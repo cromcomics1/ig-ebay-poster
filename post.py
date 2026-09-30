@@ -80,6 +80,7 @@ DEFAULT_TAGS = "#collectibles #collector #ebayfinds #vintagefinds #cromcomics"
 # ----------------------------------------------------------
 
 STATE = Path("posted.json")
+CATALOG = Path("catalog.json")
 IMG_DIR = Path("images")
 DRY_RUN = os.environ.get("DRY_RUN", "false").lower() == "true"
 REPO = os.environ.get("GITHUB_REPOSITORY", "")
@@ -124,13 +125,31 @@ def ebay_token():
     return r["access_token"]
 
 
-def fetch_listings(token):
-    headers = {"Authorization": f"Bearer {token}", "X-EBAY-C-MARKETPLACE-ID": "EBAY_US"}
+def ebay_headers(token):
+    return {"Authorization": f"Bearer {token}", "X-EBAY-C-MARKETPLACE-ID": "EBAY_US"}
+
+
+def slim(it):
+    """Keep only the fields we need, so the saved catalog stays small."""
+    keep = ("itemId", "legacyItemId", "title", "condition", "image",
+            "additionalImages", "itemCreationDate")
+    return {k: it[k] for k in keep if k in it}
+
+
+def fetch_listings(token, full):
+    """full=False: newest page per category (fast, daily).
+    full=True: every page of every category + keyword sweeps (slow, weekly)."""
+    headers = ebay_headers(token)
     items = {}
-    queries = [{"category_ids": c} for c in CATEGORIES] + [{"q": k} for k in KEYWORDS]
+    queries = [{"category_ids": c} for c in CATEGORIES]
+    if full:
+        queries += [{"q": k} for k in KEYWORDS]
+    max_pages = 50 if full else 1
+    started = time.time()
     for q in queries:
-        offset, total = 0, None
-        while True:
+        offset, total, pages = 0, None, 0
+        while pages < max_pages:
+            pages += 1
             params = {**q, "filter": f"sellers:{{{SELLER}}}", "sort": "newlyListed",
                       "limit": "200", "offset": str(offset)}
             url = "https://api.ebay.com/buy/browse/v1/item_summary/search?" + urllib.parse.urlencode(params)
@@ -141,15 +160,28 @@ def fetch_listings(token):
                 break
             page = r.get("itemSummaries", [])
             for it in page:
-                items[it["itemId"]] = it
+                items[it["itemId"]] = slim(it)
             total = r.get("total", 0)
             offset += 200
             # eBay returns at most 10,000 results per search
             if not page or offset >= min(total, 10000):
                 break
         if total:
-            print(f"  {q}: {total}")
+            print(f"  {q}: {total} listings ({int(time.time() - started)}s elapsed)")
     return sorted(items.values(), key=lambda i: i.get("itemCreationDate", ""), reverse=True)
+
+
+def still_for_sale(token, item_id):
+    url = ("https://api.ebay.com/buy/browse/v1/item/"
+           + urllib.parse.quote(item_id, safe="") + "?fieldgroups=COMPACT")
+    try:
+        r = http("GET", url, headers=ebay_headers(token))
+    except RuntimeError:
+        return False
+    for a in r.get("estimatedAvailabilities", []) or []:
+        if a.get("estimatedAvailabilityStatus") == "OUT_OF_STOCK":
+            return False
+    return True
 
 
 def image_urls(item):
@@ -310,10 +342,27 @@ def main():
     state = json.loads(STATE.read_text()) if STATE.exists() else {"posted": [], "skipped": []}
     done = set(state["posted"]) | set(state.get("skipped", []))
     token = os.environ["IG_ACCESS_TOKEN"]
+    etoken = ebay_token()
 
-    listings = fetch_listings(ebay_token())
-    print(f"Found {len(listings)} active listings for {SELLER}")
-    queue = [i for i in listings if i["itemId"] not in done]
+    # Daily: newest page of each category (about a minute).
+    newest = fetch_listings(etoken, full=False)
+    print(f"Newest listings checked: {len(newest)}")
+
+    # Weekly (Sundays), on first run, or on request: full catalog scan, saved to catalog.json.
+    need_full = (not CATALOG.exists() or time.gmtime().tm_wday == 6
+                 or os.environ.get("FULL_SCAN", "false").lower() == "true")
+    if need_full and not DRY_RUN:
+        print("Running full catalog scan (can take 15+ minutes)...")
+        catalog = fetch_listings(etoken, full=True)
+        CATALOG.write_text(json.dumps(catalog))
+        commit_and_push([CATALOG], "Refresh catalog")
+    else:
+        catalog = json.loads(CATALOG.read_text()) if CATALOG.exists() else []
+    print(f"Full catalog: {len(catalog)} listings for {SELLER}")
+
+    fresh_ids = {i["itemId"] for i in newest}
+    queue = [i for i in newest if i["itemId"] not in done]
+    queue += [i for i in catalog if i["itemId"] not in done and i["itemId"] not in fresh_ids]
     print(f"{len(queue)} not yet posted")
     if not queue:
         return
@@ -322,6 +371,10 @@ def main():
     for item in queue:
         if posted_now >= POSTS_PER_RUN:
             break
+        # older items come from the saved catalog, so confirm they haven't sold
+        if item["itemId"] not in fresh_ids and not still_for_sale(etoken, item["itemId"]):
+            print(f"  skipping (no longer for sale): {item.get('title')}")
+            continue
         caption = build_caption(item)
         print("\n--- next post ---")
         print(caption)

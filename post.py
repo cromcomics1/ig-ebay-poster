@@ -24,7 +24,7 @@ import urllib.request
 from pathlib import Path
 
 # ---------------- settings you can change ----------------
-SELLER = os.environ.get("EBAY_SELLER", "cromcomicscollectibles")
+SELLER = os.environ.get("EBAY_SELLER", "cromcomics1")  # eBay username, not the store name
 POSTS_PER_RUN = int(os.environ.get("POSTS_PER_RUN", "1"))
 MAX_IMAGES = 5                # photos per post (Instagram allows up to 10)
 CANVAS = (1080, 1350)         # 4:5 portrait, Instagram's tallest allowed shape
@@ -160,6 +160,9 @@ def fetch_listings(token, full):
                 break
             page = r.get("itemSummaries", [])
             for it in page:
+                # safety check: never keep another seller's listing
+                if (it.get("seller") or {}).get("username", "").lower() != SELLER.lower():
+                    continue
                 items[it["itemId"]] = slim(it)
             total = r.get("total", 0)
             offset += 200

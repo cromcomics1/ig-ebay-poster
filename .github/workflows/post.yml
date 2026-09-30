@@ -41,4 +41,4 @@ jobs:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           GH_PAT: ${{ secrets.GH_PAT }}
           POSTS_PER_RUN: "1"
-          DRY_RUN: ${{ inputs.dry_run == true && 'true' || 'false' }}
+          DRY_RUN:${{ inputs.dry_run == true && 'true' || 'false' }}

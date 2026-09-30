@@ -1,0 +1,43 @@
+name: Post to Instagram
+
+on:
+  schedule:
+    - cron: "0 23 * * *"   # daily at 7 pm Eastern (6 pm in winter)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Preview only (don't post)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency: ig-poster
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install pillow pynacl
+
+      - name: Git identity
+        run: |
+          git config user.name "ig-poster-bot"
+          git config user.email "ig-poster-bot@users.noreply.github.com"
+
+      - name: Post newest listing
+        run: python post.py
+        env:
+          EBAY_APP_ID: ${{ secrets.EBAY_APP_ID }}
+          EBAY_CERT_ID: ${{ secrets.EBAY_CERT_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+          DRY_RUN: ${{ inputs.dry_run == true && 'true' || 'false' }}

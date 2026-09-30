@@ -30,9 +30,14 @@ MAX_IMAGES = 5                # photos per post (Instagram allows up to 10)
 CANVAS = (1080, 1350)         # 4:5 portrait, Instagram's tallest allowed shape
 BACKGROUND = (255, 255, 255)  # white padding around photos
 
-# eBay top-level categories to scan (Collectibles, Toys & Hobbies, Jewelry,
-# Antiques, Books & Magazines, Coins) plus keyword sweeps as a safety net.
-CATEGORIES = ["1", "220", "281", "20081", "267", "11116"]
+# Every eBay US top-level category, so no listing is missed, plus keyword
+# sweeps as a safety net.
+CATEGORIES = [
+    "1", "220", "281", "20081", "267", "11116", "237", "64482", "260", "870",
+    "550", "11232", "11233", "1249", "11700", "11450", "14339", "619", "625",
+    "293", "58058", "15032", "888", "26395", "2984", "1281", "12576", "6000",
+    "172008", "1305", "3252", "316", "99",
+]
 KEYWORDS = ["comic", "hot toys", "figure", "pin", "jewelry", "vintage", "antique", "lot"]
 
 HASHTAGS = {
@@ -47,6 +52,29 @@ HASHTAGS = {
     "antique": "#antiques #antique #vintagefinds #oldstuff",
     "coin": "#coins #coincollecting #numismatics",
     "figure": "#actionfigures #toycollector #figurecollector",
+    "golden book": "#littlegoldenbooks #goldenbooks #vintagechildrensbooks",
+    "book": "#vintagebooks #bookcollector #oldbooks #booksofinstagram",
+    "magazine": "#vintagemagazines #magazinecollector",
+    "disney": "#disney #disneycollector #vintagedisney",
+    "toy": "#vintagetoys #toycollector #retrotoys",
+    "lego": "#lego #legocollector",
+    "funko": "#funko #funkopop #funkocollector",
+    "card": "#tradingcards #cardcollector #thehobby",
+    "pokemon": "#pokemon #pokemontcg #pokemoncards",
+    "vinyl": "#vinylrecords #vinylcollector #recordcollector",
+    "record": "#vinylrecords #recordcollector",
+    "watch": "#vintagewatch #watchcollector",
+    "ring": "#vintagerings #ringsofinstagram",
+    "necklace": "#vintagenecklace #jewelrylover",
+    "gold": "#goldjewelry #vintagegold",
+    "vintage": "#vintage #vintagestyle",
+    "sign": "#vintagesigns #advertisingcollectibles",
+    "button": "#vintagebuttons #pinbacks",
+    "poster": "#vintageposters #postercollector",
+    "star trek": "#startrek #startrekcollector",
+    "transformers": "#transformers #g1transformers",
+    "he-man": "#heman #motu #mastersoftheuniverse",
+    "barbie": "#barbie #vintagebarbie",
 }
 DEFAULT_TAGS = "#collectibles #collector #ebayfinds #vintagefinds #cromcomics"
 # ----------------------------------------------------------
@@ -101,15 +129,26 @@ def fetch_listings(token):
     items = {}
     queries = [{"category_ids": c} for c in CATEGORIES] + [{"q": k} for k in KEYWORDS]
     for q in queries:
-        params = {**q, "filter": f"sellers:{{{SELLER}}}", "sort": "newlyListed", "limit": "100"}
-        url = "https://api.ebay.com/buy/browse/v1/item_summary/search?" + urllib.parse.urlencode(params)
-        try:
-            r = http("GET", url, headers=headers)
-        except RuntimeError as e:
-            print(f"  (skipped search {q}: {e})")
-            continue
-        for it in r.get("itemSummaries", []):
-            items[it["itemId"]] = it
+        offset, total = 0, None
+        while True:
+            params = {**q, "filter": f"sellers:{{{SELLER}}}", "sort": "newlyListed",
+                      "limit": "200", "offset": str(offset)}
+            url = "https://api.ebay.com/buy/browse/v1/item_summary/search?" + urllib.parse.urlencode(params)
+            try:
+                r = http("GET", url, headers=headers)
+            except RuntimeError as e:
+                print(f"  (skipped search {q} at {offset}: {e})")
+                break
+            page = r.get("itemSummaries", [])
+            for it in page:
+                items[it["itemId"]] = it
+            total = r.get("total", 0)
+            offset += 200
+            # eBay returns at most 10,000 results per search
+            if not page or offset >= min(total, 10000):
+                break
+        if total:
+            print(f"  {q}: {total}")
     return sorted(items.values(), key=lambda i: i.get("itemCreationDate", ""), reverse=True)
 
 
@@ -128,7 +167,8 @@ def image_urls(item):
 def build_caption(item):
     title = item.get("title", "").strip()
     low = title.lower()
-    tags = [t for key, t in HASHTAGS.items() if key in low]
+    # whole-word match, so "gold" doesn't fire on "golden"; "pin"/"card"/"book" allow plurals
+    tags = [t for key, t in HASHTAGS.items() if re.search(rf"\b{re.escape(key)}s?\b", low)]
     tag_words = " ".join(tags + [DEFAULT_TAGS]).split()
     tag_words = list(dict.fromkeys(tag_words))[:25]  # dedupe, stay under IG's 30 limit
 

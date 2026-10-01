@@ -39,6 +39,9 @@ def get_json(url, token, tries=4):
                 time.sleep(10 * (attempt + 1))  # rate limited / eBay hiccup: back off
                 continue
             raise
+        except OSError:  # network blip (connection reset, timeout): wait and retry
+            time.sleep(5 * (attempt + 1))
+            continue
     raise RuntimeError(f"gave up after {tries} tries: {url.split('?')[0]}")
 
 
@@ -158,7 +161,7 @@ def main():
             break
         try:
             rows.append(audit_item(item_id, token, now))
-        except RuntimeError as e:
+        except Exception as e:
             failed += 1  # usually a listing that ended since the catalog was saved
             if failed <= 5:
                 print(f"  (skipped {item_id}: {e})")

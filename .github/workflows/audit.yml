@@ -1,0 +1,39 @@
+name: Listing audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "How many listings to check (0 = all)"
+        default: "0"
+
+permissions:
+  contents: write
+
+concurrency: ig-poster   # waits for any running post, so they never collide
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run audit
+        run: python audit.py
+        env:
+          EBAY_APP_ID: ${{ secrets.EBAY_APP_ID }}
+          EBAY_CERT_ID: ${{ secrets.EBAY_CERT_ID }}
+          AUDIT_LIMIT: ${{ inputs.limit }}
+
+      - name: Save results
+        run: |
+          git config user.name "ig-poster-bot"
+          git config user.email "ig-poster-bot@users.noreply.github.com"
+          git add audit
+          git commit -q -m "Listing audit" || exit 0
+          git pull -q --rebase && git push -q

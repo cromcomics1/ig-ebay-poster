@@ -2,7 +2,9 @@ name: Post to Instagram
 
 on:
   schedule:
-    - cron: "0 23 * * *"   # daily at 7 pm Eastern (6 pm in winter)
+    # 3 posts a day: noon, 4 pm and 8 pm Eastern (an hour earlier in winter)
+    - cron: "0 16,20 * * *"
+    - cron: "0 0 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -27,19 +29,23 @@ jobs:
           python-version: "3.12"
 
       - name: Install
-        run: pip install pillow pynacl
+        run: |
+          pip install pillow pynacl
+          if ! command -v ffmpeg >/dev/null || [ ! -f /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf ]; then
+            sudo apt-get update -q && sudo apt-get install -y -q ffmpeg fonts-dejavu-core
+          fi
 
       - name: Git identity
         run: |
           git config user.name "ig-poster-bot"
           git config user.email "ig-poster-bot@users.noreply.github.com"
 
-      - name: Post newest listing
+      - name: Post to Instagram
         run: python post.py
         env:
           EBAY_APP_ID: ${{ secrets.EBAY_APP_ID }}
           EBAY_CERT_ID: ${{ secrets.EBAY_CERT_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           GH_PAT: ${{ secrets.GH_PAT }}
-          POSTS_PER_RUN: "3"
+          POSTS_PER_RUN: "1"
           DRY_RUN: ${{ inputs.dry_run == true && 'true' || 'false' }}

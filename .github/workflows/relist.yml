@@ -1,0 +1,71 @@
+name: Refresh listings
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "propose = make a proposal (no changes) | apply = relist approved items"
+        type: choice
+        options: [propose, apply]
+        default: propose
+      items:
+        description: "PROPOSE: item numbers, comma-separated (leave blank to use the rule below)"
+        default: ""
+      min_price:
+        description: "PROPOSE rule: minimum price ($)"
+        default: "100"
+      min_age:
+        description: "PROPOSE rule: minimum age (days)"
+        default: "180"
+      count:
+        description: "PROPOSE rule: how many listings"
+        default: "5"
+      price_change:
+        description: "PROPOSE: price change in % for these listings, e.g. -10 (blank = keep prices)"
+        default: "10"
+      ad_rate:
+        description: "PROPOSE: Promoted Listings ad rate in %, e.g. 5 (blank = no ad)"
+        default: "4.2"
+      approve:
+        description: "APPLY: type all, or the item numbers to approve"
+        default: ""
+      dry_run:
+        description: "APPLY: practice run (shows what would change, changes nothing)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+jobs:
+  relist:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Git identity
+        run: |
+          git config user.name "ig-poster-bot"
+          git config user.email "ig-poster-bot@users.noreply.github.com"
+
+      - name: Refresh listings
+        run: python relist.py
+        env:
+          EBAY_USER_TOKEN: ${{ secrets.EBAY_USER_TOKEN }}
+          EBAY_REFRESH_TOKEN: ${{ secrets.EBAY_REFRESH_TOKEN }}
+          EBAY_APP_ID: ${{ secrets.EBAY_APP_ID }}
+          EBAY_CERT_ID: ${{ secrets.EBAY_CERT_ID }}
+          PRICE_CHANGE: ${{ inputs.price_change }}
+          AD_RATE: ${{ inputs.ad_rate }}
+          MODE: ${{ inputs.mode }}
+          ITEMS: ${{ inputs.items }}
+          MIN_PRICE: ${{ inputs.min_price }}
+          MIN_AGE: ${{ inputs.min_age }}
+          COUNT: ${{ inputs.count }}
+          APPROVE: ${{ inputs.approve }}
+          DRY_RUN: ${{ inputs.dry_run == true && 'true' || 'false' }}

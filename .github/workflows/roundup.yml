@@ -1,0 +1,56 @@
+name: Roundup Reel
+
+on:
+  schedule:
+    - cron: "0 18 */2 * *"   # every 2 days at 2 pm Eastern (1 pm in winter)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Preview only (builds the video, doesn't post)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency: ig-poster
+
+jobs:
+  roundup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: |
+          pip install pillow pynacl
+          if ! command -v ffmpeg >/dev/null || [ ! -f /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf ]; then
+            sudo apt-get update -q && sudo apt-get install -y -q ffmpeg fonts-dejavu-core
+          fi
+
+      - name: Git identity
+        run: |
+          git config user.name "ig-poster-bot"
+          git config user.email "ig-poster-bot@users.noreply.github.com"
+
+      - name: Build and post the roundup
+        run: python roundup.py
+        env:
+          EBAY_APP_ID: ${{ secrets.EBAY_APP_ID }}
+          EBAY_CERT_ID: ${{ secrets.EBAY_CERT_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          DRY_RUN: ${{ inputs.dry_run == true && 'true' || 'false' }}
+
+      - name: Attach the video for preview
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: roundup-video
+          path: roundup.mp4
+          if-no-files-found: ignore
+          retention-days: 7

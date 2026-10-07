@@ -156,15 +156,22 @@ def http(method, url, form=None, json_body=None, headers=None, raw=False):
         body = json.dumps(json_body).encode()
         headers["Content-Type"] = "application/json"
     headers.setdefault("User-Agent", "ig-ebay-poster")
-    req = urllib.request.Request(url, data=body, method=method, headers=headers)
-    try:
-        with urllib.request.urlopen(req, timeout=60) as r:
-            data = r.read()
-            return data if raw else json.loads(data.decode() or "{}")
-    except urllib.error.HTTPError as e:
-        # never print query strings: they can contain the access token
-        detail = e.read().decode(errors="replace")[:500]
-        raise RuntimeError(f"{method} {url.split('?')[0]} -> HTTP {e.code}: {detail}")
+    # reads are retried on network blips; writes are not, so nothing is ever posted twice
+    tries = 3 if method == "GET" else 1
+    for attempt in range(tries):
+        req = urllib.request.Request(url, data=body, method=method, headers=headers)
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                data = r.read()
+                return data if raw else json.loads(data.decode() or "{}")
+        except urllib.error.HTTPError as e:
+            # never print query strings: they can contain the access token
+            detail = e.read().decode(errors="replace")[:500]
+            raise RuntimeError(f"{method} {url.split('?')[0]} -> HTTP {e.code}: {detail}")
+        except OSError as e:
+            if attempt == tries - 1:
+                raise RuntimeError(f"{method} {url.split('?')[0]} -> network error: {e}")
+            time.sleep(5 * (attempt + 1))
 
 
 # ---------------- eBay ----------------
@@ -417,8 +424,16 @@ def make_reel(photos, headline, out_path):
 
 # ---------------- hosting (a throwaway 'media' branch, so the repo never grows) ----------------
 def git(*args, input_text=None):
-    r = subprocess.run(["git", *args], check=True, text=True, capture_output=True, input=input_text)
-    return r.stdout.strip()
+    """Run git. Pushes are retried (GitHub hiccups), and failures show git's own message."""
+    tries = 4 if args and args[0] == "push" else 1
+    for attempt in range(tries):
+        r = subprocess.run(["git", *args], text=True, capture_output=True, input=input_text)
+        if r.returncode == 0:
+            return r.stdout.strip()
+        if attempt < tries - 1:
+            print(f"  (git {args[0]} failed, retrying: {r.stderr.strip()[:200]})")
+            time.sleep(10 * (attempt + 1))
+    raise RuntimeError(f"git {args[0]} failed: {r.stderr.strip()[:500]}")
 
 
 def host_media(paths):
@@ -448,7 +463,7 @@ def commit_and_push(paths, message):
     if subprocess.run(["git", "diff", "--cached", "--quiet"]).returncode == 0:
         return
     subprocess.run(["git", "commit", "-q", "-m", message], check=True)
-    subprocess.run(["git", "push", "-q"], check=True)
+    git("push", "-q")
 
 
 # ---------------- Instagram ----------------

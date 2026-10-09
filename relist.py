@@ -173,7 +173,7 @@ def suggest_title(title):
 def propose():
     audit_path = Path("audit/audit.csv")
     if not audit_path.exists():
-        sys.exit("audit/audit.csv not found. Run the Listing audit workflow first.")
+        sys.exit("audit/audit.csv not found. Run the Listing audit workflow first (Actions > Listing audit).")
     audit = read_csv(audit_path.read_text(encoding="utf-8"))
     for r in audit:
         r["item_id"] = r["link"].rstrip("/").rsplit("/", 1)[-1]
@@ -214,7 +214,8 @@ def propose():
     if not out:
         sys.exit("No listings matched.")
     save_branch_files({"proposal.csv": to_csv(out, PROPOSAL_COLS)}, f"Proposal: {len(out)} listings")
-    print(f"\nProposal saved with {len(out)} listings (nothing on eBay has changed):\n")
+    print(f"\nPlan saved with {len(out)} listings (nothing on eBay has changed).\n"
+          "Next: run STEP \"2 - Carry out the plan\" with PRACTICE ONLY on.\n")
     for r in out:
         print(f"{r['item_id']}  ${r['price']}  {r['age_days']} days")
         print(f"   old: {r['old_title']}")
@@ -497,27 +498,37 @@ class Marketing:
 def apply():
     proposal = read_csv(load_branch_file("proposal.csv"))
     if not proposal:
-        sys.exit("No proposal found. Run with mode = propose first.")
+        sys.exit("No plan found. Run STEP \"1 - Make a plan\" first.")
     log = read_csv(load_branch_file("log.csv"))
     done = {r["old_item_id"] for r in log if r["status"] == "relisted"}
     month = datetime.now(timezone.utc).strftime("%Y-%m")
     this_month = sum(1 for r in log if r["status"] == "relisted" and r["date"].startswith(month))
 
     approve = os.environ.get("APPROVE", "").strip().lower()
-    approved_ids = {a.strip() for a in approve.split(",") if a.strip()}
-    rows = [r for r in proposal if r["item_id"] not in done and (
-        approve == "all" or r["item_id"] in approved_ids
-        or r.get("approve", "").strip().lower() in ("yes", "y", "x", "ok", "approve", "approved"))]
+    pending = [r for r in proposal if r["item_id"] not in done]
+    if approve.isdigit() and len(approve) <= 3:
+        # a small number like "3" means: the first 3 listings in the proposal
+        rows = pending[:int(approve)]
+        print(f"Approving the first {len(rows)} listing(s) in the proposal.")
+    else:
+        approved_ids = {a.strip() for a in approve.replace(" ", ",").split(",") if a.strip()}
+        rows = [r for r in pending if (
+            approve == "all" or r["item_id"] in approved_ids
+            or r.get("approve", "").strip().lower() in ("yes", "y", "x", "ok", "approve", "approved"))]
     if not rows:
-        sys.exit("Nothing approved. Type 'all' or item numbers in the Approve box, "
-                 "or put yes in the approve column of proposal.csv.")
+        ids = ", ".join(r["item_id"] for r in pending[:10]) or "(none left)"
+        if not pending:
+            sys.exit("Everything in the current plan has already been relisted. "
+                     "Run STEP \"1 - Make a plan\" to pick new items.")
+        sys.exit("No items selected. In WHICH ITEMS type: all, a count like 3, or item numbers "
+                 f"from the plan. Items in the current plan: {ids}")
     room = min(MAX_PER_RUN, MAX_PER_MONTH - this_month)
     if len(rows) > room:
         print(f"Limiting this run to {room} listings (safety cap).")
         rows = rows[:max(room, 0)]
 
     marketing = Marketing.connect() if any((r.get("ad_rate") or "").strip() for r in rows) else None
-    print(f"{'PRACTICE RUN: ' if DRY_RUN else ''}{len(rows)} listing(s) to sell-similar. Done this month so far: {this_month}\n")
+    print(f"{'PRACTICE ONLY (nothing will change): ' if DRY_RUN else 'LIVE: '}{len(rows)} listing(s) to sell-similar. Done this month so far: {this_month}\n")
     new_log, stop = [], False
     for r in rows:
         iid = r["item_id"]

@@ -1,36 +1,46 @@
 name: Refresh listings
+run-name: "Refresh listings: ${{ inputs.step }}"
+
+# HOW TO USE (each batch takes 3 runs):
+#   Run 1: STEP = "1 - Make a plan". Fill in the PLAN lines. Nothing on eBay changes.
+#   Run 2: STEP = "2 - Carry out the plan", WHICH ITEMS = all, PRACTICE ONLY = on.
+#          eBay checks each new listing. Nothing changes.
+#   Run 3: same as Run 2 but PRACTICE ONLY = off. This relists for real.
+# PLAN lines are only used in step 1. CARRY OUT lines are only used in step 2.
 
 on:
   workflow_dispatch:
     inputs:
-      mode:
-        description: "propose = make a proposal (no changes) | apply = relist approved items"
+      step:
+        description: "STEP: 1 = make a plan (safe), 2 = carry out the plan"
         type: choice
-        options: [propose, apply]
-        default: propose
+        options:
+          - "1 - Make a plan"
+          - "2 - Carry out the plan"
+        default: "1 - Make a plan"
       items:
-        description: "PROPOSE: item numbers, comma-separated (leave blank to use the rule below)"
+        description: "PLAN: specific item numbers (leave BLANK to auto-pick)"
         default: ""
       min_price:
-        description: "PROPOSE rule: minimum price ($)"
+        description: "PLAN auto-pick: only items priced at least $"
         default: "100"
       min_age:
-        description: "PROPOSE rule: minimum age (days)"
+        description: "PLAN auto-pick: only items listed at least this many days ago"
         default: "180"
       count:
-        description: "PROPOSE rule: how many listings"
+        description: "PLAN auto-pick: how many items to pick"
         default: "5"
       price_change:
-        description: "PROPOSE: price change in % for these listings, e.g. -10 (blank = keep prices)"
+        description: "PLAN: change price by % (10 = 10% more, -10 = 10% less, blank = same)"
         default: "10"
       ad_rate:
-        description: "PROPOSE: Promoted Listings ad rate in %, e.g. 5 (blank = no ad)"
+        description: "PLAN: promoted ad rate % (blank = no ad)"
         default: "4.2"
       approve:
-        description: "APPLY: type all, or the item numbers to approve"
-        default: ""
+        description: "CARRY OUT: which items (all, a count like 3, or item numbers)"
+        default: "all"
       dry_run:
-        description: "APPLY: practice run (shows what would change, changes nothing)"
+        description: "CARRY OUT: practice only (ON = nothing really changes)"
         type: boolean
         default: true
 
@@ -62,7 +72,7 @@ jobs:
           EBAY_CERT_ID: ${{ secrets.EBAY_CERT_ID }}
           PRICE_CHANGE: ${{ inputs.price_change }}
           AD_RATE: ${{ inputs.ad_rate }}
-          MODE: ${{ inputs.mode }}
+          MODE: ${{ startsWith(inputs.step, '2') && 'apply' || 'propose' }}
           ITEMS: ${{ inputs.items }}
           MIN_PRICE: ${{ inputs.min_price }}
           MIN_AGE: ${{ inputs.min_age }}

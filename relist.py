@@ -54,6 +54,7 @@ CAMPAIGN_NAME = "Refreshed listings"
 LOG_COLS = ["date", "old_item_id", "new_item_id", "status", "new_title", "new_price", "ad_rate", "fees", "message"]
 
 MODE = os.environ.get("MODE", "propose")
+MAX_FEE = float((os.environ.get("MAX_FEE") or "0").replace("$", "").strip() or 0)  # per listing
 DRY_RUN = os.environ.get("DRY_RUN", "true").lower() != "false"
 
 
@@ -394,19 +395,37 @@ def build_new_item(item, title, specifics, note, uuid, new_price=None):
 
 
 def total_fees(root):
-    for fee in root.findall("e:Fees/e:Fee", NS):
+    """Net cost of the listing. eBay lists each fee next to a PromotionalDiscount; free
+    store listings appear as e.g. Fee $0.10 with a $0.10 discount, so the net is $0.00."""
+    fees = root.findall("e:Fees/e:Fee", NS)
+    def net(fee):
+        amount = float(fee.findtext("e:Fee", "0", NS) or 0)
+        discount = float(fee.findtext("e:PromotionalDiscount", "0", NS) or 0)
+        return max(amount - discount, 0.0)
+    for fee in fees:
         if fee.findtext("e:Name", "", NS) == "ListingFee":  # the total of all listing fees
-            return float(fee.findtext("e:Fee", "0", NS) or 0)
-    return 0.0
+            return round(net(fee), 2)
+    return round(sum(net(f) for f in fees if f.findtext("e:Name", "", NS) != "ListingFee"), 2)
 
 
 DUPLICATE_LISTING = "21919067"  # "this is a duplicate of your item" (expected while the old one is live)
 
 
+def fee_breakdown(root):
+    parts = []
+    for fee in root.findall("e:Fees/e:Fee", NS):
+        amount = float(fee.findtext("e:Fee", "0", NS) or 0)
+        discount = float(fee.findtext("e:PromotionalDiscount", "0", NS) or 0)
+        if amount or discount:
+            parts.append(f"{fee.findtext('e:Name', '', NS)} ${amount:.2f}" + (f" - discount ${discount:.2f}" if discount else ""))
+    return "; ".join(parts) or "no fees listed"
+
+
 def verify(new_item):
-    """Ask eBay to check the new listing without creating it. Returns the fee it would charge."""
+    """Ask eBay to check the new listing without creating it. Returns the net fee it would charge."""
     try:
         root, _ = trading("VerifyAddFixedPriceItem", new_item)
+        print(f"   eBay fee quote: {fee_breakdown(root)}")
         return total_fees(root)
     except EbayError as e:
         if e.codes and all(c == DUPLICATE_LISTING for c in e.codes):
@@ -579,8 +598,9 @@ def apply():
 
             fee = verify(new_item)  # eBay checks the new listing; nothing is created or ended yet
             print(f"   eBay check passed. Listing fee: ${fee:.2f}")
-            if fee > 0:
-                raise Skip(f"eBay would charge ${fee:.2f} for this listing (subtitle or allotment used up)")
+            if fee > MAX_FEE + 0.001:
+                raise Skip(f"eBay would charge ${fee:.2f} for this listing; your fee limit is ${MAX_FEE:.2f}. "
+                           "To allow it, raise CARRY OUT: max fee per listing")
             if DRY_RUN:
                 entry["status"] = "dry-run"
                 if rate and marketing:
@@ -624,8 +644,8 @@ def apply():
                 except RuntimeError as e:  # the listing is fine; only the ad failed
                     entry["message"] = (entry["message"] + f" AD NOT SET: {e}")[:300].strip()
                     print(f"   could not set the ad rate: {e}\n")
-            if fees > 0:
-                print("STOPPING: eBay charged a fee. Check your free-listing allotment.")
+            if fees > MAX_FEE + 0.001:
+                print(f"STOPPING: eBay charged ${fees:.2f}, above your limit of ${MAX_FEE:.2f}.")
                 stop = True
             time.sleep(1)
         except Skip as e:

@@ -15,3 +15,8 @@ date,old_item_id,new_item_id,status,new_title,new_price,ad_rate,fees,message
 2026-10-10 13:29,226553403481,,skipped,Golden Age CGC 1949 Gangsters Cant Win 6 Comic Newly Graded Vol 1 Ghost Grail,735.00,,,eBay would charge $0.10 for this listing (subtitle or allotment used up)
 2026-10-10 13:29,226553446962,,skipped,Golden Age CGC 1949 Gangsters Cant Win 9 Comic Newly Graded LAST ISSUE GRAIL,683.00,,,eBay would charge $0.10 for this listing (subtitle or allotment used up)
 2026-10-10 13:29,226409842789,,skipped,1971 Classics Illustrated 26 CGC 7 Comic PAINTED COVER Frankenstein Art HRN,651.00,,,eBay would charge $0.10 for this listing (subtitle or allotment used up)
+2026-10-10 22:29,226446303853,227561491371,relisted,1950 Golden Age CGC Comic Jet Power General Electric 8.5 Roussos ONLY ONE GRADED,1260.00,4.2,0.00,
+2026-10-10 22:30,226553403481,227561491409,relisted,Golden Age CGC 1949 Gangsters Cant Win 6 Comic Newly Graded Vol 1 Ghost Grail,735.00,4.2,0.00,
+2026-10-10 22:30,226553446962,227561491458,relisted,Golden Age CGC 1949 Gangsters Cant Win 9 Comic Newly Graded LAST ISSUE GRAIL,683.00,4.2,0.00,
+2026-10-10 22:30,226409842789,227561491627,relisted,1971 Classics Illustrated 26 CGC 7 Comic PAINTED COVER Frankenstein Art HRN,651.00,4.2,0.00,
+2026-10-10 22:30,226601103703,,skipped,1985 Signed F Ramond Brass Etched Glass Flowers Lighting Fixture Art Artist VTG,578.00,,,"eBay rejected the new listing, nothing was changed: VerifyAddFixedPriceItem failed: Error: Input data for tag <BrandMPN> is invalid or missing. Please check API documentation."

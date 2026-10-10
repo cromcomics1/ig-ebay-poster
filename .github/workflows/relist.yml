@@ -39,6 +39,9 @@ on:
       approve:
         description: "CARRY OUT: which items (all, a count like 3, or item numbers)"
         default: "all"
+      max_fee:
+        description: "CARRY OUT: max eBay listing fee allowed per item in $ (0 = only free)"
+        default: "0"
       dry_run:
         description: "CARRY OUT: practice only (ON = nothing really changes)"
         type: boolean
@@ -78,4 +81,5 @@ jobs:
           MIN_AGE: ${{ inputs.min_age }}
           COUNT: ${{ inputs.count }}
           APPROVE: ${{ inputs.approve }}
+          MAX_FEE: ${{ inputs.max_fee }}
           DRY_RUN: ${{ inputs.dry_run == true && 'true' || 'false' }}

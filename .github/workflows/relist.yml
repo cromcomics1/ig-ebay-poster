@@ -50,6 +50,8 @@ on:
 permissions:
   contents: write
 
+concurrency: relist   # never runs at the same time as Auto-refresh
+
 jobs:
   relist:
     runs-on: ubuntu-latest

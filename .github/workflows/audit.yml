@@ -1,6 +1,8 @@
 name: Listing audit
 
 on:
+  schedule:
+    - cron: "0 7 1,15 * *"   # 1st and 15th of each month, so Auto-refresh has a fresh list
   workflow_dispatch:
     inputs:
       limit:
@@ -9,8 +11,6 @@ on:
 
 permissions:
   contents: write
-
-concurrency: ig-poster   # waits for any running post, so they never collide
 
 jobs:
   audit:
@@ -28,12 +28,13 @@ jobs:
         env:
           EBAY_APP_ID: ${{ secrets.EBAY_APP_ID }}
           EBAY_CERT_ID: ${{ secrets.EBAY_CERT_ID }}
-          AUDIT_LIMIT: ${{ inputs.limit }}
+          AUDIT_LIMIT: ${{ inputs.limit || '0' }}
 
-      - name: Save results
+      - name: Save results to the audit-results branch
         run: |
           git config user.name "ig-poster-bot"
           git config user.email "ig-poster-bot@users.noreply.github.com"
+          git checkout -q -B audit-results
           git add audit
-          git commit -q -m "Listing audit" || exit 0
-          git pull -q --rebase && git push -q
+          git commit -q -m "Listing audit"
+          git push -q -f origin audit-results

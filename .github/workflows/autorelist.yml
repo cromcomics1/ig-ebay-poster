@@ -1,0 +1,72 @@
+name: Auto-refresh listings
+run-name: "Auto-refresh listings${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && ' (practice)' || '' }}"
+
+# Runs by itself 3 times a day and sell-similars 3 listings each time (9 a day).
+# Rules: priced $50+, listed 180+ days, highest price first, price unchanged,
+# 4.2% Promoted Listings ad rate, only if eBay charges $0.
+# Times are in UTC: 13:00, 18:00, 00:00 = 9 am, 2 pm, 8 pm Eastern (summer time).
+# In winter (Nov to Mar) they land one hour earlier: 8 am, 1 pm, 7 pm.
+# To see what it did: ask Claude for the relist report (reads the log on the relist-data branch).
+# To pause it: Actions > Auto-refresh listings > "..." > Disable workflow.
+
+on:
+  schedule:
+    - cron: "0 13 * * *"
+    - cron: "0 18 * * *"
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Practice only (ON = nothing really changes)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency: relist
+
+jobs:
+  auto:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Git identity
+        run: |
+          git config user.name "ig-poster-bot"
+          git config user.email "ig-poster-bot@users.noreply.github.com"
+
+      - name: Use the newest listing audit
+        run: |
+          # the audit may be saved on main or on the audit-results branch; take whichever is newer
+          if git fetch -q origin audit-results 2>/dev/null; then
+            branch=$(git log -1 --format=%ct FETCH_HEAD)
+            main=$(git log -1 --format=%ct HEAD -- audit); main=${main:-0}
+            if [ "$branch" -gt "$main" ]; then git checkout -q FETCH_HEAD -- audit; echo "using audit-results branch"; fi
+          fi
+          echo "audit from: $(cat audit/summary.json 2>/dev/null | head -c 200)"
+
+      - name: Relist
+        run: python relist.py
+        env:
+          EBAY_USER_TOKEN: ${{ secrets.EBAY_USER_TOKEN }}
+          EBAY_REFRESH_TOKEN: ${{ secrets.EBAY_REFRESH_TOKEN }}
+          EBAY_APP_ID: ${{ secrets.EBAY_APP_ID }}
+          EBAY_CERT_ID: ${{ secrets.EBAY_CERT_ID }}
+          MODE: auto
+          AUTO_COUNT: "3"
+          MIN_PRICE: "50"
+          MIN_AGE: "180"
+          PRICE_CHANGE: ""
+          AD_RATE: "4.2"
+          MAX_FEE: "0"
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && 'true' || 'false' }}
+          SEND_DIGEST: "false"   # email summary turned off for now

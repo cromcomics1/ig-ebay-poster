@@ -35,3 +35,4 @@ date,old_item_id,new_item_id,status,new_title,new_price,ad_rate,fees,message,sou
 2026-10-13 00:19,226730906634,227564639314,relisted,Rare New 1991 Micro Courier Microsoft Windows 1.0 PC Communications DOS Vintage,,4.2,0.00,,auto
 2026-10-13 00:19,227257839655,227564639804,relisted,Antique Leather Gun Holster Sporting Collectible Western Military History Tooled,,4.2,0.00,,auto
 2026-10-13 00:19,226989008498,227564640268,relisted,Antique 1920 W538 Strip Graded Card # 6 Rudolph Valentino 100 Years OLD Actor,,4.2,0.00,Warning: You and your buyers can have confidence that this item will undergo a professional inspection to verify that it is authentic and matches the listing's details.,auto
+2026-10-13 13:24,226986969463,227565561486,relisted,Antique 1920 W538 Strip Graded Card # 8 Buster Keaton 100 Years OLD Actor Legend,,,0.00,relisted WITHOUT changes: AddFixedPriceItem failed: Error: System error. Unable to process your request. Please try again later.,auto

@@ -1,16 +1,16 @@
 {
- "audited": 3268,
- "skipped": 0,
- "run_at": "2026-10-01T18:58:42.114104+00:00",
+ "audited": 3297,
+ "skipped": 1,
+ "run_at": "2026-10-15T07:38:31.902010+00:00",
  "short_titles_under_50": 3,
  "titles_50_to_64": 14,
  "under_3_photos": 2,
- "under_6_photos": 220,
+ "under_6_photos": 221,
  "missing_required_specifics": 1,
- "missing_recommended_specifics": 1963,
+ "missing_recommended_specifics": 1979,
  "no_best_offer_over_20": 6,
- "no_returns": 3268,
- "not_free_shipping": 3268,
- "stale_over_180_days": 2407,
- "aging_90_to_180_days": 420
+ "no_returns": 3297,
+ "not_free_shipping": 3297,
+ "stale_over_180_days": 2527,
+ "aging_90_to_180_days": 325
 }

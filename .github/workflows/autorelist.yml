@@ -68,5 +68,6 @@ jobs:
           PRICE_CHANGE: ""
           AD_RATE: "4.2"
           MAX_FEE: "0"
+          AD_CAMPAIGN: "latest"   # newest running campaign; or type a campaign name
           DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && 'true' || 'false' }}
           SEND_DIGEST: "false"   # email summary turned off for now

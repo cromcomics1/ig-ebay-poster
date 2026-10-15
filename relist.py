@@ -498,6 +498,7 @@ class Marketing:
     def __init__(self, token):
         self.token = token
         self.campaign_id = None
+        self.campaign_name = CAMPAIGN_NAME
 
     @classmethod
     def connect(cls):
@@ -520,17 +521,38 @@ class Marketing:
             return None
 
     def find_campaign(self):
+        """Which campaign new listings go into. AD_CAMPAIGN setting:
+        "latest" (default) = your most recently started running cost-per-sale campaign
+        that you add listings to by hand; a campaign name = that campaign;
+        if nothing fits, the "Refreshed listings" campaign is used (created if needed)."""
         if self.campaign_id:
             return self.campaign_id
-        _, _, data = rest("GET", f"{self.BASE}/ad_campaign?campaign_name={CAMPAIGN_NAME.replace(' ', '%20')}"
-                                 "&campaign_status=RUNNING&limit=10", self.token)
-        for c in data.get("campaigns", []):
-            if c.get("campaignName") == CAMPAIGN_NAME:
-                self.campaign_id = c["campaignId"]
+        want = (os.environ.get("AD_CAMPAIGN") or "latest").strip()
+        camps, url = [], f"{self.BASE}/ad_campaign?campaign_status=RUNNING&limit=100"
+        while url and len(camps) < 1000:
+            _, _, data = rest("GET", url, self.token)
+            camps += data.get("campaigns", [])
+            url = data.get("next")
+        usable = [c for c in camps
+                  if (c.get("fundingStrategy") or {}).get("fundingModel") == "COST_PER_SALE"
+                  and not (c.get("campaignCriterion") or {}).get("selectionRules")  # rule-based ones don't take manual adds
+                  and (c.get("marketplaceId") or "EBAY_US") == "EBAY_US"]
+        pick = None
+        if want.lower() == "latest":
+            if usable:
+                pick = max(usable, key=lambda c: c.get("startDate") or "")
+        else:
+            pick = next((c for c in usable if c.get("campaignName", "").lower() == want.lower()), None)
+            if not pick:
+                print(f'   (campaign "{want}" not found among running cost-per-sale campaigns; using "{CAMPAIGN_NAME}")')
+        if not pick:
+            pick = next((c for c in camps if c.get("campaignName") == CAMPAIGN_NAME), None)
+        if pick:
+            self.campaign_id, self.campaign_name = pick["campaignId"], pick.get("campaignName", "")
         return self.campaign_id
 
     def campaign_label(self):
-        return f'"{CAMPAIGN_NAME}"' + (" (exists)" if self.find_campaign() else " (will be created)")
+        return f'"{self.campaign_name}"' if self.find_campaign() else f'"{CAMPAIGN_NAME}" (will be created)'
 
     def promote(self, listing_id, rate):
         if not self.find_campaign():
@@ -540,6 +562,7 @@ class Marketing:
                 "fundingStrategy": {"fundingModel": "COST_PER_SALE", "bidPercentage": f"{rate:.1f}"}})
             loc = headers.get("Location") or headers.get("location") or ""
             self.campaign_id = loc.rstrip("/").rsplit("/", 1)[-1] or self.find_campaign()
+            self.campaign_name = CAMPAIGN_NAME
             if not self.campaign_id:
                 raise RuntimeError("created the campaign but could not read its id")
         rest("POST", f"{self.BASE}/ad_campaign/{self.campaign_id}/ad", self.token,
@@ -689,7 +712,7 @@ def apply(auto_rows=None, target=None):
                 try:
                     marketing.promote(new_id, rate)
                     entry["ad_rate"] = f"{rate:g}"
-                    print(f"   promoted at {rate:g}% ad rate\n")
+                    print(f"   promoted at {rate:g}% ad rate in campaign \"{marketing.campaign_name}\"\n")
                 except RuntimeError as e:  # the listing is fine; only the ad failed
                     entry["message"] = (entry["message"] + f" AD NOT SET: {e}")[:300].strip()
                     print(f"   could not set the ad rate: {e}\n")

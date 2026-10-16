@@ -466,6 +466,60 @@ def commit_and_push(paths, message):
     git("push", "-q")
 
 
+# ---------------- TikTok (ready-to-post videos on the 'tiktok' branch) ----------------
+TIKTOK_BRANCH = "tiktok"
+TIKTOK_KEEP = 12  # newest videos kept; older ones drop off
+
+
+def tiktok_caption(title, ebay_line, extra_tags=()):
+    """TikTok caption: no price, no location; fewer hashtags than Instagram."""
+    tags = [t for t in hashtags_for(title) if t not in DEFAULT_TAGS.split()][:4]
+    tags = list(dict.fromkeys(list(extra_tags) + tags + ["#collectibles", "#ebayfinds", "#collectortok"]))
+    lines = [clean_title(title), "", hook_for(title, title), "", "Shop on eBay: link in bio"]
+    if ebay_line:
+        lines.append(ebay_line)
+    lines += ["", " ".join(tags[:7])]
+    return "\n".join(lines)
+
+
+def save_for_tiktok(video, caption, label):
+    """Add a video + caption to the 'tiktok' branch so it can be posted from a phone.
+    Keeps only the newest videos, and never stops the Instagram post if it fails."""
+    try:
+        stamp = time.strftime("%Y-%m-%d_%H%M", time.gmtime())
+        name = f"{stamp}_{label}.mp4"
+        entries = {}
+        if subprocess.run(["git", "fetch", "-q", "origin", TIKTOK_BRANCH], capture_output=True).returncode == 0:
+            for line in git("ls-tree", "FETCH_HEAD").splitlines():
+                meta, fname = line.split("\t", 1)
+                entries[fname] = meta
+        entries[name] = f"100644 blob {git('hash-object', '-w', str(video))}"
+        entries[name[:-4] + ".txt"] = f"100644 blob {git('hash-object', '-w', '--stdin', input_text=caption)}"
+        videos = sorted((f for f in entries if f.endswith(".mp4")), reverse=True)
+        for old in videos[TIKTOK_KEEP:]:
+            entries.pop(old, None)
+            entries.pop(old[:-4] + ".txt", None)
+        videos = videos[:TIKTOK_KEEP]
+        # README: newest first, tap the video link to save it, copy the caption box
+        readme = ["# Ready for TikTok", "",
+                  "Newest first. Tap **Video** and save it, then copy the caption. "
+                  "Post from the cromcomicscollectibles TikTok account.", ""]
+        for v in videos:
+            cap_blob = entries[v[:-4] + ".txt"].split()[-1]
+            cap = git("cat-file", "-p", cap_blob)
+            when = v[:15].replace("_", " ")
+            readme += [f"## {(cap.splitlines() or [''])[0][:70]}", f"_{when[:13]}:{when[13:]} UTC_", "",
+                       f"[Video](https://raw.githubusercontent.com/{REPO}/{TIKTOK_BRANCH}/{v})", "",
+                       "```", cap, "```", ""]
+        entries["README.md"] = f"100644 blob {git('hash-object', '-w', '--stdin', input_text=chr(10).join(readme))}"
+        tree = git("mktree", input_text="".join(f"{m}\t{n}\n" for n, m in entries.items()))
+        commit = git("commit-tree", tree, "-m", f"TikTok: {label}")  # no history, so the repo never grows
+        git("push", "-f", "-q", "origin", f"{commit}:refs/heads/{TIKTOK_BRANCH}")
+        print(f"  saved for TikTok: {name}")
+    except Exception as e:
+        print(f"  (could not save the TikTok copy: {e})")
+
+
 # ---------------- Instagram ----------------
 class IG:
     def __init__(self, token):
@@ -580,6 +634,8 @@ def post_one(item, as_reel, ig, workdir):
     if video_url:
         try:
             print(f"  published Reel {ig.post_reel(video_url, caption)}")
+            ebay = f"ebay.com/itm/{item['legacyItemId']}" if item.get("legacyItemId") else ""
+            save_for_tiktok(video, tiktok_caption(item.get("title", ""), ebay), safe)
             return "reel"
         except RuntimeError as e:
             print(f"  Reel failed ({e}); posting as carousel instead")

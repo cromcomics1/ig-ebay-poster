@@ -1,4 +1,3 @@
-
 """
 Roundup Reel for cromcomicscollectibles, posted every 2 days.
 
@@ -167,6 +166,11 @@ def main():
     ig = post.IG(os.environ["IG_ACCESS_TOKEN"])
     try:
         print(f"\npublished roundup Reel {ig.post_reel(url, caption)}")
+        lines = [("New arrivals" if label == "NEW ARRIVALS" else "Store picks") + f": {len(used)} finds from the vault", ""]
+        lines += [f"{n}. {post.clean_title(it.get('title', ''))}" for n, it in enumerate(used, 1)]
+        lines += ["", "Shop them all on eBay: link in bio", "",
+                  "#collectibles #ebayfinds #collectortok " + ("#newarrivals" if label == "NEW ARRIVALS" else "#storepicks")]
+        post.save_for_tiktok(OUT, "\n".join(lines)[:2000], "roundup")
     except RuntimeError as e:
         raise SystemExit(f"Instagram did not accept the roundup: {e}")
     # remember what was shown, so the next video features different items

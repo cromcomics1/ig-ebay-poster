@@ -468,7 +468,7 @@ def commit_and_push(paths, message):
 
 # ---------------- TikTok (ready-to-post videos on the 'tiktok' branch) ----------------
 TIKTOK_BRANCH = "tiktok"
-TIKTOK_KEEP = 12  # newest videos kept; older ones drop off
+TIKTOK_KEEP = 30  # newest videos kept; older ones drop off
 
 
 def tiktok_caption(title, ebay_line, extra_tags=()):
@@ -480,6 +480,14 @@ def tiktok_caption(title, ebay_line, extra_tags=()):
         lines.append(ebay_line)
     lines += ["", " ".join(tags[:7])]
     return "\n".join(lines)
+
+
+def tiktok_saved_ids():
+    """Item labels already saved for TikTok (from the 'tiktok' branch)."""
+    if subprocess.run(["git", "fetch", "-q", "origin", TIKTOK_BRANCH], capture_output=True).returncode != 0:
+        return set()
+    r = subprocess.run(["git", "show", "FETCH_HEAD:saved_ids.txt"], capture_output=True, text=True)
+    return set(r.stdout.split()) if r.returncode == 0 else set()
 
 
 def save_for_tiktok(video, caption, label):
@@ -495,6 +503,10 @@ def save_for_tiktok(video, caption, label):
                 entries[fname] = meta
         entries[name] = f"100644 blob {git('hash-object', '-w', str(video))}"
         entries[name[:-4] + ".txt"] = f"100644 blob {git('hash-object', '-w', '--stdin', input_text=caption)}"
+        # remember every item ever saved for TikTok, so batches don't repeat items
+        done_blob = entries.get("saved_ids.txt", "").split()[-1:] 
+        done = git("cat-file", "-p", done_blob[0]) if done_blob else ""
+        entries["saved_ids.txt"] = f"100644 blob {git('hash-object', '-w', '--stdin', input_text=(done.strip() + chr(10) + label).strip() + chr(10))}"
         videos = sorted((f for f in entries if f.endswith(".mp4")), reverse=True)
         for old in videos[TIKTOK_KEEP:]:
             entries.pop(old, None)
@@ -640,6 +652,15 @@ def post_one(item, as_reel, ig, workdir):
         except RuntimeError as e:
             print(f"  Reel failed ({e}); posting as carousel instead")
     print(f"  published carousel {ig.post_carousel(photo_urls, caption)}")
+    # TikTok can't take these photos through Higgsfield (they arrive as PNG), so save a
+    # short slideshow video of them for TikTok instead
+    try:
+        tt_video = workdir / f"{safe}_tiktok.mp4"
+        make_reel(photos, clean_title(item.get("title", "")), tt_video)
+        ebay = f"ebay.com/itm/{item['legacyItemId']}" if item.get("legacyItemId") else ""
+        save_for_tiktok(tt_video, tiktok_caption(item.get("title", ""), ebay), safe)
+    except Exception as e:
+        print(f"  (could not make the TikTok slideshow: {e})")
     return "carousel"
 
 

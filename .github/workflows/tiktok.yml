@@ -1,0 +1,46 @@
+name: TikTok batch
+
+# Makes ready-to-post TikTok videos (nothing is posted). Run it, then tell Claude
+# "post the TikToks". Videos + captions land on the 'tiktok' branch.
+
+on:
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "How many videos to make (max 25)"
+        default: "10"
+
+permissions:
+  contents: write
+
+concurrency: ig-poster
+
+jobs:
+  batch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: |
+          pip install pillow pynacl
+          if ! command -v ffmpeg >/dev/null || [ ! -f /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf ]; then
+            sudo apt-get update -q && sudo apt-get install -y -q ffmpeg fonts-dejavu-core
+          fi
+
+      - name: Git identity
+        run: |
+          git config user.name "ig-poster-bot"
+          git config user.email "ig-poster-bot@users.noreply.github.com"
+
+      - name: Make TikTok videos
+        run: python tiktok_batch.py
+        env:
+          EBAY_APP_ID: ${{ secrets.EBAY_APP_ID }}
+          EBAY_CERT_ID: ${{ secrets.EBAY_CERT_ID }}
+          COUNT: ${{ inputs.count }}

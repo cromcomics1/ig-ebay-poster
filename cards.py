@@ -174,7 +174,8 @@ def discover_sets(token):
                      "name": val, "listed": n})
         if len(sets) >= CANDIDATES:
             break
-    maker_list = [m for m, n in sorted(makers.items(), key=lambda kv: -kv[1]) if n >= 15][:MAKERS_CHECKED]
+    maker_list = [m for m, n in sorted(makers.items(), key=lambda kv: -kv[1])
+                  if n >= 15 and not MODERN_MAKERS.search(m)][:MAKERS_CHECKED]
     return sets, maker_list
 
 
@@ -186,7 +187,11 @@ circa approx nice great collectible collectable antique vintage old original gen
 scarce large small size lot lots uk english british england ltd co company inc corp and the of a an
 in on for with by to from or no nos number psa sgc bvg bgs cgc graded raw ex vg nm mt mint near
 excellent good fine poor fair condition back front reverse very type style issues sold each
+coa made usa different editions printed print reprint repro reproduction picture pictures photo
 """.split())
+MODERN_MAKERS = re.compile(r"atlas editions|collect-a-card|comic images|rittenhouse|upper deck|skybox|"
+                           r"inkworks|strictly ink|pro set|panini|disney|^marvel|wild card|^ty$|lime rock|"
+                           r"duocards|ace authentic|cryptozoic|breygent|dart flipcards", re.I)
 GRADE_TOKENS = re.compile(r"^(?:\d+(?:\.\d)?|[a-z]?\d+[a-z]?)$")
 
 
@@ -261,10 +266,14 @@ def maker_sets(token, maker):
         return []
     out = []
     for phrase, members in cluster_titles(old, maker):
+        singles = [m for m in members if not LOT_RE.search(m.get("title", ""))]
+        if len(singles) < 20:
+            continue
         years = sorted(min(int(y) for y in YEAR_RE.findall(m["title"])) for m in members)
         year = years[len(years) // 2]
-        name = f"{maker} - {phrase}"
-        out.append(({"category": NON_SPORT, "maker": maker, "set": phrase, "name": name,
+        who = maker_from_titles(members) or maker     # e.g. 'Allens' search finding Allen & Ginter
+        name = f"{who} - {phrase}"
+        out.append(({"category": NON_SPORT, "maker": who, "set": phrase, "name": name,
                      "year": year, "listed": len(members)}, members))
         print(f"  {name} (~{year}): {len(members)} listings")
     return out

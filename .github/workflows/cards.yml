@@ -1,0 +1,46 @@
+name: Card price tracker
+
+on:
+  schedule:
+    - cron: "0 11 * * 0"   # Sundays 11:00 UTC (7 am EDT)
+  workflow_dispatch:
+    inputs:
+      sets:
+        description: "How many sets to track"
+        default: "40"
+
+permissions:
+  contents: write
+
+concurrency: cards
+
+jobs:
+  cards:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Bring back earlier weeks
+        run: |
+          git fetch -q origin cards-data && git checkout -q origin/cards-data -- cards || echo "First run: no history yet"
+
+      - name: Collect prices
+        run: python cards.py
+        env:
+          EBAY_APP_ID: ${{ secrets.EBAY_APP_ID }}
+          EBAY_CERT_ID: ${{ secrets.EBAY_CERT_ID }}
+          CARD_SETS: ${{ inputs.sets || '40' }}
+
+      - name: Save to the cards-data branch
+        run: |
+          git config user.name "ig-poster-bot"
+          git config user.email "ig-poster-bot@users.noreply.github.com"
+          git checkout -q -B cards-data
+          git add cards
+          git commit -q -m "Card prices $(date -u +%F)"
+          git push -q -f origin cards-data

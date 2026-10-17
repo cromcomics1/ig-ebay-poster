@@ -189,6 +189,44 @@ def discover_sets(token):
     return out
 
 
+KNOWN_MAKERS = [  # (pattern in listing titles, display name)
+    (r"o-?pee-?chee|\bopc\b", "O-Pee-Chee"), (r"\btopps\b", "Topps"), (r"\bbowman\b", "Bowman"),
+    (r"\bfleer\b", "Fleer"), (r"\bdonruss\b", "Donruss"), (r"\bleaf\b", "Leaf"),
+    (r"philadelphia", "Philadelphia Gum"), (r"a\s*&\s*bc\b|\babc gum", "A&BC"),
+    (r"\bgoudey\b", "Goudey"), (r"\bgum,? inc", "Gum Inc."), (r"national chicle", "National Chicle"),
+    (r"exhibit", "Exhibit Supply Co."), (r"nu-?card", "Nu-Cards"), (r"bubbles,? inc", "Bubbles Inc."),
+    (r"parkhurst", "Parkhurst"), (r"\bwills\b", "W.D. & H.O. Wills"), (r"player'?s\b", "John Player & Sons"),
+    (r"carreras", "Carreras"), (r"godfrey phillips|\bphillips\b", "Godfrey Phillips"),
+    (r"gallaher", "Gallaher"), (r"ogden'?s", "Ogden's"), (r"lambert", "Lambert & Butler"),
+    (r"churchman", "Churchman's"), (r"allen\s*&\s*ginter", "Allen & Ginter"), (r"\bduke\b", "W. Duke Sons"),
+    (r"kinney", "Kinney Bros."), (r"goodwin", "Goodwin & Co."), (r"liebig", "Liebig"),
+    (r"imperial tobacco|\bitc\b", "Imperial Tobacco"), (r"american tobacco|\batc\b", "American Tobacco"),
+    (r"\bmecca\b", "Mecca"), (r"\bhassan\b", "Hassan"), (r"\bfatima\b", "Fatima"),
+    (r"sweet caporal", "Sweet Caporal"), (r"\bmurad\b", "Murad"), (r"cracker jack", "Cracker Jack"),
+    (r"wheaties", "Wheaties"), (r"\bpost cereal", "Post"), (r"kellogg", "Kellogg's"),
+    (r"brooke bond", "Brooke Bond"), (r"barratt", "Barratt"), (r"\ballens\b", "Allens"),
+    (r"ardath", "Ardath"), (r"abdulla", "Abdulla"), (r"\bb\.?a\.?t\.?\b|british american", "British American Tobacco"),
+    (r"monty gum", "Monty Gum"), (r"donruss", "Donruss"), (r"\bscanlens\b", "Scanlens"),
+    (r"edito.?service", "Edito-Service"), (r"\bduocards?\b", "DuoCards"), (r"\bfrito", "Frito-Lay"),
+]
+KNOWN_MAKERS = [(re.compile(p, re.I), name) for p, name in KNOWN_MAKERS]
+
+
+def maker_from_titles(items):
+    """Most common maker named in the listing titles (needs 30%+ of titles)."""
+    counts = {}
+    for it in items:
+        t = it.get("title", "")
+        for rx, name in KNOWN_MAKERS:
+            if rx.search(t):
+                counts[name] = counts.get(name, 0) + 1
+                break
+    if not counts or not items:
+        return ""
+    name, n = max(counts.items(), key=lambda kv: kv[1])
+    return name if n >= 0.3 * len(items) else ""
+
+
 YEAR_RE = re.compile(r"\b(18[5-9]\d|19\d\d|20[0-2]\d)\b")
 
 
@@ -451,6 +489,13 @@ def main():
             print(f"  skip {s['name']}: not vintage (typical year {year})")
             continue
         s["year"] = year
+        tm = maker_from_titles(items)
+        if tm:
+            s["maker"] = tm
+        elif s["filters"].get("Manufacturer") is None:
+            s["maker"] = ""          # eBay's guess for set-only groups is unreliable
+        st = s["set"]
+        s["name"] = st if (not s["maker"] or s["maker"].split()[0].lower() in st.lower()) else f"{s['maker']} - {st}"
         print(f"  {s['name']} (~{year}): {len(items)} listings")
         sets_items.append((s, items))
     snap = summarize(sets_items)

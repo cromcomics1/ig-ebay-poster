@@ -52,6 +52,12 @@ GENERIC_SETS = re.compile(r"^(not specified|unbranded|topps|bowman|fleer|donruss
                           r"trading cards?|non.?sport)$", re.I)
 SETS_PER_RUN = int(os.environ.get("CARD_SETS", "40"))   # most-listed sets to track
 PAGES_PER_SET = 2                # 200 listings per page
+NON_SPORT = "182982"             # eBay category: Non-Sport Trading Cards
+MAKER_SETS = int(os.environ.get("CARD_MAKER_SETS", "40"))  # tobacco/pre-war sets split from titles
+MAKERS_CHECKED = 40
+MAKER_PAGES = 4
+SETS_PER_MAKER = 6
+MIN_CLUSTER = 12                 # listings needed to count as a set
 MIN_PRICE = 3.0                  # ignore junk listings under this
 MIN_SET_LISTINGS = 8             # sets need this many listings in both weeks
 MIN_CARD_LISTINGS = 2            # a card needs this many listings in both weeks
@@ -128,28 +134,27 @@ def refine(token, cat, filters):
         return {}
 
 
-DISCOVERY_LOG = {"searches": [], "makers": []}
+DISCOVERY_LOG = {"searches": []}
 
 
 def discover_sets(token):
-    """Find exact sets (maker + set name). eBay groups many vintage cards only by
-    maker (e.g. 'Carreras'), so each maker is split into its own sets."""
+    """Returns (sets, makers).
+    sets   - groups eBay lists by exact set name (mostly 1950s-70s gum cards)
+    makers - manufacturers whose cards have no set name on eBay (most tobacco and
+             pre-war cards); these are split into sets from the listing titles."""
     sets_found, makers = {}, {}
     for q in BROAD_SEARCHES:
         try:
-            r = search(token, q=q, limit="1", fieldgroups="ASPECT_REFINEMENTS,CATEGORY_REFINEMENTS")
+            r = search(token, q=q, category_ids=NON_SPORT, limit="1",
+                       fieldgroups="ASPECT_REFINEMENTS,CATEGORY_REFINEMENTS")
         except RuntimeError as e:
             print(f"  (skipped '{q}': {e})")
             continue
         ref = r.get("refinement") or {}
-        cat = ref.get("dominantCategoryId")
-        if not cat:
-            continue
+        cat = ref.get("dominantCategoryId") or NON_SPORT
         print(f"  '{q}': {r.get('total', 0)} listings, category {cat}")
         DISCOVERY_LOG["searches"].append({
             "q": q, "total": r.get("total"), "category": cat,
-            "categories": [(c.get("categoryName"), c.get("categoryId"), c.get("matchCount"))
-                           for c in ref.get("categoryDistributions", [])][:8],
             "aspects": {a.get("localizedAspectName"): [(v.get("localizedAspectValue"), v.get("matchCount"))
                         for v in a.get("aspectValueDistributions", [])][:15]
                         for a in ref.get("aspectDistributions", [])}})
@@ -157,35 +162,111 @@ def discover_sets(token):
             if usable(val):
                 k = (cat, val)
                 sets_found[k] = max(sets_found.get(k, 0), n)
-        for name in ("Manufacturer", "Brand"):
-            for val, n in aspect_counts(ref, name):
-                if usable(val):
-                    k = (cat, name, val)
-                    makers[k] = max(makers.get(k, 0), n)
+        for val, n in aspect_counts(ref, "Manufacturer"):
+            if usable(val):
+                makers[val] = makers.get(val, 0) + n
+    sets, seen = [], set()
+    for (cat, val), n in sorted(sets_found.items(), key=lambda kv: -kv[1]):
+        if val.lower() in seen:
+            continue
+        seen.add(val.lower())
+        sets.append({"category": cat, "filters": {"Set": val}, "maker": "", "set": val,
+                     "name": val, "listed": n})
+        if len(sets) >= CANDIDATES:
+            break
+    maker_list = [m for m, n in sorted(makers.items(), key=lambda kv: -kv[1]) if n >= 15][:MAKERS_CHECKED]
+    return sets, maker_list
 
-    candidates = {}
-    # sets named directly: look up their maker so the name is complete
-    for (cat, val), n in sorted(sets_found.items(), key=lambda kv: -kv[1])[:CANDIDATES]:
-        top_maker = next((m for m, _ in aspect_counts(refine(token, cat, {"Set": val}), "Manufacturer")
-                          if usable(m)), "")
-        candidates[val.lower()] = {"category": cat, "filters": {"Set": val}, "maker": top_maker,
-                                   "set": val, "listed": n}
-    # makers: split into their exact sets
-    for (cat, aname, maker), n in sorted(makers.items(), key=lambda kv: -kv[1])[:40]:
-        mref = refine(token, cat, {aname: maker})
-        DISCOVERY_LOG["makers"].append({"maker": maker, "aspect": aname, "listed": n, "aspects": {
-            a.get("localizedAspectName"): [(v.get("localizedAspectValue"), v.get("matchCount"))
-                                           for v in a.get("aspectValueDistributions", [])][:12]
-            for a in mref.get("aspectDistributions", [])}})
-        for val, m in aspect_counts(mref, "Set")[:6]:
-            if usable(val) and m >= 15 and val.lower() not in candidates:
-                candidates[val.lower()] = {"category": cat, "filters": {aname: maker, "Set": val},
-                                           "maker": maker, "set": val, "listed": m}
+
+# ---------------- sets from listing titles (makers without set names) ----------------
+TITLE_STOP = set("""
+card cards cigarette cigarettes tobacco trade tea gum silk silks single singles pick choose choice
+select your you list free shipping post postage complete full set sets series 1st 2nd 3rd issued issue
+circa approx nice great collectible collectable antique vintage old original genuine authentic rare
+scarce large small size lot lots uk english british england ltd co company inc corp and the of a an
+in on for with by to from or no nos number psa sgc bvg bgs cgc graded raw ex vg nm mt mint near
+excellent good fine poor fair condition back front reverse very type style issues sold each
+""".split())
+GRADE_TOKENS = re.compile(r"^(?:\d+(?:\.\d)?|[a-z]?\d+[a-z]?)$")
+
+
+def title_tokens(title, maker_words):
+    t = title.lower()
+    t = re.sub(r"(#|\bno\.?\s*)\s*\d+[a-z]?", " ", t)
+    words = re.findall(r"[a-z0-9'&]+", t)
     out = []
-    for c in sorted(candidates.values(), key=lambda c: -c["listed"])[:CANDIDATES]:
-        maker, st = c["maker"], c["set"]
-        c["name"] = st if (not maker or maker.split()[0].lower() in st.lower()) else f"{maker} - {st}"
-        out.append(c)
+    for w in words:
+        w = w.strip("'")
+        if (not w or w in TITLE_STOP or w in maker_words or GRADE_TOKENS.match(w)
+                or len(w) < 2):
+            continue
+        out.append(w)
+    return out
+
+
+def cluster_titles(items, maker):
+    """Group a maker's listings into sets by the phrase most titles share
+    (e.g. 'Film Stars', 'Famous Footballers'). Returns [(phrase, items)]."""
+    maker_words = set(re.findall(r"[a-z0-9]+", maker.lower()))
+    grams = []
+    for it in items:
+        tk = title_tokens(it.get("title", ""), maker_words)
+        g = set()
+        for n in (2, 3, 4):
+            for i in range(len(tk) - n + 1):
+                g.add(" ".join(tk[i:i + n]))
+        grams.append(g)
+    remaining = set(range(len(items)))
+    clusters = []
+    while len(clusters) < SETS_PER_MAKER:
+        df = {}
+        for i in remaining:
+            for g in grams[i]:
+                df[g] = df.get(g, 0) + 1
+        if not df:
+            break
+        top = max(df.values())
+        if top < MIN_CLUSTER:
+            break
+        phrase = max((g for g, c in df.items() if c >= 0.8 * top),
+                     key=lambda g: (len(g.split()), df[g]))
+        members = [i for i in remaining if phrase in grams[i]]
+        remaining -= set(members)
+        clusters.append((phrase.title(), [items[i] for i in members]))
+    return clusters
+
+
+def maker_sets(token, maker):
+    """Search one maker's non-sport listings and split them into exact sets."""
+    q = re.sub(r"\b(co|ltd|inc|s\.a|company|corp)\b\.?", "", maker, flags=re.I).strip(" .,")
+    items = []
+    for page in range(MAKER_PAGES):
+        try:
+            r = search(token, q=q, category_ids=NON_SPORT, limit="200", offset=str(page * 200),
+                       filter="buyingOptions:{FIXED_PRICE},priceCurrency:USD")
+        except RuntimeError as e:
+            print(f"    (stopped '{maker}' page {page + 1}: {e})")
+            break
+        batch = r.get("itemSummaries", [])
+        items += batch
+        if len(batch) < 200:
+            break
+    old = []
+    for it in items:
+        ys = [int(y) for y in YEAR_RE.findall(it.get("title", ""))]
+        if ys and min(ys) <= MAX_YEAR:
+            old.append(it)
+    if len(old) < MIN_CLUSTER:
+        print(f"  skip maker {maker}: {len(old)} dated vintage listings")
+        return []
+    out = []
+    for phrase, members in cluster_titles(old, maker):
+        years = sorted(min(int(y) for y in YEAR_RE.findall(m["title"])) for m in members)
+        year = years[len(years) // 2]
+        name = f"{maker} - {phrase}"
+        out.append(({"category": NON_SPORT, "maker": maker, "set": phrase, "name": name,
+                     "year": year, "listed": len(members)}, members))
+        print(f"  {name} (~{year}): {len(members)} listings")
     return out
 
 
@@ -477,8 +558,8 @@ def save_thumbs(report):
 def main():
     token = ebay_token()
     print("Finding sets on eBay...")
-    sets = discover_sets(token)
-    print(f"Tracking {len(sets)} sets")
+    sets, makers = discover_sets(token)
+    print(f"{len(sets)} named sets and {len(makers)} makers to check")
     sets_items = []
     for s in sets:
         if len(sets_items) >= SETS_PER_RUN:
@@ -489,15 +570,22 @@ def main():
             print(f"  skip {s['name']}: not vintage (typical year {year})")
             continue
         s["year"] = year
-        tm = maker_from_titles(items)
-        if tm:
-            s["maker"] = tm
-        elif s["filters"].get("Manufacturer") is None:
-            s["maker"] = ""          # eBay's guess for set-only groups is unreliable
+        s["maker"] = maker_from_titles(items)
         st = s["set"]
         s["name"] = st if (not s["maker"] or s["maker"].split()[0].lower() in st.lower()) else f"{s['maker']} - {st}"
         print(f"  {s['name']} (~{year}): {len(items)} listings")
         sets_items.append((s, items))
+    print("Splitting makers into sets from listing titles...")
+    have = {s["name"].lower() for s, _ in sets_items}
+    maker_found = []
+    for m in makers:
+        for s, items in maker_sets(token, m):
+            if s["name"].lower() not in have:
+                have.add(s["name"].lower())
+                maker_found.append((s, items))
+    maker_found.sort(key=lambda si: -si[0]["listed"])
+    sets_items += maker_found[:MAKER_SETS]
+    print(f"Tracking {len(sets_items)} sets")
     snap = summarize(sets_items)
 
     (DATA_DIR / "history").mkdir(parents=True, exist_ok=True)

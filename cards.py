@@ -98,9 +98,40 @@ def search(token, **params):
 SET_ASPECTS = ("Set", "Manufacturer", "Brand")
 
 
+BAD_VALUES = ("unknown", "does not apply", "n/a", "mixed", "various", "not specified", "none")
+
+
+def usable(val):
+    val = (val or "").strip()
+    return bool(val) and val.lower() not in BAD_VALUES and not GENERIC_SETS.match(val)
+
+
+def aspect_counts(refinement, name):
+    for a in (refinement or {}).get("aspectDistributions", []):
+        if a.get("localizedAspectName") == name:
+            return [(v.get("localizedAspectValue", ""), int(v.get("matchCount", 0)))
+                    for v in a.get("aspectValueDistributions", [])]
+    return []
+
+
+def aspect_filter(cat, filters):
+    return f"categoryId:{cat}," + ",".join(f"{k}:{{{v}}}" for k, v in filters.items())
+
+
+def refine(token, cat, filters):
+    try:
+        r = search(token, category_ids=cat, limit="1", fieldgroups="ASPECT_REFINEMENTS",
+                   aspect_filter=aspect_filter(cat, filters))
+        return r.get("refinement") or {}
+    except RuntimeError as e:
+        print(f"    (refine {filters} skipped: {e})")
+        return {}
+
+
 def discover_sets(token):
-    """Ask eBay which sets are most listed for each broad search."""
-    found = {}   # (category, aspect, value) -> count
+    """Find exact sets (maker + set name). eBay groups many vintage cards only by
+    maker (e.g. 'Carreras'), so each maker is split into its own sets."""
+    sets_found, makers = {}, {}
     for q in BROAD_SEARCHES:
         try:
             r = search(token, q=q, limit="1", fieldgroups="ASPECT_REFINEMENTS,CATEGORY_REFINEMENTS")
@@ -109,28 +140,38 @@ def discover_sets(token):
             continue
         ref = r.get("refinement") or {}
         cat = ref.get("dominantCategoryId")
-        aspects = {a.get("localizedAspectName"): a for a in ref.get("aspectDistributions", [])}
-        name = next((n for n in SET_ASPECTS if n in aspects), None)
-        print(f"  '{q}': {r.get('total', 0)} listings, category {cat}, grouping by {name}")
-        if not (cat and name):
+        if not cat:
             continue
-        for v in aspects[name].get("aspectValueDistributions", []):
-            val = v.get("localizedAspectValue", "")
-            if (not val or val.lower() in ("unknown", "does not apply", "n/a", "mixed", "various")
-                    or GENERIC_SETS.match(val.strip())):
-                continue
-            key = (cat, name, val)
-            found[key] = max(found.get(key, 0), int(v.get("matchCount", 0)))
-    ranked = sorted(found.items(), key=lambda kv: kv[1], reverse=True)
-    sets, seen = [], set()
-    for (cat, aspect, val), n in ranked:
-        if val.lower() in seen:
-            continue
-        seen.add(val.lower())
-        sets.append({"name": val, "category": cat, "aspect": aspect, "listed": n})
-        if len(sets) >= CANDIDATES:
-            break
-    return sets
+        print(f"  '{q}': {r.get('total', 0)} listings, category {cat}")
+        for val, n in aspect_counts(ref, "Set"):
+            if usable(val):
+                k = (cat, val)
+                sets_found[k] = max(sets_found.get(k, 0), n)
+        for name in ("Manufacturer", "Brand"):
+            for val, n in aspect_counts(ref, name):
+                if usable(val):
+                    k = (cat, name, val)
+                    makers[k] = max(makers.get(k, 0), n)
+
+    candidates = {}
+    # sets named directly: look up their maker so the name is complete
+    for (cat, val), n in sorted(sets_found.items(), key=lambda kv: -kv[1])[:CANDIDATES]:
+        top_maker = next((m for m, _ in aspect_counts(refine(token, cat, {"Set": val}), "Manufacturer")
+                          if usable(m)), "")
+        candidates[val.lower()] = {"category": cat, "filters": {"Set": val}, "maker": top_maker,
+                                   "set": val, "listed": n}
+    # makers: split into their exact sets
+    for (cat, aname, maker), n in sorted(makers.items(), key=lambda kv: -kv[1])[:40]:
+        for val, m in aspect_counts(refine(token, cat, {aname: maker}), "Set")[:6]:
+            if usable(val) and m >= 15 and val.lower() not in candidates:
+                candidates[val.lower()] = {"category": cat, "filters": {aname: maker, "Set": val},
+                                           "maker": maker, "set": val, "listed": m}
+    out = []
+    for c in sorted(candidates.values(), key=lambda c: -c["listed"])[:CANDIDATES]:
+        maker, st = c["maker"], c["set"]
+        c["name"] = st if (not maker or maker.split()[0].lower() in st.lower()) else f"{maker} - {st}"
+        out.append(c)
+    return out
 
 
 YEAR_RE = re.compile(r"\b(18[5-9]\d|19\d\d|20[0-2]\d)\b")
@@ -188,7 +229,7 @@ def fetch_set(token, s):
     items = []
     for page in range(PAGES_PER_SET):
         params = {"category_ids": s["category"], "limit": "200", "offset": str(page * 200),
-                  "aspect_filter": f"categoryId:{s['category']},{s['aspect']}:{{{s['name']}}}",
+                  "aspect_filter": aspect_filter(s["category"], s["filters"]),
                   "filter": "buyingOptions:{FIXED_PRICE},priceCurrency:USD"}
         try:
             r = search(token, **params)
@@ -219,7 +260,8 @@ def summarize(sets_items):
         if prices:
             snap["sets"][s["name"]] = {
                 "median": round(statistics.median(prices), 2), "listings": len(prices),
-                "category": s["category"], "year": s.get("year")}
+                "category": s["category"], "year": s.get("year"),
+                "maker": s.get("maker", ""), "set_name": s.get("set", s["name"])}
         for k, rows in cards.items():
             ps = [p for p, _ in rows]
             best = min(rows, key=lambda r: r[0])[1]   # cheapest = the comp a buyer sees first

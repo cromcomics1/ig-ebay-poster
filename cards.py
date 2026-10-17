@@ -128,6 +128,9 @@ def refine(token, cat, filters):
         return {}
 
 
+DISCOVERY_LOG = {"searches": [], "makers": []}
+
+
 def discover_sets(token):
     """Find exact sets (maker + set name). eBay groups many vintage cards only by
     maker (e.g. 'Carreras'), so each maker is split into its own sets."""
@@ -143,6 +146,13 @@ def discover_sets(token):
         if not cat:
             continue
         print(f"  '{q}': {r.get('total', 0)} listings, category {cat}")
+        DISCOVERY_LOG["searches"].append({
+            "q": q, "total": r.get("total"), "category": cat,
+            "categories": [(c.get("categoryName"), c.get("categoryId"), c.get("matchCount"))
+                           for c in ref.get("categoryDistributions", [])][:8],
+            "aspects": {a.get("localizedAspectName"): [(v.get("localizedAspectValue"), v.get("matchCount"))
+                        for v in a.get("aspectValueDistributions", [])][:15]
+                        for a in ref.get("aspectDistributions", [])}})
         for val, n in aspect_counts(ref, "Set"):
             if usable(val):
                 k = (cat, val)
@@ -162,7 +172,12 @@ def discover_sets(token):
                                    "set": val, "listed": n}
     # makers: split into their exact sets
     for (cat, aname, maker), n in sorted(makers.items(), key=lambda kv: -kv[1])[:40]:
-        for val, m in aspect_counts(refine(token, cat, {aname: maker}), "Set")[:6]:
+        mref = refine(token, cat, {aname: maker})
+        DISCOVERY_LOG["makers"].append({"maker": maker, "aspect": aname, "listed": n, "aspects": {
+            a.get("localizedAspectName"): [(v.get("localizedAspectValue"), v.get("matchCount"))
+                                           for v in a.get("aspectValueDistributions", [])][:12]
+            for a in mref.get("aspectDistributions", [])}})
+        for val, m in aspect_counts(mref, "Set")[:6]:
             if usable(val) and m >= 15 and val.lower() not in candidates:
                 candidates[val.lower()] = {"category": cat, "filters": {aname: maker, "Set": val},
                                            "maker": maker, "set": val, "listed": m}
@@ -467,6 +482,7 @@ def main():
         "my_price_check": price_check(mine, snap, set_change),
     }
     save_thumbs(report)
+    (DATA_DIR / "discovery.json").write_text(json.dumps(DISCOVERY_LOG, indent=1))
     (DATA_DIR / "report.json").write_text(json.dumps(report, indent=1))
     print(f"Saved: {len(snap['sets'])} sets, {len(snap['cards'])} cards, "
           f"{len(card_up)} climbing cards, {len(report['my_price_check'])} of my listings checked.")

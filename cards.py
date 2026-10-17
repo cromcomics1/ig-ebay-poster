@@ -56,6 +56,7 @@ MIN_PRICE = 3.0                  # ignore junk listings under this
 MIN_SET_LISTINGS = 8             # sets need this many listings in both weeks
 MIN_CARD_LISTINGS = 2            # a card needs this many listings in both weeks
 TOP_N = 20
+CLIMB_PCT = float(os.environ.get("CLIMB_PCT", "30"))   # a "climber" rose at least this much
 API = "https://api.ebay.com/buy/browse/v1/item_summary/search"
 
 
@@ -266,7 +267,7 @@ def price_check(mine, snap, set_change):
             flag = "priced well below market (same card and grade)"
         elif ratio and ratio > 1.6:
             flag = "priced well above market (same card and grade)"
-        if set_change.get(set_name, 0) >= 10:
+        if set_change.get(set_name, 0) >= CLIMB_PCT:
             flag = (flag + "; " if flag else "") + "set is climbing - good one to post"
         rows.append({"title": title, "url": it.get("itemWebUrl", ""), "image": image_of(it),
                      "my_price": p, "market_median": med, "matched_card": k if market else None,
@@ -313,7 +314,7 @@ def climbers(snap, base):
         o = old["cards"].get(k)
         if o and c["listings"] >= MIN_CARD_LISTINGS and o["listings"] >= MIN_CARD_LISTINGS:
             ch = pct(c["median"], o["median"])
-            if ch and ch > 0:
+            if ch and ch >= CLIMB_PCT:
                 cards.append({**c, "card": k, "was": o["median"], "change_pct": ch})
     cards.sort(key=lambda c: c["change_pct"], reverse=True)
     sets, set_change = [], {}
@@ -322,8 +323,9 @@ def climbers(snap, base):
         if o and s["listings"] >= MIN_SET_LISTINGS and o["listings"] >= MIN_SET_LISTINGS:
             ch = pct(s["median"], o["median"])
             set_change[name] = ch or 0
-            sets.append({"set": name, "median": s["median"], "was": o["median"],
-                         "change_pct": ch, "listings": s["listings"], "was_listings": o["listings"]})
+            if ch and ch >= CLIMB_PCT:
+                sets.append({"set": name, "median": s["median"], "was": o["median"],
+                             "change_pct": ch, "listings": s["listings"], "was_listings": o["listings"]})
     sets.sort(key=lambda s: s["change_pct"] or 0, reverse=True)
     return cards, sets, set_change
 
@@ -344,6 +346,36 @@ def top3_per_set(snap, card_climbers):
         if picks:
             out[name] = picks
     return out
+
+
+# ---------------- thumbnails ----------------
+def save_thumbs(report):
+    """Download small photos for every card shown in the report (cards/img/), so the
+    report page can embed them (the page cannot load eBay images directly)."""
+    import hashlib, shutil
+    img_dir = DATA_DIR / "img"
+    shutil.rmtree(img_dir, ignore_errors=True)
+    img_dir.mkdir(parents=True, exist_ok=True)
+    rows = (report["top_card_climbers"] + report["top_card_climbers_4wk"] + report["my_price_check"]
+            + [c for cs in report["top3_per_set"].values() for c in cs])
+    done, ok = {}, 0
+    for row in rows:
+        url = (row.get("image") or "").replace("s-l500", "s-l225")
+        if not url:
+            continue
+        if url not in done:
+            name = hashlib.sha1(url.encode()).hexdigest()[:16] + ".jpg"
+            try:
+                req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+                with urllib.request.urlopen(req, timeout=30) as r:
+                    (img_dir / name).write_bytes(r.read())
+                done[url] = f"img/{name}"
+                ok += 1
+            except OSError:
+                done[url] = None
+        if done[url]:
+            row["thumb"] = done[url]
+    print(f"Saved {ok} thumbnails")
 
 
 # ---------------- main ----------------
@@ -382,6 +414,7 @@ def main():
         "compared_with_4wk": base28[0] if base28 else None,
         "weeks_of_history": len(hist) + 1,
         "note": "Asking prices (Buy It Now medians), not sold prices.",
+        "climb_threshold_pct": CLIMB_PCT,
         "sets_tracked": [{"set": k, **v} for k, v in sorted(snap["sets"].items(),
                                                             key=lambda kv: -kv[1]["listings"])],
         "top_card_climbers": card_up[:TOP_N],
@@ -391,6 +424,7 @@ def main():
         "top3_per_set": top3_per_set(snap, card_up),
         "my_price_check": price_check(mine, snap, set_change),
     }
+    save_thumbs(report)
     (DATA_DIR / "report.json").write_text(json.dumps(report, indent=1))
     print(f"Saved: {len(snap['sets'])} sets, {len(snap['cards'])} cards, "
           f"{len(card_up)} climbing cards, {len(report['my_price_check'])} of my listings checked.")

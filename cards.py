@@ -34,13 +34,22 @@ DATA_DIR = Path(os.environ.get("CARDS_DIR", "cards"))
 BROAD_SEARCHES = [               # how sets are discovered (no personal watchlist)
     "tobacco card",
     "cigarette card",
+    "tobacco silk",
+    "victorian trade card",
     "antique trade card",
-    "vintage non sport card",
-    "pre war card",
-    "gum card 1930s",
+    "pre war non sport card",
+    "1930s gum card",
+    "1940s non sport card",
     "1950s non sport card",
     "1960s non sport card",
+    "1970s non sport card",
+    "exhibit arcade card",
 ]
+MAX_YEAR = int(os.environ.get("CARD_MAX_YEAR", "1979"))   # vintage cut-off
+CANDIDATES = 150                 # sets checked for era before keeping SETS_PER_RUN
+GENERIC_SETS = re.compile(r"^(not specified|unbranded|topps|bowman|fleer|donruss|marvel|dc|"
+                          r"star wars|series \d+|mini cards|base set|single|singles|other|"
+                          r"trading cards?|non.?sport)$", re.I)
 SETS_PER_RUN = int(os.environ.get("CARD_SETS", "40"))   # most-listed sets to track
 PAGES_PER_SET = 2                # 200 listings per page
 MIN_PRICE = 3.0                  # ignore junk listings under this
@@ -106,7 +115,8 @@ def discover_sets(token):
             continue
         for v in aspects[name].get("aspectValueDistributions", []):
             val = v.get("localizedAspectValue", "")
-            if not val or val.lower() in ("unknown", "does not apply", "n/a", "mixed", "various"):
+            if (not val or val.lower() in ("unknown", "does not apply", "n/a", "mixed", "various")
+                    or GENERIC_SETS.match(val.strip())):
                 continue
             key = (cat, name, val)
             found[key] = max(found.get(key, 0), int(v.get("matchCount", 0)))
@@ -117,9 +127,25 @@ def discover_sets(token):
             continue
         seen.add(val.lower())
         sets.append({"name": val, "category": cat, "aspect": aspect, "listed": n})
-        if len(sets) >= SETS_PER_RUN:
+        if len(sets) >= CANDIDATES:
             break
     return sets
+
+
+YEAR_RE = re.compile(r"\b(18[5-9]\d|19\d\d|20[0-2]\d)\b")
+
+
+def vintage_share(items):
+    """Share of listings whose title year is <= MAX_YEAR (None if too few dated titles)."""
+    years = []
+    for it in items:
+        ys = [int(y) for y in YEAR_RE.findall(it.get("title", ""))]
+        if ys:
+            years.append(min(ys))
+    if len(years) < 5:
+        return None, None
+    old = sum(1 for y in years if y <= MAX_YEAR)
+    return old / len(years), int(statistics.median(years))
 
 
 # ---------------- listings ----------------
@@ -192,7 +218,7 @@ def summarize(sets_items):
         if prices:
             snap["sets"][s["name"]] = {
                 "median": round(statistics.median(prices), 2), "listings": len(prices),
-                "category": s["category"]}
+                "category": s["category"], "year": s.get("year")}
         for k, rows in cards.items():
             ps = [p for p, _ in rows]
             best = min(rows, key=lambda r: r[0])[1]   # cheapest = the comp a buyer sees first
@@ -231,19 +257,21 @@ def price_check(mine, snap, set_change):
             continue
         k = card_key(set_name, title)
         market = snap["cards"].get(k) if k else None
-        basis = "card" if market and market["listings"] >= MIN_CARD_LISTINGS else "set"
-        med = market["median"] if basis == "card" else snap["sets"][set_name]["median"]
+        if not (market and market["listings"] >= 3):
+            market = None
+        med = market["median"] if market else None
         ratio = p / med if med else None
         flag = ""
         if ratio and ratio < 0.7:
-            flag = "priced well below market"
+            flag = "priced well below market (same card and grade)"
         elif ratio and ratio > 1.6:
-            flag = "priced well above market"
+            flag = "priced well above market (same card and grade)"
         if set_change.get(set_name, 0) >= 10:
             flag = (flag + "; " if flag else "") + "set is climbing - good one to post"
         rows.append({"title": title, "url": it.get("itemWebUrl", ""), "image": image_of(it),
-                     "my_price": p, "market_median": med, "basis": basis,
+                     "my_price": p, "market_median": med, "matched_card": k if market else None,
                      "vs_market_pct": round((ratio - 1) * 100) if ratio else None, "flag": flag})
+    rows = [r for r in rows if r["flag"] or r["market_median"]]
     rows.sort(key=lambda r: (r["flag"] == "", r["vs_market_pct"] or 0))
     return rows
 
@@ -326,8 +354,15 @@ def main():
     print(f"Tracking {len(sets)} sets")
     sets_items = []
     for s in sets:
+        if len(sets_items) >= SETS_PER_RUN:
+            break
         items = fetch_set(token, s)
-        print(f"  {s['name']}: {len(items)} listings")
+        share, year = vintage_share(items)
+        if share is None or share < 0.6:
+            print(f"  skip {s['name']}: not vintage (typical year {year})")
+            continue
+        s["year"] = year
+        print(f"  {s['name']} (~{year}): {len(items)} listings")
         sets_items.append((s, items))
     snap = summarize(sets_items)
 

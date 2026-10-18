@@ -48,7 +48,7 @@ class Skip(Exception):
     """This listing can't be processed, but it is safe to continue with the rest."""
 API = "https://api.ebay.com/ws/api.dll"
 PROPOSAL_COLS = ["approve", "item_id", "price", "new_price", "ad_rate", "age_days", "old_title",
-                 "new_title", "add_specifics", "condition_note", "link"]
+                 "new_title", "add_specifics", "condition_note", "link", "price_ok"]
 MAX_AD_RATE = 20.0          # typo guard: refuse ad rates above this %
 CAMPAIGN_NAME = "Refreshed listings"
 LOG_COLS = ["date", "old_item_id", "new_item_id", "status", "new_title", "new_price", "ad_rate", "fees", "message", "source"]
@@ -644,9 +644,11 @@ def apply(auto_rows=None, target=None):
             entry["new_title"] = title
             old_price = float(item["xml"].findtext("e:StartPrice", "0", NS) or 0)
             new_price = money(r.get("new_price"))
-            if new_price and old_price and not (0.5 * old_price <= new_price <= 3 * old_price):
+            price_ok = (r.get("price_ok") or "").strip().lower() in ("yes", "y", "x", "ok")
+            if new_price and old_price and not price_ok and not (0.5 * old_price <= new_price <= 3 * old_price):
                 raise Skip(f"new price ${new_price:.2f} is far from the current ${old_price:.2f}; "
-                           "check for a typo (allowed range: half to triple)")
+                           "check for a typo (allowed range: half to triple; "
+                           "put yes in the plan's price_ok column to allow it)")
             rate = money(r.get("ad_rate"))
             if rate and not (2 <= rate <= MAX_AD_RATE):
                 raise Skip(f"ad rate {rate}% is outside the allowed 2% to {MAX_AD_RATE:.0f}%")

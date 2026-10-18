@@ -740,6 +740,9 @@ def apply(auto_rows=None, target=None):
 
     if not DRY_RUN:
         save_branch_files({"log.csv": to_csv(log + new_log, LOG_COLS)}, f"Sell-similar log: {len(new_log)} entries")
+    elif source == "manual":
+        # keep the practice results on the branch so they can be reviewed without the Actions log
+        save_branch_files({"practice.csv": to_csv(new_log, LOG_COLS)}, f"Practice run: {len(new_log)} entries")
     ok = sum(1 for e in new_log if e["status"] == "relisted")
     passed = sum(1 for e in new_log if e["status"] == "dry-run")
     skipped = sum(1 for e in new_log if e["status"] in ("failed", "skipped"))

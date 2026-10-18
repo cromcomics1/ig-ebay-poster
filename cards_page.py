@@ -67,6 +67,42 @@ pc_html = ('<p class="empty">None of your listings had at least 3 matching listi
 web = [tuple(w) for w in json.loads(Path(sys.argv[3]).read_text())] if len(sys.argv) > 3 else []
 web_html = '<p class="empty">No web notes this week.</p>' if not web else "<ul class='web'>" + "".join(f'<li>{e(t)} <a href="{u}" target="_blank" rel="noopener">{e(s)}</a></li>' for t, s, u in web) + "</ul>"
 
+
+# Run-now bar: owner-only button that starts the "Card climbers weekly report" scheduled task
+# through the Claude Code Remote connector. Needs the page published with capabilities
+# {"user":{}, "mcp":{"servers":[{"server":"Claude Code Remote","tools":["fire_trigger"]}]}}.
+RUN_TRIGGER = "trig_01QAVd69yxc9QFUE9cZBkw8e"
+RUN_CSS = """
+.runbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin-top:14px}
+.runbtn{font:inherit;font-weight:700;cursor:pointer;border:1px solid var(--accent);background:var(--accent);color:var(--page);border-radius:6px;padding:7px 14px}
+.runbtn:disabled{opacity:.55;cursor:default}
+.runmsg{font-size:.85rem;color:var(--muted);min-width:0;flex:1}
+.runmsg.err{color:#b23a3a}
+"""
+RUN_HTML = """<div class="runbar" id="runbar" hidden><button type="button" class="runbtn" id="runbtn">Run report now</button><span class="runmsg" id="runmsg">Rebuilds this page with the latest prices and fresh web notes. New prices are collected Sundays at 7 am.</span></div>
+<script>
+(async()=>{
+  const bar=document.getElementById("runbar"),btn=document.getElementById("runbtn"),msg=document.getElementById("runmsg");
+  const u=await window.claude?.use?.("user");let owner=false;try{owner=u?await u.isOwner():false}catch(_){}
+  if(!owner)return;
+  const mcp=await window.claude.use("mcp");if(!mcp)return;
+  bar.hidden=false;
+  const copy=e=>({approval_required:"Needs your approval. Tap again and choose Allow.",
+    server_not_connected:"Connect Claude Code Remote in claude.ai Settings, Connectors.",
+    needs_reauth:"Reconnect Claude Code Remote in claude.ai Settings, Connectors.",
+    not_in_manifest:"Running is turned off for this page in its Permissions menu.",
+    server_unavailable:"Couldn't confirm it started. Check your notifications before trying again.",
+    upstream_error:"Couldn't confirm it started. Check your notifications before trying again."})[e&&e.code]||"Couldn't start it here. Try from the Project Board.";
+  btn.addEventListener("click",async()=>{
+    btn.disabled=true;btn.textContent="Starting\\u2026";msg.classList.remove("err");
+    try{await mcp.callTool("Claude Code Remote","fire_trigger",{trigger_id:"TRIG"});
+      msg.textContent="Started "+new Date().toLocaleTimeString([], {hour:"numeric",minute:"2-digit"})+". This page refreshes in a few minutes, and the top climbers arrive as a phone notification.";
+      btn.textContent="Started";setTimeout(()=>{btn.disabled=false;btn.textContent="Run report now"},60000);}
+    catch(e){msg.textContent=copy(e);msg.classList.add("err");btn.disabled=false;btn.textContent="Run report now";}
+  });
+})();
+</script>""".replace("TRIG", RUN_TRIGGER)
+
 page = f'''<title>Card Climbers</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -132,12 +168,14 @@ th{{font-weight:500;color:var(--muted);font-size:.78rem;text-transform:uppercase
 a{{color:var(--accent)}}
 :focus-visible{{outline:2px solid var(--accent);outline-offset:2px}}
 footer{{color:var(--muted);font-size:.85rem;border-top:1px solid var(--rule);padding-top:14px;max-width:72ch}}
+{RUN_CSS}
 </style>
 <div class="wrap">
 <header>
   <h1>Card Climbers</h1>
   <p class="lede">Weekly price watch for vintage, antique and tobacco cards on eBay, for cromcomicscollectibles. A climber is a card or set whose median asking price rose {thr}% or more.</p>
   <div class="strip"><span>Run <b>{gen:%b %d, %Y}</b></span><span>Sets tracked <b>{len(sets)}</b></span><span>Compared with <b>{r["compared_with"] or "no earlier week yet"}</b></span><span>Threshold <b>+{thr}%</b></span></div>
+  {RUN_HTML}
 </header>
 {"<p class='note'>This is the first week of data, so there's nothing to compare against yet. Climbers start with the Sunday, October 25 run, the first one a full week after this data. For now, each set shows its three highest-priced cards.</p>" if not r["compared_with"] else ""}
 <section><h2>Top climbing cards</h2><p class="sec-sub">Up to 20 cards, each with at least 2 listings in both weeks.</p>{climbers_html()}</section>

@@ -7,7 +7,12 @@ on:
     inputs:
       queries:
         description: "Search words, comma-separated (e.g. nasa sticker, space patch)"
-        required: true
+        required: false
+        default: ""
+      items:
+        description: "Or item numbers, comma-separated"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -31,3 +36,4 @@ jobs:
           EBAY_APP_ID: ${{ secrets.EBAY_APP_ID }}
           EBAY_CERT_ID: ${{ secrets.EBAY_CERT_ID }}
           QUERIES: ${{ inputs.queries }}
+          ITEMS: ${{ inputs.items }}

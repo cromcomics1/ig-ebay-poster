@@ -1,0 +1,33 @@
+name: Look up listings
+
+# Read-only search of the store. Results land in lookup.csv on the 'lookup-results' branch.
+
+on:
+  workflow_dispatch:
+    inputs:
+      queries:
+        description: "Search words, comma-separated (e.g. nasa sticker, space patch)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  lookup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Git identity
+        run: |
+          git config user.name "ig-poster-bot"
+          git config user.email "ig-poster-bot@users.noreply.github.com"
+      - name: Look up
+        run: python lookup.py
+        env:
+          EBAY_APP_ID: ${{ secrets.EBAY_APP_ID }}
+          EBAY_CERT_ID: ${{ secrets.EBAY_CERT_ID }}
+          QUERIES: ${{ inputs.queries }}

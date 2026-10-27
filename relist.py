@@ -20,6 +20,7 @@ Files live on the 'relist-data' branch so they never collide with the poster.
 Safety: max 50 per run, 1,500 per month, stops at the first failure or fee.
 """
 
+import copy
 import csv
 import io
 import math
@@ -48,7 +49,7 @@ class Skip(Exception):
     """This listing can't be processed, but it is safe to continue with the rest."""
 API = "https://api.ebay.com/ws/api.dll"
 PROPOSAL_COLS = ["approve", "item_id", "price", "new_price", "ad_rate", "age_days", "old_title",
-                 "new_title", "add_specifics", "condition_note", "link", "price_ok"]
+                 "new_title", "add_specifics", "condition_note", "link", "price_ok", "new_shipping"]
 MAX_AD_RATE = 20.0          # typo guard: refuse ad rates above this %
 CAMPAIGN_NAME = "Refreshed listings"
 LOG_COLS = ["date", "old_item_id", "new_item_id", "status", "new_title", "new_price", "ad_rate", "fees", "message", "source"]
@@ -337,7 +338,7 @@ COPY_AS_IS = ("Description", "ConditionID", "ConditionDescriptors", "Country", "
               "ShipToLocations", "SKU", "Site", "PrivateListing", "ItemCompatibilityList", "SubTitle")
 
 
-def build_new_item(item, title, specifics, note, uuid, new_price=None):
+def build_new_item(item, title, specifics, note, uuid, new_price=None, new_shipping=None):
     it = item["xml"]
     find = lambda path: it.find(path, NS)
     x = [f"<UUID>{uuid}</UUID>", f"<Title>{escape(title)}</Title>", "<ListingDuration>GTC</ListingDuration>",
@@ -377,9 +378,23 @@ def build_new_item(item, title, specifics, note, uuid, new_price=None):
             if pid:
                 p += f"<{kind}><{idtag}>{pid}</{idtag}></{kind}>"
         x.append(p + "</SellerProfiles>")
+        if new_shipping is not None:  # keep the shipping policy, override its first domestic service cost
+            x.append("<ShippingServiceCostOverrideList><ShippingServiceCostOverride>"
+                     "<ShippingServicePriority>1</ShippingServicePriority>"
+                     "<ShippingServiceType>Domestic</ShippingServiceType>"
+                     f'<ShippingServiceCost currencyID="{cur}">{new_shipping:.2f}</ShippingServiceCost>'
+                     f'<ShippingServiceAdditionalCost currencyID="{cur}">0.00</ShippingServiceAdditionalCost>'
+                     "</ShippingServiceCostOverride></ShippingServiceCostOverrideList>")
     else:  # no business policies: copy the shipping and return settings directly
         ship = find("e:ShippingDetails")
         if ship is not None:
+            if new_shipping is not None:
+                ship = copy.deepcopy(ship)
+                opt = ship.find("e:ShippingServiceOptions", NS)
+                cost = opt.find("e:ShippingServiceCost", NS) if opt is not None else None
+                if cost is None:
+                    raise Skip("can't find the shipping cost on the old listing to change it")
+                cost.text = f"{new_shipping:.2f}"
             x.append(ser(ship, drop=SHIPPING_DROP))
         ret = find("e:ReturnPolicy")
         if ret is not None:
@@ -654,7 +669,13 @@ def apply(auto_rows=None, target=None):
                 raise Skip(f"ad rate {rate}% is outside the allowed 2% to {MAX_AD_RATE:.0f}%")
             entry["new_price"] = f"{new_price:.2f}" if new_price else ""
             uuid = os.urandom(16).hex().upper()
-            new_item = build_new_item(item, title, item["specifics"] + added, note, uuid, new_price)
+            new_ship = money(r.get("new_shipping"))
+            if (r.get("new_shipping") or "").strip() in ("0", "0.00", "$0"):
+                new_ship = 0.0
+            if new_ship is not None and not (0 <= new_ship <= 100):
+                raise Skip(f"new shipping ${new_ship:.2f} looks wrong (allowed $0 to $100)")
+            new_item = build_new_item(item, title, item["specifics"] + added, note, uuid, new_price,
+                                      new_ship if (r.get("new_shipping") or "").strip() else None)
 
             print(f"   title: {item['title']}")
             if title != item["title"]:
@@ -664,6 +685,8 @@ def apply(auto_rows=None, target=None):
                 print(f"   condition note: {note}")
             if new_price:
                 print(f"   price: ${old_price:.2f}  ->  ${new_price:.2f}")
+            if (r.get("new_shipping") or "").strip():
+                print(f"   shipping: ${new_ship:.2f}")
             if rate:
                 print(f"   Promoted Listings ad rate: {rate}%")
                 if marketing is None:

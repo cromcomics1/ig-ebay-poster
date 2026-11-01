@@ -1,0 +1,6470 @@
+{
+ "searches": [
+  {
+   "q": "tobacco card",
+   "total": 127930,
+   "category": "182982",
+   "aspects": {
+    "Graded": [
+     [
+      "No",
+      95706
+     ],
+     [
+      "Yes",
+      5110
+     ],
+     [
+      "Not Specified",
+      32700
+     ]
+    ],
+    "Franchise": [
+     [
+      "Marvel (MCU)",
+      279
+     ],
+     [
+      "Star Wars",
+      1581
+     ],
+     [
+      "History",
+      8655
+     ],
+     [
+      "Film & TV Stars",
+      6309
+     ],
+     [
+      "Garbage Pail Kids",
+      93
+     ],
+     [
+      "Disney",
+      295
+     ],
+     [
+      "Hollywood",
+      603
+     ],
+     [
+      "Arthur",
+      459
+     ],
+     [
+      "Heroes",
+      407
+     ],
+     [
+      "Cars",
+      396
+     ],
+     [
+      "Charmed",
+      222
+     ],
+     [
+      "US Presidents",
+      195
+     ],
+     [
+      "Space",
+      170
+     ],
+     [
+      "Maisy",
+      160
+     ],
+     [
+      "Dutch Gum",
+      152
+     ]
+    ],
+    "Year Manufactured": [
+     [
+      "1977",
+      135
+     ],
+     [
+      "1934",
+      6438
+     ],
+     [
+      "1936",
+      7277
+     ],
+     [
+      "2022",
+      1461
+     ],
+     [
+      "1935",
+      5291
+     ],
+     [
+      "1938",
+      6463
+     ],
+     [
+      "1910",
+      6156
+     ],
+     [
+      "1939",
+      5701
+     ],
+     [
+      "1937",
+      5549
+     ],
+     [
+      "1992",
+      122
+     ],
+     [
+      "1930",
+      4384
+     ],
+     [
+      "1962",
+      139
+     ],
+     [
+      "1966",
+      113
+     ],
+     [
+      "1940",
+      2359
+     ],
+     [
+      "1924",
+      3328
+     ]
+    ],
+    "Manufacturer": [
+     [
+      "Topps",
+      2191
+     ],
+     [
+      "Imperial Tobacco Co.",
+      25185
+     ],
+     [
+      "Wills",
+      13227
+     ],
+     [
+      "Marvel",
+      220
+     ],
+     [
+      "Disney",
+      120
+     ],
+     [
+      "American Tobacco Company",
+      5824
+     ],
+     [
+      "Gallaher",
+      5784
+     ],
+     [
+      "Upper Deck",
+      72
+     ],
+     [
+      "Godfrey Phillips",
+      3356
+     ],
+     [
+      "Panini",
+      158
+     ],
+     [
+      "Leaf",
+      1796
+     ],
+     [
+      "Brown & Williamson Tobacco",
+      1711
+     ],
+     [
+      "Carreras Tobacco Company",
+      1426
+     ],
+     [
+      "Garb\u00e1ty",
+      1415
+     ],
+     [
+      "Brooke Bond",
+      953
+     ]
+    ],
+    "Features": [
+     [
+      "Serial Numbered",
+      99
+     ],
+     [
+      "Base Set",
+      8281
+     ],
+     [
+      "Sketch",
+      174
+     ],
+     [
+      "Insert",
+      9521
+     ],
+     [
+      "1st Edition",
+      1892
+     ],
+     [
+      "Costume",
+      425
+     ],
+     [
+      "Sticker",
+      638
+     ],
+     [
+      "Chase",
+      235
+     ],
+     [
+      "Exclusive",
+      479
+     ],
+     [
+      "Limited Edition",
+      334
+     ],
+     [
+      "Promo",
+      97
+     ],
+     [
+      "Short Print",
+      577
+     ],
+     [
+      "Collectors Edition",
+      502
+     ],
+     [
+      "Embossed",
+      471
+     ],
+     [
+      "Stamped",
+      209
+     ]
+    ],
+    "Character": [
+     [
+      "Darth Vader",
+      72
+     ],
+     [
+      "Luke Skywalker",
+      76
+     ],
+     [
+      "Will",
+      2416
+     ],
+     [
+      "Ash",
+      377
+     ],
+     [
+      "Burne",
+      560
+     ],
+     [
+      "Jessica",
+      464
+     ],
+     [
+      "John",
+      418
+     ],
+     [
+      "Allen",
+      399
+     ],
+     [
+      "Shade",
+      333
+     ],
+     [
+      "Ashley",
+      316
+     ],
+     [
+      "Jennifer",
+      288
+     ],
+     [
+      "Belle",
+      266
+     ],
+     [
+      "Anna",
+      261
+     ],
+     [
+      "Michelle",
+      261
+     ],
+     [
+      "Emily",
+      257
+     ]
+    ],
+    "Card Condition": [
+     [
+      "Excellent",
+      47097
+     ],
+     [
+      "Very Good",
+      25061
+     ],
+     [
+      "Near Mint or Better",
+      11658
+     ],
+     [
+      "Poor",
+      10068
+     ],
+     [
+      "Not Specified",
+      39807
+     ]
+    ],
+    "Language": [
+     [
+      "English",
+      28207
+     ],
+     [
+      "German",
+      1914
+     ],
+     [
+      "Spanish",
+      572
+     ],
+     [
+      "Irish",
+      527
+     ],
+     [
+      "Turkish",
+      352
+     ],
+     [
+      "French",
+      342
+     ],
+     [
+      "Dutch",
+      326
+     ],
+     [
+      "Swedish",
+      256
+     ],
+     [
+      "Japanese",
+      144
+     ],
+     [
+      "Chinese",
+      105
+     ],
+     [
+      "Italian",
+      72
+     ],
+     [
+      "Russian",
+      62
+     ],
+     [
+      "Welsh",
+      52
+     ],
+     [
+      "Greek",
+      33
+     ],
+     [
+      "Danish",
+      32
+     ]
+    ],
+    "Material": [
+     [
+      "Card Stock",
+      21037
+     ],
+     [
+      "Paper",
+      2607
+     ],
+     [
+      "Paperboard",
+      296
+     ],
+     [
+      "Plastic",
+      38
+     ],
+     [
+      "Wood",
+      26
+     ],
+     [
+      "Stone",
+      24
+     ],
+     [
+      "Metal",
+      15
+     ],
+     [
+      "Aluminum",
+      1
+     ],
+     [
+      "Cotton",
+      1
+     ],
+     [
+      "Silk",
+      1
+     ],
+     [
+      "Not Specified",
+      110101
+     ]
+    ],
+    "Autographed": [
+     [
+      "No",
+      25709
+     ],
+     [
+      "Yes",
+      221
+     ],
+     [
+      "Not Specified",
+      107555
+     ]
+    ],
+    "Vintage": [
+     [
+      "Yes",
+      40929
+     ],
+     [
+      "No",
+      1529
+     ],
+     [
+      "Not Specified",
+      91029
+     ]
+    ],
+    "Card Size": [
+     [
+      "Tobacco",
+      92894
+     ],
+     [
+      "Standard",
+      840
+     ],
+     [
+      "Oversized",
+      122
+     ],
+     [
+      "Booklet",
+      35
+     ],
+     [
+      "Tall",
+      35
+     ],
+     [
+      "Bowman",
+      9
+     ],
+     [
+      "Japanese",
+      2
+     ],
+     [
+      "Widevision",
+      1
+     ],
+     [
+      "Not Specified",
+      39573
+     ]
+    ],
+    "Original/Licensed Reprint": [
+     [
+      "Original",
+      84057
+     ],
+     [
+      "Licensed Reprint",
+      90
+     ],
+     [
+      "Not Specified",
+      49340
+     ]
+    ],
+    "TV Show": [
+     [
+      "Star",
+      13660
+     ],
+     [
+      "Pok\u00e9mon",
+      53
+     ],
+     [
+      "Revenge",
+      47
+     ],
+     [
+      "Arrow",
+      46
+     ],
+     [
+      "The Mandalorian",
+      44
+     ],
+     [
+      "Downton Abbey",
+      39
+     ],
+     [
+      "Spider-Man",
+      38
+     ],
+     [
+      "Star Wars: Clone Wars",
+      31
+     ],
+     [
+      "Star Wars: Rebels",
+      31
+     ],
+     [
+      "Charlie's Angels",
+      27
+     ],
+     [
+      "Combat!",
+      24
+     ],
+     [
+      "UFO",
+      24
+     ],
+     [
+      "Hook",
+      23
+     ],
+     [
+      "Star Wars: Droids",
+      16
+     ],
+     [
+      "Angel",
+      13
+     ]
+    ]
+   }
+  },
+  {
+   "q": "cigarette card",
+   "total": 75457,
+   "category": "182982",
+   "aspects": {
+    "Franchise": [
+     [
+      "Star Wars",
+      85
+     ],
+     [
+      "History",
+      3899
+     ],
+     [
+      "Film & TV Stars",
+      3147
+     ],
+     [
+      "Disney",
+      50
+     ],
+     [
+      "Wacky Packages",
+      508
+     ],
+     [
+      "Hollywood",
+      329
+     ],
+     [
+      "Cars",
+      314
+     ],
+     [
+      "The X-Files",
+      179
+     ],
+     [
+      "Heroes",
+      163
+     ],
+     [
+      "Maisy",
+      148
+     ],
+     [
+      ".Hack//",
+      142
+     ],
+     [
+      "Arthur",
+      118
+     ],
+     [
+      "American Girl",
+      87
+     ],
+     [
+      "Charmed",
+      64
+     ],
+     [
+      "US Presidents",
+      59
+     ]
+    ],
+    "Year Manufactured": [
+     [
+      "1995",
+      55
+     ],
+     [
+      "1934",
+      3210
+     ],
+     [
+      "2022",
+      89
+     ],
+     [
+      "1992",
+      70
+     ],
+     [
+      "1990",
+      40
+     ],
+     [
+      "1940",
+      2399
+     ],
+     [
+      "1937",
+      3072
+     ],
+     [
+      "1936",
+      2832
+     ],
+     [
+      "1935",
+      2018
+     ],
+     [
+      "1930",
+      2810
+     ],
+     [
+      "1910",
+      2495
+     ],
+     [
+      "1962",
+      102
+     ],
+     [
+      "1989",
+      44
+     ],
+     [
+      "1938",
+      1948
+     ],
+     [
+      "1939",
+      1850
+     ]
+    ],
+    "Manufacturer": [
+     [
+      "Topps",
+      723
+     ],
+     [
+      "Wills",
+      8279
+     ],
+     [
+      "Disney",
+      100
+     ],
+     [
+      "Upper Deck",
+      155
+     ],
+     [
+      "Imperial Tobacco Co.",
+      2013
+     ],
+     [
+      "Gallaher",
+      1904
+     ],
+     [
+      "Leaf",
+      1658
+     ],
+     [
+      "Brown & Williamson Tobacco",
+      1519
+     ],
+     [
+      "Garb\u00e1ty",
+      1235
+     ],
+     [
+      "Godfrey Phillips",
+      1083
+     ],
+     [
+      "INKWORKS",
+      46
+     ],
+     [
+      "American Tobacco Company",
+      809
+     ],
+     [
+      "Massary Zigarettenfabrik",
+      642
+     ],
+     [
+      "Eckstein-Halpaus",
+      588
+     ],
+     [
+      "Carreras Tobacco Company",
+      545
+     ]
+    ],
+    "Features": [
+     [
+      "Base Set",
+      1703
+     ],
+     [
+      "Sketch",
+      83
+     ],
+     [
+      "1st Edition",
+      748
+     ],
+     [
+      "Insert",
+      2822
+     ],
+     [
+      "Costume",
+      255
+     ],
+     [
+      "Sticker",
+      234
+     ],
+     [
+      "One of One",
+      54
+     ],
+     [
+      "Embossed",
+      1040
+     ],
+     [
+      "Collectors Edition",
+      155
+     ],
+     [
+      "Stamped",
+      97
+     ],
+     [
+      "Framed",
+      76
+     ],
+     [
+      "Checklist",
+      52
+     ],
+     [
+      "Limited Edition",
+      27
+     ],
+     [
+      "Puzzle",
+      26
+     ],
+     [
+      "Promo",
+      25
+     ]
+    ],
+    "Character": [
+     [
+      "Will",
+      5072
+     ],
+     [
+      "John",
+      1561
+     ],
+     [
+      "Ash",
+      280
+     ],
+     [
+      "Brand",
+      59
+     ],
+     [
+      "Burne",
+      543
+     ],
+     [
+      "Jessica",
+      436
+     ],
+     [
+      "Carly",
+      324
+     ],
+     [
+      "Shade",
+      317
+     ],
+     [
+      "Ashley",
+      297
+     ],
+     [
+      "Victoria",
+      273
+     ],
+     [
+      "Belle",
+      267
+     ],
+     [
+      "Jennifer",
+      254
+     ],
+     [
+      "Anna",
+      251
+     ],
+     [
+      "Michelle",
+      245
+     ],
+     [
+      "Emily",
+      224
+     ]
+    ],
+    "Card Condition": [
+     [
+      "Very Good",
+      19588
+     ],
+     [
+      "Excellent",
+      18046
+     ],
+     [
+      "Near Mint or Better",
+      5462
+     ],
+     [
+      "Poor",
+      2708
+     ],
+     [
+      "Not Specified",
+      33818
+     ]
+    ],
+    "Card Size": [
+     [
+      "Tobacco",
+      22931
+     ],
+     [
+      "Standard",
+      1382
+     ],
+     [
+      "Oversized",
+      57
+     ],
+     [
+      "Tall",
+      12
+     ],
+     [
+      "Booklet",
+      9
+     ],
+     [
+      "Bowman",
+      8
+     ],
+     [
+      "Japanese",
+      2
+     ],
+     [
+      "Widevision",
+      2
+     ],
+     [
+      "Not Specified",
+      55108
+     ]
+    ],
+    "Language": [
+     [
+      "English",
+      12614
+     ],
+     [
+      "German",
+      1459
+     ],
+     [
+      "Irish",
+      284
+     ],
+     [
+      "Turkish",
+      247
+     ],
+     [
+      "French",
+      152
+     ],
+     [
+      "Spanish",
+      114
+     ],
+     [
+      "Hebrew",
+      76
+     ],
+     [
+      "Welsh",
+      52
+     ],
+     [
+      "Dutch",
+      49
+     ],
+     [
+      "Chinese",
+      48
+     ],
+     [
+      "Danish",
+      38
+     ],
+     [
+      "Japanese",
+      26
+     ],
+     [
+      "Italian",
+      24
+     ],
+     [
+      "Thai",
+      23
+     ],
+     [
+      "Polish",
+      19
+     ]
+    ],
+    "Material": [
+     [
+      "Card Stock",
+      10374
+     ],
+     [
+      "Paper",
+      1230
+     ],
+     [
+      "Paperboard",
+      72
+     ],
+     [
+      "Wood",
+      23
+     ],
+     [
+      "Stone",
+      21
+     ],
+     [
+      "Plastic",
+      8
+     ],
+     [
+      "Cardboard",
+      6
+     ],
+     [
+      "Metal",
+      5
+     ],
+     [
+      "Leather",
+      2
+     ],
+     [
+      "Silk",
+      2
+     ],
+     [
+      "Cotton",
+      1
+     ],
+     [
+      "Not Specified",
+      68052
+     ]
+    ],
+    "Graded": [
+     [
+      "No",
+      46774
+     ],
+     [
+      "Yes",
+      1510
+     ],
+     [
+      "Not Specified",
+      31235
+     ]
+    ],
+    "Autographed": [
+     [
+      "No",
+      11100
+     ],
+     [
+      "Yes",
+      79
+     ],
+     [
+      "Not Specified",
+      68329
+     ]
+    ],
+    "Vintage": [
+     [
+      "Yes",
+      23412
+     ],
+     [
+      "No",
+      171
+     ],
+     [
+      "Not Specified",
+      55726
+     ]
+    ],
+    "Original/Licensed Reprint": [
+     [
+      "Original",
+      27033
+     ],
+     [
+      "Licensed Reprint",
+      13
+     ],
+     [
+      "Not Specified",
+      52464
+     ]
+    ],
+    "TV Show": [
+     [
+      "Star",
+      8102
+     ],
+     [
+      "The X-Files",
+      125
+     ],
+     [
+      "Downton Abbey",
+      78
+     ],
+     [
+      "Revenge",
+      37
+     ],
+     [
+      "Combat!",
+      28
+     ],
+     [
+      "Arrow",
+      21
+     ],
+     [
+      "Hook",
+      21
+     ],
+     [
+      "UFO",
+      12
+     ],
+     [
+      "Castle",
+      7
+     ],
+     [
+      "Fringe",
+      6
+     ],
+     [
+      "Breaking Bad",
+      4
+     ],
+     [
+      "Psych",
+      4
+     ],
+     [
+      "Star Trek: Voyager",
+      3
+     ],
+     [
+      "The Prisoner",
+      3
+     ],
+     [
+      "Angel",
+      2
+     ]
+    ]
+   }
+  },
+  {
+   "q": "tobacco silk",
+   "total": 1253,
+   "category": "182982",
+   "aspects": {
+    "Franchise": [
+     [
+      "History",
+      228
+     ],
+     [
+      "US Presidents",
+      47
+     ],
+     [
+      "American Girl",
+      1
+     ],
+     [
+      "Arthur",
+      1
+     ],
+     [
+      "Not Specified",
+      976
+     ]
+    ],
+    "Year Manufactured": [
+     [
+      "1910",
+      616
+     ],
+     [
+      "1915",
+      122
+     ],
+     [
+      "1934",
+      65
+     ],
+     [
+      "1912",
+      65
+     ],
+     [
+      "1913",
+      61
+     ],
+     [
+      "1914",
+      61
+     ],
+     [
+      "1911",
+      54
+     ],
+     [
+      "1909",
+      32
+     ],
+     [
+      "1925",
+      29
+     ],
+     [
+      "1916",
+      25
+     ],
+     [
+      "1920",
+      23
+     ],
+     [
+      "1930",
+      22
+     ],
+     [
+      "1928",
+      15
+     ],
+     [
+      "1918",
+      12
+     ],
+     [
+      "1917",
+      7
+     ]
+    ],
+    "Manufacturer": [
+     [
+      "American Tobacco Company",
+      384
+     ],
+     [
+      "Godfrey Phillips",
+      151
+     ],
+     [
+      "Wills",
+      92
+     ],
+     [
+      "Imperial Tobacco Co.",
+      71
+     ],
+     [
+      "Imperial Tobacco Canada",
+      25
+     ],
+     [
+      "Unbranded",
+      1
+     ],
+     [
+      "Not Specified",
+      529
+     ]
+    ],
+    "Features": [
+     [
+      "Insert",
+      322
+     ],
+     [
+      "Base Set",
+      4
+     ],
+     [
+      "1st Edition",
+      62
+     ],
+     [
+      "Sticker",
+      1
+     ],
+     [
+      "One of One",
+      1
+     ],
+     [
+      "Promo",
+      1
+     ],
+     [
+      "Framed",
+      2
+     ],
+     [
+      "Not Specified",
+      837
+     ]
+    ],
+    "Character": [
+     [
+      "Will",
+      92
+     ],
+     [
+      "Richard",
+      15
+     ],
+     [
+      "George",
+      11
+     ],
+     [
+      "Lady",
+      8
+     ],
+     [
+      "Charles",
+      4
+     ],
+     [
+      "Allie",
+      3
+     ],
+     [
+      "Henry",
+      3
+     ],
+     [
+      "Sydney",
+      3
+     ],
+     [
+      "Heath",
+      2
+     ],
+     [
+      "Lifeguard",
+      2
+     ],
+     [
+      "Pearl",
+      2
+     ],
+     [
+      "Violet",
+      2
+     ],
+     [
+      "Anna",
+      1
+     ],
+     [
+      "Art",
+      1
+     ],
+     [
+      "Chelsea",
+      1
+     ]
+    ],
+    "Card Condition": [
+     [
+      "Very Good",
+      523
+     ],
+     [
+      "Excellent",
+      519
+     ],
+     [
+      "Poor",
+      81
+     ],
+     [
+      "Near Mint or Better",
+      12
+     ],
+     [
+      "Not Specified",
+      118
+     ]
+    ],
+    "Language": [
+     [
+      "English",
+      340
+     ],
+     [
+      "French",
+      15
+     ],
+     [
+      "Japanese",
+      5
+     ],
+     [
+      "Chinese",
+      4
+     ],
+     [
+      "German",
+      3
+     ],
+     [
+      "Irish",
+      3
+     ],
+     [
+      "Dutch",
+      2
+     ],
+     [
+      "Greek",
+      2
+     ],
+     [
+      "Russian",
+      2
+     ],
+     [
+      "Danish",
+      1
+     ],
+     [
+      "Italian",
+      1
+     ],
+     [
+      "Malay",
+      1
+     ],
+     [
+      "Swedish",
+      1
+     ],
+     [
+      "Turkish",
+      1
+     ],
+     [
+      "Welsh",
+      1
+     ]
+    ],
+    "Age Level": [
+     [
+      "16+",
+      186
+     ],
+     [
+      "10+",
+      15
+     ],
+     [
+      "13+",
+      9
+     ],
+     [
+      "6+",
+      6
+     ],
+     [
+      "8+",
+      1
+     ],
+     [
+      "Not Specified",
+      1036
+     ]
+    ],
+    "Parallel/Variety": [
+     [
+      "Red",
+      91
+     ],
+     [
+      "Black",
+      24
+     ],
+     [
+      "Yellow",
+      18
+     ],
+     [
+      "Orange",
+      15
+     ],
+     [
+      "Gold",
+      11
+     ],
+     [
+      "Blue",
+      9
+     ],
+     [
+      "Green",
+      8
+     ],
+     [
+      "White",
+      8
+     ],
+     [
+      "Purple",
+      4
+     ],
+     [
+      "Rainbow",
+      1
+     ],
+     [
+      "Not Specified",
+      1064
+     ]
+    ],
+    "Graded": [
+     [
+      "No",
+      1139
+     ],
+     [
+      "Yes",
+      51
+     ],
+     [
+      "Not Specified",
+      64
+     ]
+    ],
+    "Autographed": [
+     [
+      "No",
+      353
+     ],
+     [
+      "Not Specified",
+      900
+     ]
+    ],
+    "Vintage": [
+     [
+      "Yes",
+      639
+     ],
+     [
+      "Not Specified",
+      614
+     ]
+    ],
+    "Original/Licensed Reprint": [
+     [
+      "Original",
+      1140
+     ],
+     [
+      "Not Specified",
+      113
+     ]
+    ],
+    "Card Size": [
+     [
+      "Tobacco",
+      1016
+     ],
+     [
+      "Standard",
+      21
+     ],
+     [
+      "Oversized",
+      9
+     ],
+     [
+      "Bowman",
+      8
+     ],
+     [
+      "Not Specified",
+      199
+     ]
+    ]
+   }
+  },
+  {
+   "q": "victorian trade card",
+   "total": 2122,
+   "category": "182982",
+   "aspects": {
+    "Year Manufactured": [
+     [
+      "1890",
+      936
+     ],
+     [
+      "1880",
+      280
+     ],
+     [
+      "2022",
+      27
+     ],
+     [
+      "1994",
+      7
+     ],
+     [
+      "2014",
+      59
+     ],
+     [
+      "1870",
+      62
+     ],
+     [
+      "2016",
+      28
+     ],
+     [
+      "2015",
+      5
+     ],
+     [
+      "1997",
+      4
+     ],
+     [
+      "2020",
+      4
+     ],
+     [
+      "1979",
+      3
+     ],
+     [
+      "1915",
+      24
+     ],
+     [
+      "1920",
+      21
+     ],
+     [
+      "1950",
+      20
+     ],
+     [
+      "1885",
+      16
+     ]
+    ],
+    "Autographed": [
+     [
+      "No",
+      448
+     ],
+     [
+      "Yes",
+      41
+     ],
+     [
+      "Not Specified",
+      1856
+     ]
+    ],
+    "Vintage": [
+     [
+      "Yes",
+      294
+     ],
+     [
+      "No",
+      104
+     ],
+     [
+      "Not Specified",
+      1947
+     ]
+    ],
+    "Features": [
+     [
+      "Serial Numbered",
+      10
+     ],
+     [
+      "Sketch",
+      2
+     ],
+     [
+      "Base Set",
+      25
+     ],
+     [
+      "1st Edition",
+      58
+     ],
+     [
+      "Hologram",
+      3
+     ],
+     [
+      "Sticker",
+      32
+     ],
+     [
+      "Insert",
+      45
+     ],
+     [
+      "Promo",
+      42
+     ],
+     [
+      "Chase",
+      8
+     ],
+     [
+      "One of One",
+      7
+     ],
+     [
+      "Limited Edition",
+      10
+     ],
+     [
+      "Exclusive",
+      3
+     ],
+     [
+      "Embossed",
+      22
+     ],
+     [
+      "Printing Plate",
+      16
+     ],
+     [
+      "Digital",
+      4
+     ]
+    ],
+    "Card Condition": [
+     [
+      "Very Good",
+      514
+     ],
+     [
+      "Excellent",
+      513
+     ],
+     [
+      "Near Mint or Better",
+      156
+     ],
+     [
+      "Poor",
+      35
+     ],
+     [
+      "Not Specified",
+      1133
+     ]
+    ],
+    "Language": [
+     [
+      "English",
+      498
+     ],
+     [
+      "French",
+      35
+     ],
+     [
+      "German",
+      26
+     ],
+     [
+      "Japanese",
+      7
+     ],
+     [
+      "Polish",
+      5
+     ],
+     [
+      "Italian",
+      3
+     ],
+     [
+      "Spanish",
+      3
+     ],
+     [
+      "Arabic",
+      1
+     ],
+     [
+      "Dutch",
+      1
+     ],
+     [
+      "Swedish",
+      1
+     ],
+     [
+      "Turkish",
+      1
+     ],
+     [
+      "Not Specified",
+      1777
+     ]
+    ],
+    "Material": [
+     [
+      "Card Stock",
+      361
+     ],
+     [
+      "Paper",
+      50
+     ],
+     [
+      "Paperboard",
+      3
+     ],
+     [
+      "Metal",
+      1
+     ],
+     [
+      "Not Specified",
+      1936
+     ]
+    ],
+    "Card Size": [
+     [
+      "Standard",
+      165
+     ],
+     [
+      "Tobacco",
+      123
+     ],
+     [
+      "Oversized",
+      65
+     ],
+     [
+      "Tall",
+      11
+     ],
+     [
+      "Japanese",
+      5
+     ],
+     [
+      "Widevision",
+      1
+     ],
+     [
+      "Not Specified",
+      1975
+     ]
+    ],
+    "Age Level": [
+     [
+      "10+",
+      163
+     ],
+     [
+      "16+",
+      26
+     ],
+     [
+      "13+",
+      15
+     ],
+     [
+      "4+",
+      12
+     ],
+     [
+      "6+",
+      9
+     ],
+     [
+      "8+",
+      8
+     ],
+     [
+      "Not Specified",
+      2110
+     ]
+    ],
+    "Graded": [
+     [
+      "No",
+      1267
+     ],
+     [
+      "Yes",
+      33
+     ],
+     [
+      "Not Specified",
+      1045
+     ]
+    ],
+    "Original/Licensed Reprint": [
+     [
+      "Original",
+      620
+     ],
+     [
+      "Not Specified",
+      1725
+     ]
+    ]
+   }
+  },
+  {
+   "q": "antique trade card",
+   "total": 75657,
+   "category": "182982",
+   "aspects": {
+    "Graded": [
+     [
+      "No",
+      71069
+     ],
+     [
+      "Yes",
+      6824
+     ],
+     [
+      "Not Specified",
+      2072
+     ]
+    ],
+    "Franchise": [
+     [
+      "Marvel (MCU)",
+      642
+     ],
+     [
+      "Star Wars",
+      3489
+     ],
+     [
+      "Star Trek",
+      163
+     ],
+     [
+      "Batman",
+      2103
+     ],
+     [
+      "Pok\u00e9mon",
+      1008
+     ],
+     [
+      "Garbage Pail Kids",
+      722
+     ],
+     [
+      "Cars",
+      2873
+     ],
+     [
+      "X-Men",
+      444
+     ],
+     [
+      "Disney",
+      859
+     ],
+     [
+      "History",
+      1225
+     ],
+     [
+      "The Beatles",
+      1425
+     ],
+     [
+      "Heroes",
+      1236
+     ],
+     [
+      "Film & TV Stars",
+      370
+     ],
+     [
+      "James Bond",
+      319
+     ],
+     [
+      "MusiCards",
+      264
+     ]
+    ],
+    "Year Manufactured": [
+     [
+      "1977",
+      1168
+     ],
+     [
+      "1964",
+      7308
+     ],
+     [
+      "1966",
+      5021
+     ],
+     [
+      "1992",
+      1638
+     ],
+     [
+      "1967",
+      3906
+     ],
+     [
+      "1995",
+      543
+     ],
+     [
+      "1994",
+      412
+     ],
+     [
+      "1993",
+      370
+     ],
+     [
+      "1990",
+      284
+     ],
+     [
+      "1965",
+      3421
+     ],
+     [
+      "1991",
+      966
+     ],
+     [
+      "2022",
+      143
+     ],
+     [
+      "1952",
+      3246
+     ],
+     [
+      "1954",
+      3171
+     ],
+     [
+      "1962",
+      759
+     ]
+    ],
+    "Manufacturer": [
+     [
+      "Topps",
+      29792
+     ],
+     [
+      "SkyBox",
+      223
+     ],
+     [
+      "Marvel",
+      481
+     ],
+     [
+      "Donruss",
+      4725
+     ],
+     [
+      "Fleer",
+      1401
+     ],
+     [
+      "Disney",
+      447
+     ],
+     [
+      "Impel",
+      374
+     ],
+     [
+      "Upper Deck",
+      264
+     ],
+     [
+      "Panini",
+      1621
+     ],
+     [
+      "Pro Set",
+      271
+     ],
+     [
+      "Wizards of the Coast",
+      61
+     ],
+     [
+      "Leaf",
+      1754
+     ],
+     [
+      "O-Pee-Chee",
+      936
+     ],
+     [
+      "Bowman",
+      1694
+     ],
+     [
+      "Nintendo",
+      500
+     ]
+    ],
+    "Features": [
+     [
+      "Serial Numbered",
+      558
+     ],
+     [
+      "Base Set",
+      4602
+     ],
+     [
+      "Sketch",
+      117
+     ],
+     [
+      "1st Edition",
+      2429
+     ],
+     [
+      "Hologram",
+      745
+     ],
+     [
+      "Sticker",
+      1940
+     ],
+     [
+      "Costume",
+      55
+     ],
+     [
+      "Insert",
+      1005
+     ],
+     [
+      "Collectors Edition",
+      2474
+     ],
+     [
+      "Chase",
+      677
+     ],
+     [
+      "One of One",
+      67
+     ],
+     [
+      "Limited Edition",
+      864
+     ],
+     [
+      "Exclusive",
+      195
+     ],
+     [
+      "Promo",
+      123
+     ],
+     [
+      "Digital",
+      617
+     ]
+    ],
+    "Language": [
+     [
+      "English",
+      64290
+     ],
+     [
+      "Japanese",
+      2538
+     ],
+     [
+      "German",
+      372
+     ],
+     [
+      "French",
+      307
+     ],
+     [
+      "Dutch",
+      228
+     ],
+     [
+      "Swedish",
+      125
+     ],
+     [
+      "Chinese",
+      122
+     ],
+     [
+      "Italian",
+      101
+     ],
+     [
+      "Spanish",
+      84
+     ],
+     [
+      "Irish",
+      34
+     ],
+     [
+      "Russian",
+      23
+     ],
+     [
+      "Turkish",
+      20
+     ],
+     [
+      "Thai",
+      18
+     ],
+     [
+      "Greek",
+      16
+     ],
+     [
+      "Finnish",
+      9
+     ]
+    ],
+    "Card Condition": [
+     [
+      "Very Good",
+      16590
+     ],
+     [
+      "Excellent",
+      15590
+     ],
+     [
+      "Poor",
+      11943
+     ],
+     [
+      "Near Mint or Better",
+      8333
+     ],
+     [
+      "Not Specified",
+      28054
+     ]
+    ],
+    "Featured Person/Artist": [
+     [
+      "Mark Hamill",
+      1955
+     ],
+     [
+      "Harrison Ford",
+      1931
+     ],
+     [
+      "Anthony Daniels",
+      1930
+     ],
+     [
+      "Kenny Baker",
+      1919
+     ],
+     [
+      "Carrie Fisher",
+      1910
+     ],
+     [
+      "Peter Mayhew",
+      1902
+     ],
+     [
+      "David Prowse",
+      1856
+     ],
+     [
+      "Alec Guinness",
+      1838
+     ],
+     [
+      "James Earl Jones",
+      1836
+     ],
+     [
+      "George Lucas",
+      1833
+     ],
+     [
+      "Peter Cushing",
+      1596
+     ],
+     [
+      "Denis Lawson",
+      1483
+     ],
+     [
+      "John Lennon",
+      1149
+     ],
+     [
+      "Robert Vaughn",
+      1130
+     ],
+     [
+      "Paul McCartney",
+      1107
+     ]
+    ],
+    "Material": [
+     [
+      "Card Stock",
+      7984
+     ],
+     [
+      "Paper",
+      2805
+     ],
+     [
+      "Plastic",
+      377
+     ],
+     [
+      "Paperboard",
+      358
+     ],
+     [
+      "Metal",
+      202
+     ],
+     [
+      "Cardboard",
+      5
+     ],
+     [
+      "Aluminum",
+      1
+     ],
+     [
+      "Leather",
+      1
+     ],
+     [
+      "Not Specified",
+      68670
+     ]
+    ],
+    "Card Size": [
+     [
+      "Standard",
+      8058
+     ],
+     [
+      "Tobacco",
+      1709
+     ],
+     [
+      "Japanese",
+      816
+     ],
+     [
+      "Oversized",
+      364
+     ],
+     [
+      "Widevision",
+      108
+     ],
+     [
+      "Bowman",
+      95
+     ],
+     [
+      "Tall",
+      64
+     ],
+     [
+      "Booklet",
+      8
+     ],
+     [
+      "Not Specified",
+      68633
+     ]
+    ],
+    "TV Show": [
+     [
+      "Star",
+      5771
+     ],
+     [
+      "Pok\u00e9mon",
+      806
+     ],
+     [
+      "Combat!",
+      591
+     ],
+     [
+      "X-Men",
+      346
+     ],
+     [
+      "McHale's Navy",
+      248
+     ],
+     [
+      "Arrow",
+      176
+     ],
+     [
+      "Dark Shadows",
+      117
+     ],
+     [
+      "Star Trek: The Original Series",
+      113
+     ],
+     [
+      "Batman and Robin",
+      100
+     ],
+     [
+      "The Green Hornet",
+      73
+     ],
+     [
+      "The Mod Squad",
+      69
+     ],
+     [
+      "Digimon",
+      41
+     ],
+     [
+      "Star Wars: Rebels",
+      41
+     ],
+     [
+      "The Monkees",
+      41
+     ],
+     [
+      "Spider-Man",
+      38
+     ]
+    ],
+    "Age Level": [
+     [
+      "6+",
+      3611
+     ],
+     [
+      "16+",
+      1976
+     ],
+     [
+      "13+",
+      1117
+     ],
+     [
+      "8+",
+      935
+     ],
+     [
+      "4+",
+      633
+     ],
+     [
+      "10+",
+      341
+     ],
+     [
+      "Not Specified",
+      71136
+     ]
+    ],
+    "Autographed": [
+     [
+      "No",
+      66185
+     ],
+     [
+      "Yes",
+      364
+     ],
+     [
+      "Not Specified",
+      13303
+     ]
+    ],
+    "Vintage": [
+     [
+      "Yes",
+      67893
+     ],
+     [
+      "No",
+      1558
+     ],
+     [
+      "Not Specified",
+      10575
+     ]
+    ],
+    "Original/Licensed Reprint": [
+     [
+      "Original",
+      67736
+     ],
+     [
+      "Licensed Reprint",
+      9
+     ],
+     [
+      "Not Specified",
+      12108
+     ]
+    ]
+   }
+  },
+  {
+   "q": "pre war non sport card",
+   "total": 2837,
+   "category": "183050",
+   "aspects": {
+    "Year Manufactured": [
+     [
+      "1938",
+      724
+     ],
+     [
+      "1939",
+      267
+     ],
+     [
+      "2022",
+      5
+     ],
+     [
+      "1941",
+      342
+     ],
+     [
+      "1950",
+      385
+     ],
+     [
+      "1962",
+      360
+     ],
+     [
+      "1965",
+      465
+     ],
+     [
+      "1977",
+      3
+     ],
+     [
+      "1920",
+      12
+     ],
+     [
+      "1923",
+      2
+     ],
+     [
+      "1924",
+      1
+     ],
+     [
+      "1928",
+      1
+     ],
+     [
+      "1930",
+      59
+     ],
+     [
+      "1931",
+      1
+     ],
+     [
+      "1933",
+      18
+     ]
+    ],
+    "Set": [
+     [
+      "Civil War News",
+      217
+     ],
+     [
+      "Marvel Masterpieces",
+      3
+     ],
+     [
+      "Series 2",
+      6
+     ],
+     [
+      "Star Wars",
+      137
+     ],
+     [
+      "(Official) Marvel Universe Stickers",
+      1
+     ],
+     [
+      "Desert Storm",
+      2
+     ],
+     [
+      "Marvel",
+      1
+     ],
+     [
+      "Marvel Annuals",
+      1
+     ],
+     [
+      "Marvel Metal",
+      1
+     ],
+     [
+      "Marvel NOW!",
+      1
+     ],
+     [
+      "Star Wars: The Mandalorian",
+      2
+     ],
+     [
+      "Star Wars 3",
+      1
+     ],
+     [
+      "Star Wars Chrome Perspectives",
+      1
+     ],
+     [
+      "Star Wars Clone Wars",
+      5
+     ],
+     [
+      "Star Wars Living Set",
+      4
+     ]
+    ],
+    "Manufacturer": [
+     [
+      "Disney",
+      11
+     ],
+     [
+      "Fleer",
+      2
+     ],
+     [
+      "Marvel",
+      5
+     ],
+     [
+      "Topps",
+      691
+     ],
+     [
+      "A&BC Chewing Gum Ltd.",
+      1
+     ],
+     [
+      "American Tobacco Company",
+      1
+     ],
+     [
+      "Atlas Editions",
+      1
+     ],
+     [
+      "Bandai",
+      3
+     ],
+     [
+      "Bowman",
+      18
+     ],
+     [
+      "Edito-Service S.A.",
+      1
+     ],
+     [
+      "Gallaher",
+      39
+     ],
+     [
+      "Garb\u00e1ty",
+      4
+     ],
+     [
+      "Goudey",
+      12
+     ],
+     [
+      "Historic Autographs, LLC",
+      5
+     ],
+     [
+      "Leaf",
+      41
+     ]
+    ],
+    "Franchise": [
+     [
+      "Avengers",
+      4
+     ],
+     [
+      "Disney",
+      16
+     ],
+     [
+      "History",
+      80
+     ],
+     [
+      "Marvel (MCU)",
+      6
+     ],
+     [
+      "Pok\u00e9mon",
+      4
+     ],
+     [
+      "Pop Century",
+      37
+     ],
+     [
+      "Star Wars",
+      150
+     ],
+     [
+      "Betty Boop",
+      1
+     ],
+     [
+      "Captain America",
+      1
+     ],
+     [
+      "Cars",
+      1
+     ],
+     [
+      "Davy Crockett",
+      8
+     ],
+     [
+      "Desert Storm",
+      2
+     ],
+     [
+      "Dragon",
+      5
+     ],
+     [
+      "Film & TV Stars",
+      40
+     ],
+     [
+      "Guardians of the Galaxy",
+      1
+     ]
+    ],
+    "Genre": [
+     [
+      "Action",
+      207
+     ],
+     [
+      "Adventure",
+      212
+     ],
+     [
+      "Fantasy",
+      203
+     ],
+     [
+      "History",
+      426
+     ],
+     [
+      "Military",
+      455
+     ],
+     [
+      "Romance",
+      199
+     ],
+     [
+      "Sci-Fi",
+      196
+     ],
+     [
+      "War",
+      521
+     ],
+     [
+      "Comedy",
+      64
+     ],
+     [
+      "Comics",
+      190
+     ],
+     [
+      "Crime",
+      61
+     ],
+     [
+      "Glamour",
+      100
+     ],
+     [
+      "Horror",
+      117
+     ],
+     [
+      "Music",
+      58
+     ],
+     [
+      "Mystery",
+      63
+     ]
+    ],
+    "Language": [
+     [
+      "Chinese",
+      81
+     ],
+     [
+      "English",
+      2900
+     ],
+     [
+      "Japanese",
+      100
+     ],
+     [
+      "Czech",
+      2
+     ],
+     [
+      "Dutch",
+      10
+     ],
+     [
+      "French",
+      19
+     ],
+     [
+      "German",
+      28
+     ],
+     [
+      "Greek",
+      5
+     ],
+     [
+      "Irish",
+      1
+     ],
+     [
+      "Italian",
+      26
+     ],
+     [
+      "Korean",
+      2
+     ],
+     [
+      "Russian",
+      6
+     ],
+     [
+      "Spanish",
+      15
+     ],
+     [
+      "Swedish",
+      3
+     ],
+     [
+      "Not Specified",
+      180
+     ]
+    ],
+    "Vintage": [
+     [
+      "No",
+      175
+     ],
+     [
+      "Yes",
+      2854
+     ],
+     [
+      "Not Specified",
+      115
+     ]
+    ],
+    "Country of Origin": [
+     [
+      "United Kingdom",
+      53
+     ],
+     [
+      "United States",
+      2524
+     ],
+     [
+      "Argentina",
+      2
+     ],
+     [
+      "Canada",
+      1
+     ],
+     [
+      "China",
+      2
+     ],
+     [
+      "Germany",
+      11
+     ],
+     [
+      "Gibraltar",
+      1
+     ],
+     [
+      "Guinea",
+      33
+     ],
+     [
+      "Hong Kong",
+      26
+     ],
+     [
+      "Italy",
+      1
+     ],
+     [
+      "Japan",
+      14
+     ],
+     [
+      "Spain",
+      12
+     ],
+     [
+      "Ukraine",
+      1
+     ],
+     [
+      "Not Specified",
+      463
+     ]
+    ],
+    "Card Condition": [
+     [
+      "Very Good",
+      821
+     ],
+     [
+      "Excellent",
+      433
+     ],
+     [
+      "Poor",
+      430
+     ],
+     [
+      "Near Mint or Better",
+      291
+     ],
+     [
+      "Not Specified",
+      1170
+     ]
+    ],
+    "Material": [
+     [
+      "Card Stock",
+      473
+     ],
+     [
+      "Metal",
+      34
+     ],
+     [
+      "Aluminum",
+      12
+     ],
+     [
+      "Paper",
+      20
+     ],
+     [
+      "Plastic",
+      2
+     ],
+     [
+      "Not Specified",
+      2622
+     ]
+    ],
+    "Card Size": [
+     [
+      "Standard",
+      225
+     ],
+     [
+      "Tobacco",
+      125
+     ],
+     [
+      "Bowman",
+      1
+     ],
+     [
+      "Japanese",
+      15
+     ],
+     [
+      "Oversized",
+      1
+     ],
+     [
+      "Widevision",
+      6
+     ],
+     [
+      "Not Specified",
+      2771
+     ]
+    ],
+    "Graded": [
+     [
+      "No",
+      2918
+     ],
+     [
+      "Yes",
+      224
+     ],
+     [
+      "Not Specified",
+      4
+     ]
+    ],
+    "Autographed": [
+     [
+      "No",
+      2921
+     ],
+     [
+      "Not Specified",
+      223
+     ]
+    ],
+    "Original/Licensed Reprint": [
+     [
+      "Licensed Reprint",
+      1
+     ],
+     [
+      "Original",
+      3041
+     ],
+     [
+      "Not Specified",
+      102
+     ]
+    ]
+   }
+  },
+  {
+   "q": "1930s gum card",
+   "total": 356,
+   "category": "183050",
+   "aspects": {
+    "Graded": [
+     [
+      "No",
+      297
+     ],
+     [
+      "Yes",
+      18
+     ],
+     [
+      "Not Specified",
+      19
+     ]
+    ],
+    "Year Manufactured": [
+     [
+      "1930",
+      280
+     ],
+     [
+      "1936",
+      36
+     ],
+     [
+      "1938",
+      7
+     ],
+     [
+      "1950",
+      7
+     ],
+     [
+      "1933",
+      6
+     ],
+     [
+      "1935",
+      4
+     ],
+     [
+      "1937",
+      1
+     ],
+     [
+      "1947",
+      1
+     ],
+     [
+      "1975",
+      1
+     ]
+    ],
+    "Features": [
+     [
+      "1st Edition",
+      32
+     ],
+     [
+      "Base Set",
+      4
+     ],
+     [
+      "Costume",
+      3
+     ],
+     [
+      "Insert",
+      48
+     ],
+     [
+      "Sticker",
+      2
+     ],
+     [
+      "One of One",
+      1
+     ],
+     [
+      "Puzzle",
+      4
+     ],
+     [
+      "Short Print",
+      2
+     ],
+     [
+      "Not Specified",
+      238
+     ]
+    ],
+    "Manufacturer": [
+     [
+      "Allens",
+      12
+     ],
+     [
+      "Goudey",
+      26
+     ],
+     [
+      "Goudey Gum Co.",
+      81
+     ],
+     [
+      "Topps",
+      5
+     ],
+     [
+      "O-Pee-Chee",
+      1
+     ],
+     [
+      "Unbranded",
+      1
+     ],
+     [
+      "Not Specified",
+      208
+     ]
+    ],
+    "Franchise": [
+     [
+      "Heroes",
+      5
+     ],
+     [
+      "History",
+      85
+     ],
+     [
+      "Davy Crockett",
+      1
+     ],
+     [
+      "Dutch Gum",
+      1
+     ],
+     [
+      "Film & TV Stars",
+      2
+     ],
+     [
+      "Hollywood",
+      3
+     ],
+     [
+      "Popeye",
+      1
+     ],
+     [
+      "Tarzan",
+      4
+     ],
+     [
+      "24",
+      2
+     ],
+     [
+      "Not Specified",
+      231
+     ]
+    ],
+    "Card Condition": [
+     [
+      "Very Good",
+      153
+     ],
+     [
+      "Poor",
+      68
+     ],
+     [
+      "Excellent",
+      64
+     ],
+     [
+      "Near Mint or Better",
+      6
+     ],
+     [
+      "Not Specified",
+      49
+     ]
+    ],
+    "Country of Origin": [
+     [
+      "Belgium",
+      31
+     ],
+     [
+      "Canada",
+      30
+     ],
+     [
+      "United States",
+      53
+     ],
+     [
+      "Spain",
+      1
+     ],
+     [
+      "United Kingdom",
+      1
+     ],
+     [
+      "Not Specified",
+      218
+     ]
+    ],
+    "Genre": [
+     [
+      "History",
+      39
+     ],
+     [
+      "TV & Movies",
+      7
+     ],
+     [
+      "Action",
+      2
+     ],
+     [
+      "Adventure",
+      2
+     ],
+     [
+      "Comedy",
+      1
+     ],
+     [
+      "Comics",
+      1
+     ],
+     [
+      "Fantasy",
+      2
+     ],
+     [
+      "Glamour",
+      1
+     ],
+     [
+      "Horror",
+      1
+     ],
+     [
+      "Military",
+      3
+     ],
+     [
+      "Parody",
+      1
+     ],
+     [
+      "Romance",
+      1
+     ],
+     [
+      "Sci-Fi",
+      2
+     ],
+     [
+      "War",
+      5
+     ],
+     [
+      "Western",
+      1
+     ]
+    ],
+    "Language": [
+     [
+      "Dutch",
+      31
+     ],
+     [
+      "English",
+      25
+     ],
+     [
+      "Irish",
+      12
+     ],
+     [
+      "French",
+      1
+     ],
+     [
+      "Not Specified",
+      265
+     ]
+    ],
+    "Age Level": [
+     [
+      "4+",
+      32
+     ],
+     [
+      "16+",
+      6
+     ],
+     [
+      "8+",
+      3
+     ],
+     [
+      "13+",
+      5
+     ],
+     [
+      "Not Specified",
+      288
+     ]
+    ],
+    "Original/Licensed Reprint": [
+     [
+      "Original",
+      155
+     ],
+     [
+      "Not Specified",
+      179
+     ]
+    ],
+    "Vintage": [
+     [
+      "Yes",
+      111
+     ],
+     [
+      "Not Specified",
+      223
+     ]
+    ],
+    "Material": [
+     [
+      "Card Stock",
+      73
+     ],
+     [
+      "Paper",
+      3
+     ],
+     [
+      "Not Specified",
+      259
+     ]
+    ]
+   }
+  },
+  {
+   "q": "1940s non sport card",
+   "total": 6043,
+   "category": "182982",
+   "aspects": {
+    "Graded": [
+     [
+      "No",
+      5300
+     ],
+     [
+      "Yes",
+      422
+     ],
+     [
+      "Not Specified",
+      834
+     ]
+    ],
+    "Franchise": [
+     [
+      "Marvel (MCU)",
+      41
+     ],
+     [
+      "Star Wars",
+      286
+     ],
+     [
+      "Batman",
+      87
+     ],
+     [
+      "History",
+      308
+     ],
+     [
+      "Film & TV Stars",
+      232
+     ],
+     [
+      "Disney",
+      95
+     ],
+     [
+      "DC Universe",
+      79
+     ],
+     [
+      "US Presidents",
+      120
+     ],
+     [
+      "Coca-Cola",
+      78
+     ],
+     [
+      "James Bond",
+      4
+     ],
+     [
+      "Tarzan",
+      66
+     ],
+     [
+      "Heroes",
+      60
+     ],
+     [
+      "The Three Stooges",
+      48
+     ],
+     [
+      "The Lone Ranger",
+      47
+     ],
+     [
+      "Hollywood",
+      35
+     ]
+    ],
+    "Year Manufactured": [
+     [
+      "1940",
+      3895
+     ],
+     [
+      "1977",
+      267
+     ],
+     [
+      "1966",
+      226
+     ],
+     [
+      "1995",
+      47
+     ],
+     [
+      "1950",
+      340
+     ],
+     [
+      "1993",
+      66
+     ],
+     [
+      "1992",
+      61
+     ],
+     [
+      "1952",
+      318
+     ],
+     [
+      "1994",
+      53
+     ],
+     [
+      "1962",
+      33
+     ],
+     [
+      "1996",
+      95
+     ],
+     [
+      "1954",
+      176
+     ],
+     [
+      "1956",
+      173
+     ],
+     [
+      "1980",
+      36
+     ],
+     [
+      "1947",
+      92
+     ]
+    ],
+    "Set": [
+     [
+      "Series 1",
+      59
+     ],
+     [
+      "Star Wars",
+      209
+     ],
+     [
+      "Batman (Black Bat)",
+      9
+     ],
+     [
+      "Series 2",
+      74
+     ],
+     [
+      "Marvel",
+      4
+     ],
+     [
+      "Star Wars Stickers",
+      25
+     ],
+     [
+      "Mars Attacks",
+      12
+     ],
+     [
+      "Batman",
+      41
+     ],
+     [
+      "Superman",
+      90
+     ],
+     [
+      "The Empire Strikes Back Series 1",
+      19
+     ],
+     [
+      "The Three Stooges",
+      48
+     ],
+     [
+      "Marvel Super Heroes",
+      35
+     ],
+     [
+      "Batman & Robin Action Packs",
+      17
+     ],
+     [
+      "Civil War News",
+      16
+     ],
+     [
+      "Bat Laffs",
+      4
+     ]
+    ],
+    "Manufacturer": [
+     [
+      "Topps",
+      1170
+     ],
+     [
+      "Marvel",
+      10
+     ],
+     [
+      "Disney",
+      52
+     ],
+     [
+      "Fleer",
+      83
+     ],
+     [
+      "Exhibit Supply Co.",
+      189
+     ],
+     [
+      "Donruss",
+      34
+     ],
+     [
+      "Panini",
+      6
+     ],
+     [
+      "Leaf",
+      137
+     ],
+     [
+      "Cracker Jack",
+      129
+     ],
+     [
+      "Collect-A-Card",
+      60
+     ],
+     [
+      "Atlas Editions",
+      114
+     ],
+     [
+      "Liebig's Extract of Meat Company",
+      111
+     ],
+     [
+      "Bowman",
+      87
+     ],
+     [
+      "Comic Images",
+      5
+     ],
+     [
+      "Brown & Williamson Tobacco",
+      53
+     ]
+    ],
+    "Features": [
+     [
+      "Serial Numbered",
+      6
+     ],
+     [
+      "Base Set",
+      667
+     ],
+     [
+      "1st Edition",
+      109
+     ],
+     [
+      "Sticker",
+      69
+     ],
+     [
+      "Insert",
+      67
+     ],
+     [
+      "Chase",
+      17
+     ],
+     [
+      "Limited Edition",
+      21
+     ],
+     [
+      "Promo",
+      11
+     ],
+     [
+      "Exclusive",
+      10
+     ],
+     [
+      "Collectors Edition",
+      21
+     ],
+     [
+      "Checklist",
+      17
+     ],
+     [
+      "Short Print",
+      11
+     ],
+     [
+      "Stamped",
+      11
+     ],
+     [
+      "Framed",
+      5
+     ],
+     [
+      "Digital",
+      3
+     ]
+    ],
+    "Character": [
+     [
+      "Box",
+      6
+     ],
+     [
+      "Leia Organa",
+      25
+     ],
+     [
+      "Spider-Man",
+      15
+     ],
+     [
+      "Han Solo",
+      67
+     ],
+     [
+      "Darth Vader",
+      37
+     ],
+     [
+      "Batman",
+      36
+     ],
+     [
+      "Luke Skywalker",
+      74
+     ],
+     [
+      "Mickey Mouse",
+      24
+     ],
+     [
+      "Tusken Raider",
+      12
+     ],
+     [
+      "Hulk",
+      4
+     ],
+     [
+      "Sinestro",
+      67
+     ],
+     [
+      "Tarzan",
+      66
+     ],
+     [
+      "C-3PO",
+      46
+     ],
+     [
+      "R2-D2",
+      46
+     ],
+     [
+      "Stormtrooper",
+      40
+     ]
+    ],
+    "Card Condition": [
+     [
+      "Excellent",
+      2224
+     ],
+     [
+      "Very Good",
+      1375
+     ],
+     [
+      "Near Mint or Better",
+      746
+     ],
+     [
+      "Poor",
+      563
+     ],
+     [
+      "Not Specified",
+      1756
+     ]
+    ],
+    "Language": [
+     [
+      "English",
+      1851
+     ],
+     [
+      "Japanese",
+      117
+     ],
+     [
+      "Dutch",
+      86
+     ],
+     [
+      "Spanish",
+      83
+     ],
+     [
+      "French",
+      69
+     ],
+     [
+      "German",
+      17
+     ],
+     [
+      "Portuguese",
+      9
+     ],
+     [
+      "Irish",
+      5
+     ],
+     [
+      "Chinese",
+      3
+     ],
+     [
+      "Italian",
+      3
+     ],
+     [
+      "Russian",
+      3
+     ],
+     [
+      "Korean",
+      2
+     ],
+     [
+      "Polish",
+      2
+     ],
+     [
+      "Czech",
+      1
+     ],
+     [
+      "Danish",
+      1
+     ]
+    ],
+    "Material": [
+     [
+      "Card Stock",
+      1136
+     ],
+     [
+      "Paper",
+      275
+     ],
+     [
+      "Metal",
+      8
+     ],
+     [
+      "Paperboard",
+      6
+     ],
+     [
+      "Plastic",
+      3
+     ],
+     [
+      "Not Specified",
+      5150
+     ]
+    ],
+    "Card Size": [
+     [
+      "Standard",
+      865
+     ],
+     [
+      "Oversized",
+      166
+     ],
+     [
+      "Tobacco",
+      77
+     ],
+     [
+      "Japanese",
+      23
+     ],
+     [
+      "Bowman",
+      12
+     ],
+     [
+      "Booklet",
+      4
+     ],
+     [
+      "Not Specified",
+      5407
+     ]
+    ],
+    "TV Show": [
+     [
+      "Star",
+      1003
+     ],
+     [
+      "Batman and Robin",
+      45
+     ],
+     [
+      "Star Wars: Droids",
+      14
+     ],
+     [
+      "Combat!",
+      8
+     ],
+     [
+      "Star Wars: Rebels",
+      4
+     ],
+     [
+      "Happy Days",
+      2
+     ],
+     [
+      "Hook",
+      2
+     ],
+     [
+      "Lost in Space",
+      2
+     ],
+     [
+      "The Green Hornet",
+      2
+     ],
+     [
+      "UFO",
+      2
+     ],
+     [
+      "Arrow",
+      1
+     ],
+     [
+      "Buffy the Vampire Slayer",
+      1
+     ],
+     [
+      "McHale's Navy",
+      1
+     ],
+     [
+      "Spider-Man",
+      1
+     ],
+     [
+      "Star Trek: The Original Series",
+      1
+     ]
+    ],
+    "Autographed": [
+     [
+      "No",
+      1828
+     ],
+     [
+      "Yes",
+      6
+     ],
+     [
+      "Not Specified",
+      4719
+     ]
+    ],
+    "Vintage": [
+     [
+      "Yes",
+      2585
+     ],
+     [
+      "No",
+      56
+     ],
+     [
+      "Not Specified",
+      3913
+     ]
+    ],
+    "Original/Licensed Reprint": [
+     [
+      "Original",
+      3913
+     ],
+     [
+      "Licensed Reprint",
+      2
+     ],
+     [
+      "Not Specified",
+      2638
+     ]
+    ]
+   }
+  },
+  {
+   "q": "1950s non sport card",
+   "total": 19797,
+   "category": "182982",
+   "aspects": {
+    "Graded": [
+     [
+      "No",
+      17736
+     ],
+     [
+      "Yes",
+      1140
+     ],
+     [
+      "Not Specified",
+      1806
+     ]
+    ],
+    "Franchise": [
+     [
+      "Marvel (MCU)",
+      107
+     ],
+     [
+      "Star Wars",
+      324
+     ],
+     [
+      "Batman",
+      124
+     ],
+     [
+      "Hopalong Cassidy",
+      1436
+     ],
+     [
+      "History",
+      1130
+     ],
+     [
+      "Disney",
+      781
+     ],
+     [
+      "Film & TV Stars",
+      680
+     ],
+     [
+      "Garbage Pail Kids",
+      13
+     ],
+     [
+      "Dutch Gum",
+      676
+     ],
+     [
+      "Pop Century",
+      26
+     ],
+     [
+      "Space",
+      249
+     ],
+     [
+      "Davy Crockett",
+      242
+     ],
+     [
+      "DC Universe",
+      24
+     ],
+     [
+      "The Lone Ranger",
+      186
+     ],
+     [
+      "Hollywood",
+      185
+     ]
+    ],
+    "Year Manufactured": [
+     [
+      "1950",
+      16216
+     ],
+     [
+      "1977",
+      267
+     ],
+     [
+      "1995",
+      53
+     ],
+     [
+      "1993",
+      81
+     ],
+     [
+      "1994",
+      69
+     ],
+     [
+      "1992",
+      63
+     ],
+     [
+      "1966",
+      229
+     ],
+     [
+      "1962",
+      35
+     ],
+     [
+      "1956",
+      601
+     ],
+     [
+      "1952",
+      544
+     ],
+     [
+      "1960",
+      298
+     ],
+     [
+      "1940",
+      255
+     ],
+     [
+      "1980",
+      40
+     ],
+     [
+      "1996",
+      31
+     ],
+     [
+      "1954",
+      320
+     ]
+    ],
+    "Manufacturer": [
+     [
+      "Topps",
+      6947
+     ],
+     [
+      "SkyBox",
+      11
+     ],
+     [
+      "Marvel",
+      38
+     ],
+     [
+      "Disney",
+      166
+     ],
+     [
+      "Fleer",
+      109
+     ],
+     [
+      "Upper Deck",
+      29
+     ],
+     [
+      "Bowman",
+      685
+     ],
+     [
+      "Donruss",
+      34
+     ],
+     [
+      "Panini",
+      18
+     ],
+     [
+      "Liebig's Extract of Meat Company",
+      403
+     ],
+     [
+      "Collect-A-Card",
+      62
+     ],
+     [
+      "Exhibit Supply Co.",
+      219
+     ],
+     [
+      "Leaf",
+      218
+     ],
+     [
+      "Unbranded",
+      132
+     ],
+     [
+      "Ed-U-Cards",
+      118
+     ]
+    ],
+    "Features": [
+     [
+      "Serial Numbered",
+      30
+     ],
+     [
+      "Base Set",
+      2206
+     ],
+     [
+      "Sketch",
+      54
+     ],
+     [
+      "1st Edition",
+      360
+     ],
+     [
+      "Insert",
+      733
+     ],
+     [
+      "Costume",
+      21
+     ],
+     [
+      "Sticker",
+      99
+     ],
+     [
+      "Chase",
+      34
+     ],
+     [
+      "One of One",
+      24
+     ],
+     [
+      "Promo",
+      75
+     ],
+     [
+      "Exclusive",
+      27
+     ],
+     [
+      "Limited Edition",
+      27
+     ],
+     [
+      "Collectors Edition",
+      111
+     ],
+     [
+      "Framed",
+      29
+     ],
+     [
+      "Short Print",
+      28
+     ]
+    ],
+    "Card Condition": [
+     [
+      "Excellent",
+      6844
+     ],
+     [
+      "Very Good",
+      5286
+     ],
+     [
+      "Poor",
+      2899
+     ],
+     [
+      "Near Mint or Better",
+      1880
+     ],
+     [
+      "Not Specified",
+      3999
+     ]
+    ],
+    "Language": [
+     [
+      "English",
+      5556
+     ],
+     [
+      "Dutch",
+      1182
+     ],
+     [
+      "Japanese",
+      871
+     ],
+     [
+      "German",
+      235
+     ],
+     [
+      "French",
+      216
+     ],
+     [
+      "Swedish",
+      184
+     ],
+     [
+      "Italian",
+      179
+     ],
+     [
+      "Danish",
+      90
+     ],
+     [
+      "Korean",
+      90
+     ],
+     [
+      "Spanish",
+      46
+     ],
+     [
+      "Irish",
+      15
+     ],
+     [
+      "Hebrew",
+      12
+     ],
+     [
+      "Chinese",
+      8
+     ],
+     [
+      "Russian",
+      8
+     ],
+     [
+      "Portuguese",
+      5
+     ]
+    ],
+    "Material": [
+     [
+      "Card Stock",
+      3064
+     ],
+     [
+      "Paper",
+      1210
+     ],
+     [
+      "Paperboard",
+      212
+     ],
+     [
+      "Metal",
+      39
+     ],
+     [
+      "Aluminum",
+      17
+     ],
+     [
+      "Plastic",
+      9
+     ],
+     [
+      "Not Specified",
+      16214
+     ]
+    ],
+    "Age Level": [
+     [
+      "13+",
+      1304
+     ],
+     [
+      "16+",
+      802
+     ],
+     [
+      "4+",
+      265
+     ],
+     [
+      "6+",
+      189
+     ],
+     [
+      "8+",
+      185
+     ],
+     [
+      "10+",
+      95
+     ],
+     [
+      "Not Specified",
+      17812
+     ]
+    ],
+    "TV Show": [
+     [
+      "Star",
+      2047
+     ],
+     [
+      "Combat!",
+      168
+     ],
+     [
+      "Batman and Robin",
+      50
+     ],
+     [
+      "Happy Days",
+      33
+     ],
+     [
+      "Arrow",
+      25
+     ],
+     [
+      "Revenge",
+      24
+     ],
+     [
+      "Hook",
+      18
+     ],
+     [
+      "M*A*S*H",
+      17
+     ],
+     [
+      "Zorro",
+      16
+     ],
+     [
+      "Star Wars: Droids",
+      14
+     ],
+     [
+      "UFO",
+      8
+     ],
+     [
+      "Spider-Man",
+      6
+     ],
+     [
+      "Star Wars: Rebels",
+      4
+     ],
+     [
+      "The Prisoner",
+      3
+     ],
+     [
+      "Angel",
+      2
+     ]
+    ],
+    "Card Size": [
+     [
+      "Standard",
+      1318
+     ],
+     [
+      "Bowman",
+      342
+     ],
+     [
+      "Japanese",
+      329
+     ],
+     [
+      "Tobacco",
+      249
+     ],
+     [
+      "Oversized",
+      101
+     ],
+     [
+      "Tall",
+      9
+     ],
+     [
+      "Booklet",
+      8
+     ],
+     [
+      "Widevision",
+      2
+     ],
+     [
+      "Not Specified",
+      18308
+     ]
+    ],
+    "Autographed": [
+     [
+      "No",
+      6533
+     ],
+     [
+      "Yes",
+      126
+     ],
+     [
+      "Not Specified",
+      14006
+     ]
+    ],
+    "Vintage": [
+     [
+      "Yes",
+      8740
+     ],
+     [
+      "No",
+      155
+     ],
+     [
+      "Not Specified",
+      11758
+     ]
+    ],
+    "Original/Licensed Reprint": [
+     [
+      "Original",
+      12691
+     ],
+     [
+      "Licensed Reprint",
+      107
+     ],
+     [
+      "Not Specified",
+      7867
+     ]
+    ]
+   }
+  },
+  {
+   "q": "1960s non sport card",
+   "total": 13079,
+   "category": "182982",
+   "aspects": {
+    "Franchise": [
+     [
+      "Marvel (MCU)",
+      231
+     ],
+     [
+      "Star Wars",
+      287
+     ],
+     [
+      "Star Trek",
+      8
+     ],
+     [
+      "Batman",
+      421
+     ],
+     [
+      "Garbage Pail Kids",
+      8
+     ],
+     [
+      "Disney",
+      213
+     ],
+     [
+      "Film & TV Stars",
+      329
+     ],
+     [
+      "The Beatles",
+      446
+     ],
+     [
+      "The Monkees",
+      197
+     ],
+     [
+      "History",
+      169
+     ],
+     [
+      "Pop Century",
+      13
+     ],
+     [
+      "Cars",
+      285
+     ],
+     [
+      "24",
+      264
+     ],
+     [
+      "Spider-Man",
+      119
+     ],
+     [
+      "US Presidents",
+      257
+     ]
+    ],
+    "Year Manufactured": [
+     [
+      "1960",
+      6317
+     ],
+     [
+      "1977",
+      269
+     ],
+     [
+      "1966",
+      1409
+     ],
+     [
+      "1992",
+      588
+     ],
+     [
+      "1964",
+      648
+     ],
+     [
+      "1995",
+      19
+     ],
+     [
+      "1993",
+      121
+     ],
+     [
+      "1994",
+      26
+     ],
+     [
+      "1967",
+      441
+     ],
+     [
+      "1965",
+      576
+     ],
+     [
+      "1962",
+      123
+     ],
+     [
+      "1969",
+      362
+     ],
+     [
+      "2021",
+      65
+     ],
+     [
+      "1991",
+      37
+     ],
+     [
+      "1996",
+      86
+     ]
+    ],
+    "Set": [
+     [
+      "Series 1",
+      174
+     ],
+     [
+      "Star Wars",
+      209
+     ],
+     [
+      "Series 2",
+      324
+     ],
+     [
+      "Batman (Black Bat)",
+      57
+     ],
+     [
+      "Spider-Man II: 30th Anniversary",
+      606
+     ],
+     [
+      "Marvel",
+      151
+     ],
+     [
+      "Star Wars Stickers",
+      25
+     ],
+     [
+      "Mars Attacks",
+      14
+     ],
+     [
+      "Batman",
+      96
+     ],
+     [
+      "Superman",
+      168
+     ],
+     [
+      "The Empire Strikes Back Series 1",
+      19
+     ],
+     [
+      "Mini Cards",
+      130
+     ],
+     [
+      "The Three Stooges",
+      58
+     ],
+     [
+      "Marvel Super Heroes",
+      44
+     ],
+     [
+      "Batman B Series (Blue Bat)",
+      42
+     ]
+    ],
+    "Manufacturer": [
+     [
+      "Topps",
+      3053
+     ],
+     [
+      "Marvel",
+      303
+     ],
+     [
+      "Fleer",
+      271
+     ],
+     [
+      "Donruss",
+      655
+     ],
+     [
+      "Disney",
+      78
+     ],
+     [
+      "Brooke Bond",
+      684
+     ],
+     [
+      "Upper Deck",
+      83
+     ],
+     [
+      "Comic Images",
+      468
+     ],
+     [
+      "Pro Set",
+      33
+     ],
+     [
+      "Panini",
+      19
+     ],
+     [
+      "Post",
+      262
+     ],
+     [
+      "Leaf",
+      254
+     ],
+     [
+      "INKWORKS",
+      96
+     ],
+     [
+      "Philadelphia Gum",
+      189
+     ],
+     [
+      "Collect-A-Card",
+      8
+     ]
+    ],
+    "Features": [
+     [
+      "Serial Numbered",
+      93
+     ],
+     [
+      "Base Set",
+      2921
+     ],
+     [
+      "1st Edition",
+      324
+     ],
+     [
+      "Costume",
+      54
+     ],
+     [
+      "Sticker",
+      290
+     ],
+     [
+      "Insert",
+      342
+     ],
+     [
+      "Chase",
+      113
+     ],
+     [
+      "One of One",
+      15
+     ],
+     [
+      "Exclusive",
+      56
+     ],
+     [
+      "Limited Edition",
+      37
+     ],
+     [
+      "Promo",
+      35
+     ],
+     [
+      "Short Print",
+      63
+     ],
+     [
+      "Collectors Edition",
+      32
+     ],
+     [
+      "Checklist",
+      26
+     ],
+     [
+      "Puzzle",
+      26
+     ]
+    ],
+    "Character": [
+     [
+      "Box",
+      14
+     ],
+     [
+      "Spider-Man",
+      145
+     ],
+     [
+      "Leia Organa",
+      25
+     ],
+     [
+      "Han Solo",
+      67
+     ],
+     [
+      "Batman",
+      191
+     ],
+     [
+      "Darth Vader",
+      37
+     ],
+     [
+      "Luke Skywalker",
+      74
+     ],
+     [
+      "Brook",
+      494
+     ],
+     [
+      "Shell",
+      416
+     ],
+     [
+      "Mickey Mouse",
+      61
+     ],
+     [
+      "Superman",
+      171
+     ],
+     [
+      "Hulk",
+      21
+     ],
+     [
+      "Carly",
+      163
+     ],
+     [
+      "Tusken Raider",
+      12
+     ],
+     [
+      "Rocket",
+      9
+     ]
+    ],
+    "Card Condition": [
+     [
+      "Excellent",
+      5182
+     ],
+     [
+      "Very Good",
+      2814
+     ],
+     [
+      "Near Mint or Better",
+      2548
+     ],
+     [
+      "Poor",
+      548
+     ],
+     [
+      "Not Specified",
+      3174
+     ]
+    ],
+    "Language": [
+     [
+      "English",
+      4850
+     ],
+     [
+      "Japanese",
+      883
+     ],
+     [
+      "Dutch",
+      382
+     ],
+     [
+      "Swedish",
+      273
+     ],
+     [
+      "German",
+      90
+     ],
+     [
+      "Spanish",
+      70
+     ],
+     [
+      "Hebrew",
+      60
+     ],
+     [
+      "French",
+      33
+     ],
+     [
+      "Portuguese",
+      7
+     ],
+     [
+      "Italian",
+      5
+     ],
+     [
+      "Chinese",
+      3
+     ],
+     [
+      "Danish",
+      3
+     ],
+     [
+      "Russian",
+      3
+     ],
+     [
+      "Czech",
+      2
+     ],
+     [
+      "Irish",
+      2
+     ]
+    ],
+    "Material": [
+     [
+      "Card Stock",
+      4440
+     ],
+     [
+      "Paper",
+      1034
+     ],
+     [
+      "Paperboard",
+      98
+     ],
+     [
+      "Plastic",
+      64
+     ],
+     [
+      "Metal",
+      10
+     ],
+     [
+      "Aluminum",
+      7
+     ],
+     [
+      "Not Specified",
+      8778
+     ]
+    ],
+    "Age Level": [
+     [
+      "13+",
+      1910
+     ],
+     [
+      "16+",
+      556
+     ],
+     [
+      "6+",
+      465
+     ],
+     [
+      "4+",
+      326
+     ],
+     [
+      "8+",
+      229
+     ],
+     [
+      "10+",
+      99
+     ],
+     [
+      "Not Specified",
+      10635
+     ]
+    ],
+    "Card Size": [
+     [
+      "Standard",
+      2030
+     ],
+     [
+      "Japanese",
+      386
+     ],
+     [
+      "Tobacco",
+      212
+     ],
+     [
+      "Oversized",
+      76
+     ],
+     [
+      "Booklet",
+      12
+     ],
+     [
+      "Bowman",
+      11
+     ],
+     [
+      "Not Specified",
+      11509
+     ]
+    ],
+    "Parallel/Variety": [
+     [
+      "Green",
+      618
+     ],
+     [
+      "White",
+      422
+     ],
+     [
+      "Blue",
+      337
+     ],
+     [
+      "Red",
+      205
+     ],
+     [
+      "Throwback",
+      145
+     ],
+     [
+      "Silver",
+      82
+     ],
+     [
+      "Bar",
+      74
+     ],
+     [
+      "Orange",
+      70
+     ],
+     [
+      "Black",
+      64
+     ],
+     [
+      "Gold",
+      31
+     ],
+     [
+      "Molten",
+      25
+     ],
+     [
+      "Refractor",
+      24
+     ],
+     [
+      "Blue Refractor",
+      19
+     ],
+     [
+      "Purple",
+      16
+     ],
+     [
+      "Sepia",
+      16
+     ]
+    ],
+    "TV Show": [
+     [
+      "Star",
+      960
+     ],
+     [
+      "The Monkees",
+      158
+     ],
+     [
+      "Batman and Robin",
+      130
+     ],
+     [
+      "Spider-Man",
+      121
+     ],
+     [
+      "Dark Shadows",
+      78
+     ],
+     [
+      "The Green Hornet",
+      68
+     ],
+     [
+      "Lost in Space",
+      47
+     ],
+     [
+      "McHale's Navy",
+      39
+     ],
+     [
+      "The Prisoner",
+      35
+     ],
+     [
+      "Combat!",
+      26
+     ],
+     [
+      "The Avengers",
+      26
+     ],
+     [
+      "Star Wars: Droids",
+      14
+     ],
+     [
+      "The Outer Limits",
+      13
+     ],
+     [
+      "X-Men",
+      9
+     ],
+     [
+      "Alf",
+      7
+     ]
+    ],
+    "Graded": [
+     [
+      "No",
+      11645
+     ],
+     [
+      "Yes",
+      577
+     ],
+     [
+      "Not Specified",
+      2016
+     ]
+    ],
+    "Autographed": [
+     [
+      "No",
+      5121
+     ],
+     [
+      "Yes",
+      172
+     ],
+     [
+      "Not Specified",
+      8943
+     ]
+    ],
+    "Vintage": [
+     [
+      "Yes",
+      6897
+     ],
+     [
+      "No",
+      321
+     ],
+     [
+      "Not Specified",
+      7018
+     ]
+    ],
+    "Original/Licensed Reprint": [
+     [
+      "Original",
+      7982
+     ],
+     [
+      "Licensed Reprint",
+      8
+     ],
+     [
+      "Not Specified",
+      6246
+     ]
+    ]
+   }
+  },
+  {
+   "q": "1970s non sport card",
+   "total": 17684,
+   "category": "182982",
+   "aspects": {
+    "Graded": [
+     [
+      "No",
+      16835
+     ],
+     [
+      "Yes",
+      1027
+     ],
+     [
+      "Not Specified",
+      1839
+     ]
+    ],
+    "Franchise": [
+     [
+      "Marvel (MCU)",
+      875
+     ],
+     [
+      "Star Wars",
+      537
+     ],
+     [
+      "Star Trek",
+      48
+     ],
+     [
+      "Batman",
+      133
+     ],
+     [
+      "Odd Rods",
+      974
+     ],
+     [
+      "Garbage Pail Kids",
+      93
+     ],
+     [
+      "Wacky Packages",
+      830
+     ],
+     [
+      "Disney",
+      339
+     ],
+     [
+      "X-Men",
+      29
+     ],
+     [
+      "Film & TV Stars",
+      220
+     ],
+     [
+      "Pop Century",
+      21
+     ],
+     [
+      "Spider-Man",
+      186
+     ],
+     [
+      "History",
+      172
+     ],
+     [
+      "DC Universe",
+      90
+     ],
+     [
+      "Space",
+      280
+     ]
+    ],
+    "Year Manufactured": [
+     [
+      "1970",
+      11574
+     ],
+     [
+      "1977",
+      634
+     ],
+     [
+      "1992",
+      657
+     ],
+     [
+      "1995",
+      11
+     ],
+     [
+      "1993",
+      113
+     ],
+     [
+      "1966",
+      230
+     ],
+     [
+      "2022",
+      19
+     ],
+     [
+      "1994",
+      18
+     ],
+     [
+      "1990",
+      12
+     ],
+     [
+      "1980",
+      382
+     ],
+     [
+      "1991",
+      153
+     ],
+     [
+      "1962",
+      46
+     ],
+     [
+      "1978",
+      625
+     ],
+     [
+      "2021",
+      27
+     ],
+     [
+      "1973",
+      419
+     ]
+    ],
+    "Set": [
+     [
+      "Series 1",
+      564
+     ],
+     [
+      "Star Wars",
+      309
+     ],
+     [
+      "Series 2",
+      215
+     ],
+     [
+      "Marvel",
+      218
+     ],
+     [
+      "Marvel: Bronze Age",
+      722
+     ],
+     [
+      "Spider-Man II: 30th Anniversary",
+      606
+     ],
+     [
+      "Star Wars Stickers",
+      60
+     ],
+     [
+      "Star Wars Series 1",
+      18
+     ],
+     [
+      "Mars Attacks",
+      13
+     ],
+     [
+      "Wacky Packages",
+      314
+     ],
+     [
+      "Batman",
+      48
+     ],
+     [
+      "The Empire Strikes Back Series 1",
+      21
+     ],
+     [
+      "Mini Cards",
+      194
+     ],
+     [
+      "Marvel Super Heroes",
+      74
+     ],
+     [
+      "The Three Stooges",
+      48
+     ]
+    ],
+    "Manufacturer": [
+     [
+      "Topps",
+      4687
+     ],
+     [
+      "Marvel",
+      908
+     ],
+     [
+      "SkyBox",
+      11
+     ],
+     [
+      "Donruss",
+      1513
+     ],
+     [
+      "Rittenhouse",
+      449
+     ],
+     [
+      "Fleer",
+      540
+     ],
+     [
+      "Disney",
+      150
+     ],
+     [
+      "Upper Deck",
+      175
+     ],
+     [
+      "Brooke Bond",
+      823
+     ],
+     [
+      "Comic Images",
+      469
+     ],
+     [
+      "O-Pee-Chee",
+      376
+     ],
+     [
+      "Panini",
+      126
+     ],
+     [
+      "Collect-A-Card",
+      144
+     ],
+     [
+      "Ace Authentic",
+      192
+     ],
+     [
+      "Scanlens",
+      173
+     ]
+    ],
+    "Vintage": [
+     [
+      "Yes",
+      6917
+     ],
+     [
+      "No",
+      1212
+     ],
+     [
+      "Not Specified",
+      12352
+     ]
+    ],
+    "Features": [
+     [
+      "Serial Numbered",
+      37
+     ],
+     [
+      "Base Set",
+      1602
+     ],
+     [
+      "Sticker",
+      2823
+     ],
+     [
+      "Sketch",
+      181
+     ],
+     [
+      "1st Edition",
+      257
+     ],
+     [
+      "Costume",
+      105
+     ],
+     [
+      "Insert",
+      358
+     ],
+     [
+      "Exclusive",
+      482
+     ],
+     [
+      "Chase",
+      115
+     ],
+     [
+      "One of One",
+      51
+     ],
+     [
+      "Limited Edition",
+      99
+     ],
+     [
+      "Promo",
+      50
+     ],
+     [
+      "Puzzle",
+      140
+     ],
+     [
+      "Checklist",
+      58
+     ],
+     [
+      "Stamped",
+      55
+     ]
+    ],
+    "Character": [
+     [
+      "Box",
+      37
+     ],
+     [
+      "Spider-Man",
+      250
+     ],
+     [
+      "Leia Organa",
+      56
+     ],
+     [
+      "Han Solo",
+      88
+     ],
+     [
+      "Batman",
+      70
+     ],
+     [
+      "Darth Vader",
+      57
+     ],
+     [
+      "Luke Skywalker",
+      127
+     ],
+     [
+      "Wolverine",
+      100
+     ],
+     [
+      "Brook",
+      463
+     ],
+     [
+      "Hulk",
+      123
+     ],
+     [
+      "Ace",
+      271
+     ],
+     [
+      "Ash",
+      64
+     ],
+     [
+      "Mickey Mouse",
+      24
+     ],
+     [
+      "Rocket",
+      20
+     ],
+     [
+      "Tusken Raider",
+      16
+     ]
+    ],
+    "Card Condition": [
+     [
+      "Excellent",
+      6963
+     ],
+     [
+      "Near Mint or Better",
+      4300
+     ],
+     [
+      "Very Good",
+      4007
+     ],
+     [
+      "Poor",
+      577
+     ],
+     [
+      "Not Specified",
+      3930
+     ]
+    ],
+    "Language": [
+     [
+      "English",
+      5709
+     ],
+     [
+      "Japanese",
+      782
+     ],
+     [
+      "Spanish",
+      377
+     ],
+     [
+      "Hebrew",
+      204
+     ],
+     [
+      "Swedish",
+      121
+     ],
+     [
+      "Dutch",
+      112
+     ],
+     [
+      "Greek",
+      32
+     ],
+     [
+      "German",
+      30
+     ],
+     [
+      "French",
+      24
+     ],
+     [
+      "Russian",
+      13
+     ],
+     [
+      "Italian",
+      12
+     ],
+     [
+      "Arabic",
+      11
+     ],
+     [
+      "Portuguese",
+      7
+     ],
+     [
+      "Chinese",
+      4
+     ],
+     [
+      "Irish",
+      4
+     ]
+    ],
+    "Material": [
+     [
+      "Card Stock",
+      3627
+     ],
+     [
+      "Paper",
+      1112
+     ],
+     [
+      "Paperboard",
+      71
+     ],
+     [
+      "Metal",
+      28
+     ],
+     [
+      "Plastic",
+      25
+     ],
+     [
+      "Aluminum",
+      6
+     ],
+     [
+      "Not Specified",
+      14887
+     ]
+    ],
+    "Card Size": [
+     [
+      "Standard",
+      3260
+     ],
+     [
+      "Tobacco",
+      216
+     ],
+     [
+      "Japanese",
+      196
+     ],
+     [
+      "Oversized",
+      141
+     ],
+     [
+      "Booklet",
+      23
+     ],
+     [
+      "Bowman",
+      10
+     ],
+     [
+      "Tall",
+      2
+     ],
+     [
+      "Not Specified",
+      15761
+     ]
+    ],
+    "Age Level": [
+     [
+      "8+",
+      1042
+     ],
+     [
+      "13+",
+      692
+     ],
+     [
+      "6+",
+      440
+     ],
+     [
+      "16+",
+      371
+     ],
+     [
+      "4+",
+      313
+     ],
+     [
+      "10+",
+      169
+     ],
+     [
+      "Not Specified",
+      16556
+     ]
+    ],
+    "Autographed": [
+     [
+      "No",
+      6375
+     ],
+     [
+      "Yes",
+      114
+     ],
+     [
+      "Not Specified",
+      13120
+     ]
+    ],
+    "Original/Licensed Reprint": [
+     [
+      "Original",
+      10772
+     ],
+     [
+      "Licensed Reprint",
+      9
+     ],
+     [
+      "Not Specified",
+      8828
+     ]
+    ]
+   }
+  },
+  {
+   "q": "exhibit arcade card",
+   "total": 2690,
+   "category": "182982",
+   "aspects": {
+    "Franchise": [
+     [
+      "Film & TV Stars",
+      188
+     ],
+     [
+      "Batman",
+      9
+     ],
+     [
+      "Hollywood",
+      95
+     ],
+     [
+      "The Wild Wild West",
+      58
+     ],
+     [
+      "History",
+      30
+     ],
+     [
+      "Cars",
+      19
+     ],
+     [
+      "The Lone Ranger",
+      9
+     ],
+     [
+      "Elvis Presley",
+      5
+     ],
+     [
+      "24",
+      4
+     ],
+     [
+      "Arthur",
+      4
+     ],
+     [
+      "Space",
+      4
+     ],
+     [
+      "The Beatles",
+      4
+     ],
+     [
+      "Davy Crockett",
+      3
+     ],
+     [
+      "Hopalong Cassidy",
+      3
+     ],
+     [
+      "Alias",
+      2
+     ]
+    ],
+    "Year Manufactured": [
+     [
+      "1940",
+      672
+     ],
+     [
+      "1950",
+      521
+     ],
+     [
+      "1960",
+      143
+     ],
+     [
+      "1920",
+      117
+     ],
+     [
+      "1966",
+      28
+     ],
+     [
+      "1930",
+      92
+     ],
+     [
+      "1962",
+      5
+     ],
+     [
+      "1972",
+      50
+     ],
+     [
+      "1935",
+      4
+     ],
+     [
+      "1931",
+      2
+     ],
+     [
+      "1934",
+      2
+     ],
+     [
+      "1948",
+      29
+     ],
+     [
+      "1939",
+      23
+     ],
+     [
+      "1941",
+      23
+     ],
+     [
+      "1946",
+      17
+     ]
+    ],
+    "Manufacturer": [
+     [
+      "Topps",
+      2
+     ],
+     [
+      "Exhibit Supply Co.",
+      609
+     ],
+     [
+      "Post",
+      59
+     ],
+     [
+      "Exhibits",
+      45
+     ],
+     [
+      "Wild Card",
+      7
+     ],
+     [
+      "Unbranded",
+      6
+     ],
+     [
+      "Ty",
+      3
+     ],
+     [
+      "Gallaher",
+      1
+     ],
+     [
+      "Pacific",
+      1
+     ],
+     [
+      "SAGE",
+      1
+     ],
+     [
+      "WOW",
+      1
+     ],
+     [
+      "Wills",
+      1
+     ],
+     [
+      "Not Specified",
+      2022
+     ]
+    ],
+    "Character": [
+     [
+      "Penny",
+      76
+     ],
+     [
+      "Gene",
+      37
+     ],
+     [
+      "Rocket",
+      3
+     ],
+     [
+      "Silent",
+      23
+     ],
+     [
+      "Shirley",
+      21
+     ],
+     [
+      "Ace",
+      9
+     ],
+     [
+      "Rod",
+      9
+     ],
+     [
+      "Robert",
+      6
+     ],
+     [
+      "Roger",
+      6
+     ],
+     [
+      "Carly",
+      5
+     ],
+     [
+      "Charles",
+      5
+     ],
+     [
+      "George",
+      5
+     ],
+     [
+      "Andy",
+      4
+     ],
+     [
+      "Cooper",
+      4
+     ],
+     [
+      "Ed",
+      4
+     ]
+    ],
+    "Card Condition": [
+     [
+      "Excellent",
+      840
+     ],
+     [
+      "Very Good",
+      742
+     ],
+     [
+      "Poor",
+      372
+     ],
+     [
+      "Near Mint or Better",
+      290
+     ],
+     [
+      "Not Specified",
+      805
+     ]
+    ],
+    "Material": [
+     [
+      "Card Stock",
+      662
+     ],
+     [
+      "Paper",
+      53
+     ],
+     [
+      "Paperboard",
+      3
+     ],
+     [
+      "Not Specified",
+      2052
+     ]
+    ],
+    "Card Size": [
+     [
+      "Oversized",
+      377
+     ],
+     [
+      "Standard",
+      51
+     ],
+     [
+      "Tobacco",
+      2
+     ],
+     [
+      "Not Specified",
+      2326
+     ]
+    ],
+    "Graded": [
+     [
+      "No",
+      2327
+     ],
+     [
+      "Yes",
+      5
+     ],
+     [
+      "Not Specified",
+      424
+     ]
+    ],
+    "Autographed": [
+     [
+      "No",
+      851
+     ],
+     [
+      "Yes",
+      13
+     ],
+     [
+      "Not Specified",
+      1892
+     ]
+    ],
+    "Vintage": [
+     [
+      "Yes",
+      1393
+     ],
+     [
+      "No",
+      2
+     ],
+     [
+      "Not Specified",
+      1362
+     ]
+    ],
+    "Original/Licensed Reprint": [
+     [
+      "Original",
+      978
+     ],
+     [
+      "Not Specified",
+      1778
+     ]
+    ],
+    "Language": [
+     [
+      "English",
+      800
+     ],
+     [
+      "French",
+      1
+     ],
+     [
+      "Swedish",
+      1
+     ],
+     [
+      "Not Specified",
+      1954
+     ]
+    ],
+    "TV Show": [
+     [
+      "Star",
+      332
+     ],
+     [
+      "Arrow",
+      4
+     ],
+     [
+      "Combat!",
+      3
+     ],
+     [
+      "Not Specified",
+      2417
+     ]
+    ]
+   }
+  }
+ ]
+}

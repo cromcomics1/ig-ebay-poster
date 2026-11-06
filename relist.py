@@ -90,6 +90,24 @@ def save_branch_files(files, message):
     git("push", "-q", "origin", f"{commit}:refs/heads/{BRANCH}")
 
 
+def append_log(new_log, tries=5):
+    """Add entries to log.csv, re-reading it first so runs that overlap never drop each
+    other's lines; retries if GitHub rejects the push."""
+    for n in range(tries):
+        try:
+            current = read_csv(load_branch_file("log.csv"))
+            save_branch_files({"log.csv": to_csv(current + new_log, LOG_COLS)},
+                              f"Sell-similar log: {len(new_log)} entries")
+            return
+        except RuntimeError as e:
+            if n == tries - 1:
+                print("COULD NOT SAVE THE LOG. These entries were done on eBay:")
+                print(to_csv(new_log, LOG_COLS))
+                raise
+            print(f"   saving the log failed ({e}); trying again")
+            time.sleep(10 * (n + 1))
+
+
 def read_csv(text):
     return list(csv.DictReader(io.StringIO(text))) if text else []
 
@@ -762,7 +780,7 @@ def apply(auto_rows=None, target=None, source=None):
             break
 
     if not DRY_RUN:
-        save_branch_files({"log.csv": to_csv(log + new_log, LOG_COLS)}, f"Sell-similar log: {len(new_log)} entries")
+        append_log(new_log)
     elif source == "manual":
         # keep the practice results on the branch so they can be reviewed without the Actions log
         save_branch_files({"practice.csv": to_csv(new_log, LOG_COLS)}, f"Practice run: {len(new_log)} entries")

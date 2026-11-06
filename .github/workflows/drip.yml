@@ -10,7 +10,8 @@ run-name: "Drip relist${{ github.event_name == 'workflow_dispatch' && inputs.dry
 
 on:
   schedule:
-    - cron: "23 * * * *"
+    - cron: "7 * * * *"
+    - cron: "37 * * * *"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -25,7 +26,7 @@ on:
 permissions:
   contents: write
 
-concurrency: relist
+concurrency: drip   # own lane, so it never bumps a waiting Auto-refresh
 
 jobs:
   drip:

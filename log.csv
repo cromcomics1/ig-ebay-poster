@@ -529,3 +529,7 @@ date,old_item_id,new_item_id,status,new_title,new_price,ad_rate,fees,message,sou
 2026-11-05 23:24,226686394155,227600215234,relisted,Hot Toys Matrix Neo Keanu Reeves 1/6 Display Stand Upside Pose ONLY 4 Toy Figure,,4.2,0.00,log entry restored by hand (GitHub push error),auto
 2026-11-05 23:24,226626249973,227600215420,relisted,Beyblade Huge Lot Burst Bakuten Shoot Metal Plastic Fight Takara Tomy Japan Game,,4.2,0.00,log entry restored by hand (GitHub push error),auto
 2026-11-06 02:27,226460816850,227600375622,relisted,Nightmare Before Christmas Disney Pin Silver Trim Candy Kids Bath Cartoon Burton,14.00,4.2,0.00,,drip
+2026-11-06 05:19,226601103702,227600525925,relisted,Old Small Lady By River Painting Art Signed Artist Gold Tone Frame Nature Trees,,4.2,0.00,,auto
+2026-11-06 05:19,226375240489,227600526277,relisted,"Jay Strongwater Picture Frame 2.75"" Pink Rhinestone Angel Art VTG Heavy Design",,4.2,0.00,,auto
+2026-11-06 05:19,224481222204,,skipped,Vintage G1 Transformer toy Lot. Sludge Dino Car Fire Chief Porsche See desc. Bot,,,,"eBay rejected the new listing, nothing was changed: VerifyAddFixedPriceItem failed: Error: Please add at least one valid shipping service option to your listing.",auto
+2026-11-06 05:19,227056295247,227600526578,relisted,Hot Toys Hawkeye Avenger MMS 1/6 Scale Bow Arrow Quiver Weapon ONLY 4 Toy Figure,,4.2,0.00,,auto

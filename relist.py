@@ -584,10 +584,10 @@ class Marketing:
              {"listingId": str(listing_id), "bidPercentage": f"{rate:.1f}"})
 
 
-def apply(auto_rows=None, target=None):
-    """Manual: relist approved rows from proposal.csv. Autopilot: relist auto_rows until
+def apply(auto_rows=None, target=None, source=None):
+    """Manual: relist approved rows from proposal.csv. Autopilot/drip: relist auto_rows until
     `target` new listings are made (extra rows are spares in case some are skipped)."""
-    source = "auto" if auto_rows is not None else "manual"
+    source = source or ("auto" if auto_rows is not None else "manual")
     proposal = auto_rows if auto_rows is not None else read_csv(load_branch_file("proposal.csv"))
     if not proposal:
         if auto_rows is not None:
@@ -749,7 +749,7 @@ def apply(auto_rows=None, target=None):
             entry.update(status="skipped", message=str(e)[:300])
             print(f"   SKIPPED: {e}\n")
         except RuntimeError as e:
-            entry.update(status="failed", message=str(e)[:300])
+            entry.update(status="failed", message=(("AFTER OLD LISTING ENDED: " if ended else "") + str(e))[:300])
             print(f"   FAILED: {e}\n")
             entry["ended"] = ended
             if not DRY_RUN and (ended or source == "manual"):
@@ -796,6 +796,57 @@ def autopilot():
             send_digest(read_csv(load_branch_file("log.csv")))
 
 
+# ---------------- drip: one listing at a time, at random daytime times ----------------
+DRIP_QUEUE = "drip_queue.csv"   # plan rows, worked through top to bottom
+DRIP_STATE = "drip_state.json"  # {"next_due": "...UTC..."}
+
+
+def drip():
+    """Hourly run. When the random 'next due' time has passed and it is daytime in
+    New York, sell-similar ONE listing from drip_queue.csv, then pick the next due
+    time at random (DRIP_MIN_HOURS to DRIP_MAX_HOURS later). Stops for good if a
+    listing ever fails after its old copy was ended."""
+    import json
+    import random
+    from zoneinfo import ZoneInfo
+    queue = read_csv(load_branch_file(DRIP_QUEUE))
+    log = read_csv(load_branch_file("log.csv"))
+    done = {r["old_item_id"] for r in log if r["status"] == "relisted"}
+    tried = {r["old_item_id"] for r in log if r.get("source") == "drip"}
+    if any(r.get("source") == "drip" and (r["message"].startswith(("AFTER OLD", "relisted WITHOUT")) or "PHOTOS:" in r["message"])
+           for r in log):
+        print("Drip is PAUSED: a drip relist failed earlier (see log.csv). Ask Claude to check it.")
+        return
+    pending = [r for r in queue if r["item_id"] not in done and r["item_id"] not in tried]
+    print(f"Drip queue: {len(queue)} listings, {len(pending)} still to do.")
+    if not pending:
+        print("Nothing left to do.")
+        return
+    state = json.loads(load_branch_file(DRIP_STATE) or "{}")
+    now = datetime.now(timezone.utc)
+    due = datetime.fromisoformat(state["next_due"]) if state.get("next_due") else now
+    force = os.environ.get("DRIP_NOW", "").lower() == "true"
+    if now < due and not force:
+        print(f"Not yet. Next listing is due after {due.astimezone(ZoneInfo('America/New_York')):%a %b %d, %I:%M %p} Eastern.")
+        return
+    local = now.astimezone(ZoneInfo("America/New_York"))
+    start, end = int(os.environ.get("DRIP_START_HOUR") or 8), int(os.environ.get("DRIP_END_HOUR") or 22)
+    if not (start <= local.hour < end) and not force:
+        print(f"Outside listing hours ({start}:00 to {end}:00 Eastern); waiting.")
+        return
+    if not force:
+        wait = random.randint(0, 25)  # random minute; finishes before the next hour so it never blocks Auto-refresh
+        print(f"Waiting {wait} minutes so the time is less regular...")
+        time.sleep(wait * 60)
+    if not DRY_RUN:
+        lo, hi = float(os.environ.get("DRIP_MIN_HOURS") or 2.5), float(os.environ.get("DRIP_MAX_HOURS") or 5)
+        nxt = datetime.now(timezone.utc) + timedelta(minutes=random.randint(int(lo * 60), int(hi * 60)))
+        save_branch_files({DRIP_STATE: json.dumps({"next_due": nxt.isoformat(timespec="minutes")}) + "\n"},
+                          "Drip: next listing time")
+        print(f"After this one, the next listing is due after {nxt.astimezone(ZoneInfo('America/New_York')):%a %b %d, %I:%M %p} Eastern.")
+    apply(pending[:3], 1, source="drip")  # 2 spares in case eBay rejects the first before anything changes
+
+
 def send_digest(log):
     """Email a summary of the last 24 hours of relists (Gmail with an app password)."""
     import smtplib
@@ -837,4 +888,4 @@ def send_digest(log):
 
 
 if __name__ == "__main__":
-    {"apply": apply, "auto": autopilot}.get(MODE, propose)()
+    {"apply": apply, "auto": autopilot, "drip": drip}.get(MODE, propose)()

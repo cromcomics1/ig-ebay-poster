@@ -1,0 +1,61 @@
+name: Drip relist
+run-name: "Drip relist${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && ' (practice)' || '' }}"
+
+# Sell-similars ONE listing at a time from drip_queue.csv (on the relist-data branch),
+# at random daytime times so the changes are spread out.
+# Checks every hour; acts only when the random "next due" time has passed and it is
+# between 8 am and 10 pm Eastern. Gaps between listings: 2.5 to 5 hours, at random.
+# Stops by itself when the queue is done, or if any listing fails after its old copy ended.
+# To pause: Actions > Drip relist > "..." > Disable workflow.
+
+on:
+  schedule:
+    - cron: "23 * * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Practice only (ON = nothing really changes)"
+        type: boolean
+        default: true
+      now:
+        description: "Ignore the waiting time and do one now"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency: relist
+
+jobs:
+  drip:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Git identity
+        run: |
+          git config user.name "ig-poster-bot"
+          git config user.email "ig-poster-bot@users.noreply.github.com"
+
+      - name: Drip relist
+        run: python relist.py
+        env:
+          EBAY_USER_TOKEN: ${{ secrets.EBAY_USER_TOKEN }}
+          EBAY_REFRESH_TOKEN: ${{ secrets.EBAY_REFRESH_TOKEN }}
+          EBAY_APP_ID: ${{ secrets.EBAY_APP_ID }}
+          EBAY_CERT_ID: ${{ secrets.EBAY_CERT_ID }}
+          MODE: drip
+          MAX_FEE: "0"
+          AD_CAMPAIGN: "latest"
+          DRIP_MIN_HOURS: "2.5"
+          DRIP_MAX_HOURS: "5"
+          DRIP_START_HOUR: "8"
+          DRIP_END_HOUR: "22"
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && 'true' || 'false' }}
+          DRIP_NOW: ${{ github.event_name == 'workflow_dispatch' && inputs.now && 'true' || 'false' }}

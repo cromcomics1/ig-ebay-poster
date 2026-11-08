@@ -16,17 +16,36 @@ from pathlib import Path
 import post
 
 COUNT = max(1, min(int(os.environ.get("COUNT") or 10), 25))
+# Optional: specific eBay item numbers (comma/space separated). When given, only
+# these are made, even if they were on TikTok before.
+ITEMS = re.findall(r"\d{9,15}", os.environ.get("ITEMS") or "")
+
+
+def fetch_item(token, legacy_id):
+    url = ("https://api.ebay.com/buy/browse/v1/item/get_item_by_legacy_id?legacy_item_id="
+           + legacy_id)
+    try:
+        return post.slim(post.http("GET", url, headers=post.ebay_headers(token)))
+    except RuntimeError as e:
+        print(f"  (couldn't find item {legacy_id} on eBay: {e})")
+        return None
 
 
 def main():
+    global COUNT
     token = post.ebay_token()
-    done = post.tiktok_saved_ids()
-    newest = post.fetch_listings(token, full=False)
-    catalog = json.loads(post.CATALOG.read_text()) if post.CATALOG.exists() else []
     label = lambda it: re.sub(r"[^0-9A-Za-z]", "_", it["itemId"])
-    fresh = [i for i in newest if label(i) not in done]
-    pool = [i for i in catalog if label(i) not in done and i["itemId"] not in {f["itemId"] for f in fresh}]
-    random.shuffle(pool)
+    if ITEMS:
+        fresh = [it for it in (fetch_item(token, i) for i in ITEMS) if it]
+        pool = []
+        COUNT = len(fresh)
+    else:
+        done = post.tiktok_saved_ids()
+        newest = post.fetch_listings(token, full=False)
+        catalog = json.loads(post.CATALOG.read_text()) if post.CATALOG.exists() else []
+        fresh = [i for i in newest if label(i) not in done]
+        pool = [i for i in catalog if label(i) not in done and i["itemId"] not in {f["itemId"] for f in fresh}]
+        random.shuffle(pool)
     workdir = Path(tempfile.mkdtemp())
     made = 0
     for it in fresh + pool:

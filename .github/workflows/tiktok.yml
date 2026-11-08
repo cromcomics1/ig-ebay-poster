@@ -9,6 +9,10 @@ on:
       count:
         description: "How many videos to make (max 25)"
         default: "10"
+      items:
+        description: "OR specific eBay item numbers, comma-separated (leave blank for automatic)"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -44,3 +48,5 @@ jobs:
           EBAY_APP_ID: ${{ secrets.EBAY_APP_ID }}
           EBAY_CERT_ID: ${{ secrets.EBAY_CERT_ID }}
           COUNT: ${{ inputs.count }}
+          ITEMS: ${{ inputs.items }}
+

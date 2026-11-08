@@ -1,0 +1,3172 @@
+{
+ "generated": "2026-11-08T16:53Z",
+ "compared_with": "2026-11-01",
+ "compared_with_4wk": "2026-10-17",
+ "weeks_of_history": 5,
+ "note": "Asking prices (Buy It Now medians), not sold prices.",
+ "climb_threshold_pct": 30.0,
+ "sets_tracked": [
+  {
+   "set": "National Chicle - Sky Birds",
+   "median": 19.5,
+   "listings": 607,
+   "category": "182982",
+   "year": 1933,
+   "maker": "National Chicle",
+   "set_name": "Sky Birds"
+  },
+  {
+   "set": "Topps - Civil War News",
+   "median": 17.49,
+   "listings": 386,
+   "category": "183050",
+   "year": 1962,
+   "maker": "Topps",
+   "set_name": "Civil War News"
+  },
+  {
+   "set": "Topps - Batman (Black Bat)",
+   "median": 38.0,
+   "listings": 379,
+   "category": "182982",
+   "year": 1966,
+   "maker": "Topps",
+   "set_name": "Batman (Black Bat)"
+  },
+  {
+   "set": "Nu-Cards - Horror Monster",
+   "median": 50.0,
+   "listings": 377,
+   "category": "182982",
+   "year": 1961,
+   "maker": "Nu-Cards",
+   "set_name": "Horror Monster"
+  },
+  {
+   "set": "Massary Zigarettenfabrik - Cigaretten Bilderdienst",
+   "median": 5.99,
+   "listings": 376,
+   "category": "182982",
+   "year": 1937,
+   "maker": "Massary Zigarettenfabrik",
+   "set_name": "Cigaretten Bilderdienst"
+  },
+  {
+   "set": "Topps - Batman A Series (Red Bat)",
+   "median": 9.99,
+   "listings": 365,
+   "category": "182982",
+   "year": 1966,
+   "maker": "Topps",
+   "set_name": "Batman A Series (Red Bat)"
+  },
+  {
+   "set": "Topps - Bat Laffs",
+   "median": 10.0,
+   "listings": 364,
+   "category": "182982",
+   "year": 1966,
+   "maker": "Topps",
+   "set_name": "Bat Laffs"
+  },
+  {
+   "set": "Topps - Wacky Packages Die-Cuts",
+   "median": 59.99,
+   "listings": 356,
+   "category": "182982",
+   "year": 1967,
+   "maker": "Topps",
+   "set_name": "Wacky Packages Die-Cuts"
+  },
+  {
+   "set": "Topps - Star Wars Stickers",
+   "median": 20.69,
+   "listings": 344,
+   "category": "182982",
+   "year": 1977,
+   "maker": "Topps",
+   "set_name": "Star Wars Stickers"
+  },
+  {
+   "set": "Fleer - The Three Stooges",
+   "median": 17.5,
+   "listings": 340,
+   "category": "182982",
+   "year": 1959,
+   "maker": "Fleer",
+   "set_name": "The Three Stooges"
+  },
+  {
+   "set": "Topps - Batman (Riddler Back)",
+   "median": 20.0,
+   "listings": 328,
+   "category": "182982",
+   "year": 1966,
+   "maker": "Topps",
+   "set_name": "Batman (Riddler Back)"
+  },
+  {
+   "set": "Topps - Batman B Series (Blue Bat)",
+   "median": 10.3,
+   "listings": 318,
+   "category": "182982",
+   "year": 1966,
+   "maker": "Topps",
+   "set_name": "Batman B Series (Blue Bat)"
+  },
+  {
+   "set": "Bowman - Jets, Rockets and Spacemen",
+   "median": 15.0,
+   "listings": 308,
+   "category": "182982",
+   "year": 1951,
+   "maker": "Bowman",
+   "set_name": "Jets, Rockets and Spacemen"
+  },
+  {
+   "set": "Topps - Wacky Packages - 1st Series",
+   "median": 17.0,
+   "listings": 305,
+   "category": "182982",
+   "year": 1973,
+   "maker": "Topps",
+   "set_name": "Wacky Packages - 1st Series"
+  },
+  {
+   "set": "Topps - Star Wars - Series 1 (Blue)",
+   "median": 14.99,
+   "listings": 301,
+   "category": "182982",
+   "year": 1977,
+   "maker": "Topps",
+   "set_name": "Star Wars - Series 1 (Blue)"
+  },
+  {
+   "set": "Topps - Wacky Packages - 3rd Series",
+   "median": 9.99,
+   "listings": 283,
+   "category": "182982",
+   "year": 1973,
+   "maker": "Topps",
+   "set_name": "Wacky Packages - 3rd Series"
+  },
+  {
+   "set": "Topps - Star Wars Series 1",
+   "median": 25.0,
+   "listings": 274,
+   "category": "182982",
+   "year": 1977,
+   "maker": "Topps",
+   "set_name": "Star Wars Series 1"
+  },
+  {
+   "set": "Topps - Wacky Packages - 9th Series",
+   "median": 5.99,
+   "listings": 255,
+   "category": "182982",
+   "year": 1974,
+   "maker": "Topps",
+   "set_name": "Wacky Packages - 9th Series"
+  },
+  {
+   "set": "Topps - Star Wars Series 2",
+   "median": 7.95,
+   "listings": 243,
+   "category": "182982",
+   "year": 1977,
+   "maker": "Topps",
+   "set_name": "Star Wars Series 2"
+  },
+  {
+   "set": "Topps - Wacky Packages - 2nd Series",
+   "median": 11.99,
+   "listings": 243,
+   "category": "182982",
+   "year": 1973,
+   "maker": "Topps",
+   "set_name": "Wacky Packages - 2nd Series"
+  },
+  {
+   "set": "Topps - Batman B Series (Blue Bat - Puzzle Back)",
+   "median": 11.18,
+   "listings": 227,
+   "category": "182982",
+   "year": 1966,
+   "maker": "Topps",
+   "set_name": "Batman B Series (Blue Bat - Puzzle Back)"
+  },
+  {
+   "set": "Topps - Star Wars 4 (Green)",
+   "median": 7.5,
+   "listings": 221,
+   "category": "182982",
+   "year": 1977,
+   "maker": "Topps",
+   "set_name": "Star Wars 4 (Green)"
+  },
+  {
+   "set": "Cigarettenfabrik Dresden - Bunten Filmbilder",
+   "median": 3.7,
+   "listings": 201,
+   "category": "182982",
+   "year": 1935,
+   "maker": "Cigarettenfabrik Dresden",
+   "set_name": "Bunten Filmbilder"
+  },
+  {
+   "set": "Star Trek (Topps)",
+   "median": 12.0,
+   "listings": 187,
+   "category": "182982",
+   "year": 1979,
+   "maker": "Topps",
+   "set_name": "Star Trek (Topps)"
+  },
+  {
+   "set": "Topps - Star Wars 2 (Red)",
+   "median": 19.87,
+   "listings": 182,
+   "category": "182982",
+   "year": 1977,
+   "maker": "Topps",
+   "set_name": "Star Wars 2 (Red)"
+  },
+  {
+   "set": "Topps - Star Wars 3 (Yellow)",
+   "median": 7.99,
+   "listings": 179,
+   "category": "182982",
+   "year": 1977,
+   "maker": "Topps",
+   "set_name": "Star Wars 3 (Yellow)"
+  },
+  {
+   "set": "Philadelphia Gum - James Bond - Thunderball",
+   "median": 6.58,
+   "listings": 169,
+   "category": "182982",
+   "year": 1966,
+   "maker": "Philadelphia Gum",
+   "set_name": "James Bond - Thunderball"
+  },
+  {
+   "set": "O-Pee-Chee - Star Wars",
+   "median": 18.07,
+   "listings": 158,
+   "category": "182982",
+   "year": 1977,
+   "maker": "O-Pee-Chee",
+   "set_name": "Star Wars"
+  },
+  {
+   "set": "American Tobacco - Flags All Nations",
+   "median": 6.72,
+   "listings": 141,
+   "category": "182982",
+   "year": 1910,
+   "maker": "American Tobacco",
+   "set_name": "Flags All Nations"
+  },
+  {
+   "set": "Nu-Cards - Rock Roll",
+   "median": 13.4,
+   "listings": 141,
+   "category": "182982",
+   "year": 1959,
+   "maker": "Nu-Cards",
+   "set_name": "Rock Roll"
+  },
+  {
+   "set": "Philadelphia Gum - War Bulletin",
+   "median": 3.62,
+   "listings": 140,
+   "category": "182982",
+   "year": 1965,
+   "maker": "Philadelphia Gum",
+   "set_name": "War Bulletin"
+  },
+  {
+   "set": "Star Trek (Leaf)",
+   "median": 31.0,
+   "listings": 133,
+   "category": "182982",
+   "year": 1967,
+   "maker": "Leaf",
+   "set_name": "Star Trek (Leaf)"
+  },
+  {
+   "set": "Cigarettenfabrik Dresden - Goldfilm Constantin",
+   "median": 3.7,
+   "listings": 133,
+   "category": "182982",
+   "year": 1934,
+   "maker": "Cigarettenfabrik Dresden",
+   "set_name": "Goldfilm Constantin"
+  },
+  {
+   "set": "Massary Zigarettenfabrik - Caid Beruhmter Filmkunstler",
+   "median": 3.13,
+   "listings": 126,
+   "category": "182982",
+   "year": 1934,
+   "maker": "Massary Zigarettenfabrik",
+   "set_name": "Caid Beruhmter Filmkunstler"
+  },
+  {
+   "set": "Scanlens - Star Wars",
+   "median": 49.0,
+   "listings": 124,
+   "category": "182982",
+   "year": 1977,
+   "maker": "Scanlens",
+   "set_name": "Star Wars"
+  },
+  {
+   "set": "Topps - Wacky Packages - 11th Series",
+   "median": 15.99,
+   "listings": 123,
+   "category": "182982",
+   "year": 1974,
+   "maker": "Topps",
+   "set_name": "Wacky Packages - 11th Series"
+  },
+  {
+   "set": "American Tobacco - Indian Chiefs",
+   "median": 40.0,
+   "listings": 119,
+   "category": "182982",
+   "year": 1910,
+   "maker": "American Tobacco",
+   "set_name": "Indian Chiefs"
+  },
+  {
+   "set": "Red Man - Indian Chiefs",
+   "median": 20.0,
+   "listings": 118,
+   "category": "182982",
+   "year": 1954,
+   "maker": "Red Man",
+   "set_name": "Indian Chiefs"
+  },
+  {
+   "set": "Eckstein-Halpaus - Grossen Der Weltgeschichte",
+   "median": 31.49,
+   "listings": 117,
+   "category": "182982",
+   "year": 1934,
+   "maker": "Eckstein-Halpaus",
+   "set_name": "Grossen Der Weltgeschichte"
+  },
+  {
+   "set": "Carreras - Film Stars",
+   "median": 6.14,
+   "listings": 116,
+   "category": "182982",
+   "year": 1936,
+   "maker": "Carreras",
+   "set_name": "Film Stars"
+  },
+  {
+   "set": "Exhibit Supply Co. - Exhibit Arcade",
+   "median": 4.0,
+   "listings": 111,
+   "category": "182982",
+   "year": 1940,
+   "maker": "Exhibit Supply Co.",
+   "set_name": "Exhibit Arcade"
+  },
+  {
+   "set": "Garb\u00e1ty - Garbaty Film",
+   "median": 8.0,
+   "listings": 111,
+   "category": "182982",
+   "year": 1934,
+   "maker": "Garb\u00e1ty",
+   "set_name": "Garbaty Film"
+  },
+  {
+   "set": "Kinney Bros. - Sweet Caporal",
+   "median": 13.21,
+   "listings": 110,
+   "category": "182982",
+   "year": 1887,
+   "maker": "Kinney Bros.",
+   "set_name": "Sweet Caporal"
+  },
+  {
+   "set": "Garb\u00e1ty - Kurmark Moderne Schonheitsgalerie",
+   "median": 7.09,
+   "listings": 106,
+   "category": "182982",
+   "year": 1934,
+   "maker": "Garb\u00e1ty",
+   "set_name": "Kurmark Moderne Schonheitsgalerie"
+  },
+  {
+   "set": "Eckstein-Halpaus - Die Tanzbuhnen Der Welt",
+   "median": 3.7,
+   "listings": 95,
+   "category": "182982",
+   "year": 1934,
+   "maker": "Eckstein-Halpaus",
+   "set_name": "Die Tanzbuhnen Der Welt"
+  },
+  {
+   "set": "Topps - Topps World",
+   "median": 260.0,
+   "listings": 94,
+   "category": "182982",
+   "year": 1954,
+   "maker": "Topps",
+   "set_name": "Topps World"
+  },
+  {
+   "set": "Nu-Cards - Horror Monsters",
+   "median": 9.97,
+   "listings": 93,
+   "category": "182982",
+   "year": 1961,
+   "maker": "Nu-Cards",
+   "set_name": "Horror Monsters"
+  },
+  {
+   "set": "Imperial Tobacco - Itc Canadian History",
+   "median": 5.43,
+   "listings": 92,
+   "category": "182982",
+   "year": 1926,
+   "maker": "Imperial Tobacco",
+   "set_name": "Itc Canadian History"
+  },
+  {
+   "set": "American Tobacco - Royal Bengals",
+   "median": 34.18,
+   "listings": 91,
+   "category": "182982",
+   "year": 1911,
+   "maker": "American Tobacco",
+   "set_name": "Royal Bengals"
+  },
+  {
+   "set": "Ed-U-Cards - Book Knowledge Flash",
+   "median": 22.49,
+   "listings": 91,
+   "category": "182982",
+   "year": 1960,
+   "maker": "Ed-U-Cards",
+   "set_name": "Book Knowledge Flash"
+  },
+  {
+   "set": "Ed-U-Cards - Green Hornet Playing",
+   "median": 3.49,
+   "listings": 87,
+   "category": "182982",
+   "year": 1966,
+   "maker": "Ed-U-Cards",
+   "set_name": "Green Hornet Playing"
+  },
+  {
+   "set": "Ed-U-Cards - Cowboys Indians",
+   "median": 3.7,
+   "listings": 84,
+   "category": "182982",
+   "year": 1967,
+   "maker": "Ed-U-Cards",
+   "set_name": "Cowboys Indians"
+  },
+  {
+   "set": "Parkhurst - Frontier Days",
+   "median": 25.0,
+   "listings": 83,
+   "category": "182982",
+   "year": 1956,
+   "maker": "Parkhurst",
+   "set_name": "Frontier Days"
+  },
+  {
+   "set": "Eckstein-Halpaus - Greats World History",
+   "median": 4.5,
+   "listings": 74,
+   "category": "182982",
+   "year": 1934,
+   "maker": "Eckstein-Halpaus",
+   "set_name": "Greats World History"
+  },
+  {
+   "set": "Exhibit Supply Co. - Exhibit Supply",
+   "median": 12.0,
+   "listings": 72,
+   "category": "182982",
+   "year": 1950,
+   "maker": "Exhibit Supply Co.",
+   "set_name": "Exhibit Supply"
+  },
+  {
+   "set": "Parkhurst - Time Cars",
+   "median": 98.03,
+   "listings": 70,
+   "category": "182982",
+   "year": 1911,
+   "maker": "Parkhurst",
+   "set_name": "Time Cars"
+  },
+  {
+   "set": "Imperial Tobacco - Motor Cars",
+   "median": 3.7,
+   "listings": 69,
+   "category": "182982",
+   "year": 1924,
+   "maker": "Imperial Tobacco",
+   "set_name": "Motor Cars"
+  },
+  {
+   "set": "Cavanders Ltd. - Camera Studies",
+   "median": 3.7,
+   "listings": 68,
+   "category": "182982",
+   "year": 1926,
+   "maker": "Cavanders Ltd.",
+   "set_name": "Camera Studies"
+  },
+  {
+   "set": "Cavanders Ltd. - Army Club Peeps Into",
+   "median": 3.98,
+   "listings": 66,
+   "category": "182982",
+   "year": 1930,
+   "maker": "Cavanders Ltd.",
+   "set_name": "Army Club Peeps Into"
+  },
+  {
+   "set": "Kellogg's - All Wheat",
+   "median": 7.43,
+   "listings": 65,
+   "category": "182982",
+   "year": 1945,
+   "maker": "Kellogg's",
+   "set_name": "All Wheat"
+  },
+  {
+   "set": "Carreras - Film Favourites",
+   "median": 5.0,
+   "listings": 54,
+   "category": "182982",
+   "year": 1938,
+   "maker": "Carreras",
+   "set_name": "Film Favourites"
+  },
+  {
+   "set": "Topps - James Bond - Moonraker",
+   "median": 34.95,
+   "listings": 51,
+   "category": "182982",
+   "year": 1979,
+   "maker": "Topps",
+   "set_name": "James Bond - Moonraker"
+  },
+  {
+   "set": "Gallaher - Screen Stage",
+   "median": 4.97,
+   "listings": 48,
+   "category": "182982",
+   "year": 1934,
+   "maker": "Gallaher",
+   "set_name": "Screen Stage"
+  },
+  {
+   "set": "Gallaher - Shots Famous Films",
+   "median": 4.0,
+   "listings": 9,
+   "category": "182982",
+   "year": 1935,
+   "maker": "Gallaher",
+   "set_name": "Shots Famous Films"
+  }
+ ],
+ "top_card_climbers": [
+  {
+   "set": "Topps - Star Wars - Series 1 (Blue)",
+   "median": 180.0,
+   "listings": 2,
+   "title": "1977 Topps Star Wars Card #51 Series 1 Blue Border",
+   "image": "https://i.ebayimg.com/images/g/RJwAAOSwnAtm9AQF/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/407257761304?hash=item5ed2744618:g:RJwAAOSwnAtm9AQF",
+   "card": "Topps - Star Wars - Series 1 (Blue) #51 raw",
+   "was": 9.99,
+   "change_pct": 1701.8,
+   "thumb": "img/43bb0be93987ab67.jpg"
+  },
+  {
+   "set": "Topps - Star Wars - Series 1 (Blue)",
+   "median": 77.47,
+   "listings": 2,
+   "title": "1977 TOPPS STAR WARS TUSKEN RAIDER STICKER CARD #39  ",
+   "image": "https://i.ebayimg.com/images/g/biAAAeSwG3dqzZwL/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/860038779633?hash=itemc83e4e52f1:g:biAAAeSwG3dqzZwL",
+   "card": "Topps - Star Wars - Series 1 (Blue) #39 raw",
+   "was": 4.99,
+   "change_pct": 1452.5,
+   "thumb": "img/e071a546ccb167af.jpg"
+  },
+  {
+   "set": "Topps - Star Wars Series 1",
+   "median": 107.44,
+   "listings": 2,
+   "title": "1977 Topps Star Wars Series 1 Peter Cushing As Grand Moff Tarkin #60 Blue \u2b50\ud83c\udf11",
+   "image": "https://i.ebayimg.com/images/g/xbsAAeSw5xJq5RWL/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/860104783285?hash=itemc8423d75b5:g:xbsAAeSw5xJq5RWL",
+   "card": "Topps - Star Wars Series 1 #60 raw",
+   "was": 7.99,
+   "change_pct": 1244.7,
+   "thumb": "img/da5e8bd683d1d426.jpg"
+  },
+  {
+   "set": "Topps - Batman (Black Bat)",
+   "median": 37.49,
+   "listings": 2,
+   "title": "1966 Topps Batman Black Bat Set Card #6 Chloroform Victim",
+   "image": "https://i.ebayimg.com/images/g/zpcAAeSwW5Nq520d/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/168830857789?hash=item274f1a723d:g:zpcAAeSwW5Nq520d",
+   "card": "Topps - Batman (Black Bat) #6 raw",
+   "was": 3.99,
+   "change_pct": 839.6,
+   "thumb": "img/e82022e096c7aa72.jpg"
+  },
+  {
+   "set": "Topps - Batman (Black Bat)",
+   "median": 75.22,
+   "listings": 2,
+   "title": "1966 A&BC Batman Black Bat Batman Robin Nightly Patrol #14 1s67",
+   "image": "https://i.ebayimg.com/images/g/xhkAAeSwA49q8Dxa/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/257841738176?hash=item3c0890b1c0:g:xhkAAeSwA49q8Dxa",
+   "card": "Topps - Batman (Black Bat) #14 raw",
+   "was": 8.88,
+   "change_pct": 747.1,
+   "thumb": "img/aaaca21a8870a5c0.jpg"
+  },
+  {
+   "set": "Topps - Star Wars Stickers",
+   "median": 42.74,
+   "listings": 2,
+   "title": "1977 Topps Star Wars Sticker #15 C-3PO See-Threepio Anthony Daniels EX",
+   "image": "https://i.ebayimg.com/images/g/3LEAAeSwFBtq5opU/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/128167045151?hash=item1dd759e81f:g:3LEAAeSwFBtq5opU",
+   "card": "Topps - Star Wars Stickers #15 raw",
+   "was": 7.21,
+   "change_pct": 492.8,
+   "thumb": "img/16fd41c666e784fd.jpg"
+  },
+  {
+   "set": "Star Trek (Topps)",
+   "median": 19.5,
+   "listings": 2,
+   "title": "1979 Topps Star Trek On Spock's Native World #72 VG",
+   "image": "https://i.ebayimg.com/images/g/9p0AAeSw2bRqPgzW/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/198456377221?hash=item2e34ebff85:g:9p0AAeSw2bRqPgzW",
+   "card": "Star Trek (Topps) #72 raw",
+   "was": 3.7,
+   "change_pct": 427.0,
+   "thumb": "img/da012417d766d192.jpg"
+  },
+  {
+   "set": "Topps - Star Wars - Series 1 (Blue)",
+   "median": 95.0,
+   "listings": 3,
+   "title": "1977 LUKE SKYWALKER TOPPS STAR WARS SERIES 1 BLUE TRADING CARD #63 RC",
+   "image": "https://i.ebayimg.com/images/g/YjoAAeSwpG5qxZPL/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/257786668985?hash=item3c054867b9:g:YjoAAeSwpG5qxZPL",
+   "card": "Topps - Star Wars - Series 1 (Blue) #63 raw",
+   "was": 19.99,
+   "change_pct": 375.2,
+   "thumb": "img/4832876cac1c2928.jpg"
+  },
+  {
+   "set": "O-Pee-Chee - Star Wars",
+   "median": 134.45,
+   "listings": 3,
+   "title": "1977 Topps/O-Pee-Chee Star Wars Stickers Han Solo #3 gi0",
+   "image": "https://i.ebayimg.com/images/g/aBYAAeSwlrBq1zMq/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/257807924699?_skw=O-Pee-Chee&hash=item3c068cbddb:g:aBYAAeSwlrBq1zMq",
+   "card": "O-Pee-Chee - Star Wars #3 raw",
+   "was": 35.33,
+   "change_pct": 280.6,
+   "thumb": "img/1c49238656a04006.jpg"
+  },
+  {
+   "set": "Topps - Batman (Black Bat)",
+   "median": 17.24,
+   "listings": 2,
+   "title": "1966 Topps BATMAN Black Bat  #16 The Penguin\u2019s Trap EX-NM",
+   "image": "https://i.ebayimg.com/images/g/mBAAAeSwQAJq7JPl/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/128177030440?hash=item1dd7f24528:g:mBAAAeSwQAJq7JPl",
+   "card": "Topps - Batman (Black Bat) #16 raw",
+   "was": 4.55,
+   "change_pct": 278.9,
+   "thumb": "img/d543c6c4f9281cd8.jpg"
+  },
+  {
+   "set": "Topps - Star Wars Series 1",
+   "median": 95.0,
+   "listings": 3,
+   "title": "1977 Topps Star Wars Series 1 Blue #4 Space pirate Han Solo [C]",
+   "image": "https://i.ebayimg.com/images/g/gaAAAeSwNm9q7hYi/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/960162970949?hash=itemdf8e2c3d45:g:gaAAAeSwNm9q7hYi",
+   "card": "Topps - Star Wars Series 1 #4 raw",
+   "was": 28.99,
+   "change_pct": 227.7,
+   "thumb": "img/b2af4da91d8cee5a.jpg"
+  },
+  {
+   "set": "Carreras - Film Stars",
+   "median": 11.79,
+   "listings": 2,
+   "title": "Charles Laughton 1949 Carreras Turf Famous Film Stars Tobacco Card #1",
+   "image": "https://i.ebayimg.com/images/g/ZS4AAeSwjFhooMLq/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/197622470376?_skw=Carreras+Tobacco&hash=item2e033796e8:g:ZS4AAeSwjFhooMLq",
+   "card": "Carreras - Film Stars #1 raw",
+   "was": 3.69,
+   "change_pct": 219.5,
+   "thumb": "img/22c426f2ef907847.jpg"
+  },
+  {
+   "set": "Topps - Civil War News",
+   "median": 21.0,
+   "listings": 4,
+   "title": "Topps 1962 Civil War News Non-Sport Trading Card #76 Blazing Cannon",
+   "image": "https://i.ebayimg.com/images/g/nQwAAeSwNkpquBZC/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/880053888318?hash=itemcce74ca53e:g:nQwAAeSwNkpquBZC",
+   "card": "Topps - Civil War News #76 raw",
+   "was": 6.99,
+   "change_pct": 200.4,
+   "thumb": "img/f0aaedab2248cd97.jpg"
+  },
+  {
+   "set": "Carreras - Film Stars",
+   "median": 15.72,
+   "listings": 4,
+   "title": "1936 Carreras Film Stars Tobacco Card #24 Jean Parker",
+   "image": "https://i.ebayimg.com/images/g/GhsAAeSwvEpolV~w/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/127295331747?_skw=Carreras+Tobacco&hash=item1da3649da3:g:GhsAAeSwvEpolV~w",
+   "card": "Carreras - Film Stars #24 raw",
+   "was": 5.24,
+   "change_pct": 200.0,
+   "thumb": "img/f8686f6c715e79c6.jpg"
+  },
+  {
+   "set": "Topps - Batman A Series (Red Bat)",
+   "median": 10.0,
+   "listings": 8,
+   "title": "Batman Red Card #2a - Grappling A Gator - 1966 Topps",
+   "image": "https://i.ebayimg.com/images/g/akMAAeSwVO9og5nl/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/297495310424?hash=item45441a3058:g:akMAAeSwVO9og5nl",
+   "card": "Topps - Batman A Series (Red Bat) #2a raw",
+   "was": 3.99,
+   "change_pct": 150.6,
+   "thumb": "img/c67abaf3951e045d.jpg"
+  },
+  {
+   "set": "Topps - Star Wars - Series 1 (Blue)",
+   "median": 25.0,
+   "listings": 2,
+   "title": "1977 Topps Star Wars Card #59 Series 1 Blue Border Ben Obi Wan Kenobi",
+   "image": "https://i.ebayimg.com/images/g/AKMAAOSwQXVm8Xtu/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/407225108227?hash=item5ed0820703:g:AKMAAOSwQXVm8Xtu",
+   "card": "Topps - Star Wars - Series 1 (Blue) #59 raw",
+   "was": 9.99,
+   "change_pct": 150.3,
+   "thumb": "img/06d9f54db4b47877.jpg"
+  },
+  {
+   "set": "Ed-U-Cards - Cowboys Indians",
+   "median": 9.17,
+   "listings": 2,
+   "title": "1967 Ed-U-Cards Cowboys and Indians Mini Smoke Signal #4 0w6",
+   "image": "https://i.ebayimg.com/images/g/fOQAAeSwqTlq4vPt/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/257823064504?_skw=Ed-U-Cards&hash=item3c0773c1b8:g:fOQAAeSwqTlq4vPt",
+   "card": "Ed-U-Cards - Cowboys Indians #4 raw",
+   "was": 3.7,
+   "change_pct": 147.8,
+   "thumb": "img/a4d85b2a2c85dee5.jpg"
+  },
+  {
+   "set": "Ed-U-Cards - Cowboys Indians",
+   "median": 9.17,
+   "listings": 2,
+   "title": "1967 Ed-U-Cards Cowboys and Indians Mini Six-Shooter #7 0w6",
+   "image": "https://i.ebayimg.com/images/g/3lMAAeSwGV1q3IvU/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/336860701190?_skw=Ed-U-Cards&hash=item4e6e766206:g:3lMAAeSwGV1q3IvU",
+   "card": "Ed-U-Cards - Cowboys Indians #7 raw",
+   "was": 3.7,
+   "change_pct": 147.8,
+   "thumb": "img/c7f498127b6e469a.jpg"
+  },
+  {
+   "set": "Topps - Civil War News",
+   "median": 10.18,
+   "listings": 4,
+   "title": "Topps Civil War News Non-Sport Trading Card Shot To Death #44 Base Set English",
+   "image": "https://i.ebayimg.com/images/g/E1MAAeSwmIRquCN2/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/880053997719?hash=itemcce74e5097:g:E1MAAeSwmIRquCN2",
+   "card": "Topps - Civil War News #44 raw",
+   "was": 4.37,
+   "change_pct": 133.0,
+   "thumb": "img/aea9427cbace66fd.jpg"
+  },
+  {
+   "set": "Scanlens - Star Wars",
+   "median": 6374.49,
+   "listings": 2,
+   "title": "1977 STAR WARS SCANLENS #1 LUKE SKYWALKER RC rare ",
+   "image": "https://i.ebayimg.com/images/g/OEAAAeSwIYVq18Ok/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/227575967481?_skw=Scanlens&hash=item34fc95aef9:g:OEAAAeSwIYVq18Ok",
+   "card": "Scanlens - Star Wars #1 raw",
+   "was": 2749.0,
+   "change_pct": 131.9,
+   "thumb": "img/f025e81f9b402294.jpg"
+  }
+ ],
+ "top_set_climbers": [
+  {
+   "set": "Ed-U-Cards - Book Knowledge Flash",
+   "median": 22.49,
+   "was": 5.43,
+   "change_pct": 314.2,
+   "listings": 91,
+   "was_listings": 108
+  },
+  {
+   "set": "Topps - James Bond - Moonraker",
+   "median": 34.95,
+   "was": 19.95,
+   "change_pct": 75.2,
+   "listings": 51,
+   "was_listings": 59
+  }
+ ],
+ "top_card_climbers_4wk": [
+  {
+   "set": "Carreras - Film Stars",
+   "median": 628.25,
+   "listings": 2,
+   "title": "1936 Carreras Film Stars #38 Loretta Young Vintage Tobacco Cigarette Movie Card",
+   "image": "https://i.ebayimg.com/images/g/iF0AAOSwFexnTIXZ/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/168784763930?_skw=Carreras+Tobacco&hash=item274c5b1c1a:g:iF0AAOSwFexnTIXZ",
+   "card": "Carreras - Film Stars #38 raw",
+   "was": 10.0,
+   "change_pct": 6182.5,
+   "thumb": "img/87cd29e080561bcb.jpg"
+  },
+  {
+   "set": "Topps - Star Wars Series 2",
+   "median": 60.0,
+   "listings": 5,
+   "title": "1977 Topps Star Wars Cards Red Series 2 \u2013 You Pick #67-#132 \u2013 Buy 4 Save 25%",
+   "image": "https://i.ebayimg.com/images/g/vK8AAeSwDWto3cHg/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/315599226186?hash=item497b2e054a:g:vK8AAeSwDWto3cHg",
+   "card": "Topps - Star Wars Series 2 #67 raw",
+   "was": 3.6,
+   "change_pct": 1566.7,
+   "thumb": "img/8e6629a0fc12cb4f.jpg"
+  },
+  {
+   "set": "Topps - Star Wars Series 1",
+   "median": 107.44,
+   "listings": 2,
+   "title": "1977 Topps Star Wars Series 1 Peter Cushing As Grand Moff Tarkin #60 Blue \u2b50\ud83c\udf11",
+   "image": "https://i.ebayimg.com/images/g/xbsAAeSw5xJq5RWL/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/860104783285?hash=itemc8423d75b5:g:xbsAAeSw5xJq5RWL",
+   "card": "Topps - Star Wars Series 1 #60 raw",
+   "was": 7.99,
+   "change_pct": 1244.7,
+   "thumb": "img/da5e8bd683d1d426.jpg"
+  },
+  {
+   "set": "Topps - Star Wars Series 1",
+   "median": 95.0,
+   "listings": 3,
+   "title": "1977 Topps Star Wars Series 1 Blue #4 Space pirate Han Solo [C]",
+   "image": "https://i.ebayimg.com/images/g/gaAAAeSwNm9q7hYi/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/960162970949?hash=itemdf8e2c3d45:g:gaAAAeSwNm9q7hYi",
+   "card": "Topps - Star Wars Series 1 #4 raw",
+   "was": 12.0,
+   "change_pct": 691.7,
+   "thumb": "img/b2af4da91d8cee5a.jpg"
+  },
+  {
+   "set": "Topps - Star Wars Stickers",
+   "median": 42.74,
+   "listings": 2,
+   "title": "1977 Topps Star Wars Sticker #15 C-3PO See-Threepio Anthony Daniels EX",
+   "image": "https://i.ebayimg.com/images/g/3LEAAeSwFBtq5opU/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/128167045151?hash=item1dd759e81f:g:3LEAAeSwFBtq5opU",
+   "card": "Topps - Star Wars Stickers #15 raw",
+   "was": 5.75,
+   "change_pct": 643.3,
+   "thumb": "img/16fd41c666e784fd.jpg"
+  },
+  {
+   "set": "O-Pee-Chee - Star Wars",
+   "median": 134.45,
+   "listings": 3,
+   "title": "1977 Topps/O-Pee-Chee Star Wars Stickers Han Solo #3 gi0",
+   "image": "https://i.ebayimg.com/images/g/aBYAAeSwlrBq1zMq/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/257807924699?_skw=O-Pee-Chee&hash=item3c068cbddb:g:aBYAAeSwlrBq1zMq",
+   "card": "O-Pee-Chee - Star Wars #3 raw",
+   "was": 18.94,
+   "change_pct": 609.9,
+   "thumb": "img/1c49238656a04006.jpg"
+  },
+  {
+   "set": "Topps - Star Wars 4 (Green)",
+   "median": 240.0,
+   "listings": 5,
+   "title": "1977 Topps Star Wars C-3PO (Anthony Daniels) Corrected card Green Series 4 #207",
+   "image": "https://i.ebayimg.com/images/g/xHMAAeSwH99qxZSi/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/287632242964?hash=item42f837b914:g:xHMAAeSwH99qxZSi",
+   "card": "Topps - Star Wars 4 (Green) #207 raw",
+   "was": 40.0,
+   "change_pct": 500.0,
+   "thumb": "img/4d852f9760a3582c.jpg"
+  },
+  {
+   "set": "Scanlens - Star Wars",
+   "median": 107.5,
+   "listings": 2,
+   "title": "1977 Scanlens Star Wars #28 Luke Agrees To Join Ben Kenobi",
+   "image": "https://i.ebayimg.com/images/g/kmMAAeSw2bRqOAHa/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/407017332682?_skw=Scanlens&hash=item5ec41f9fca:g:kmMAAeSw2bRqOAHa",
+   "card": "Scanlens - Star Wars #28 raw",
+   "was": 19.99,
+   "change_pct": 437.8,
+   "thumb": "img/0f60c0a88b343bc5.jpg"
+  },
+  {
+   "set": "Star Trek (Topps)",
+   "median": 19.5,
+   "listings": 2,
+   "title": "1979 Topps Star Trek On Spock's Native World #72 VG",
+   "image": "https://i.ebayimg.com/images/g/9p0AAeSw2bRqPgzW/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/198456377221?hash=item2e34ebff85:g:9p0AAeSw2bRqPgzW",
+   "card": "Star Trek (Topps) #72 raw",
+   "was": 3.7,
+   "change_pct": 427.0,
+   "thumb": "img/da012417d766d192.jpg"
+  },
+  {
+   "set": "Topps - Batman (Riddler Back)",
+   "median": 85.0,
+   "listings": 2,
+   "title": "1966 Topps Batman Riddler Backs #15 Bat On A Buoy Netherlands Holland",
+   "image": "https://i.ebayimg.com/images/g/nQcAAeSw0Vtqa47f/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/298545489241?hash=item4582b2a559:g:nQcAAeSw0Vtqa47f",
+   "card": "Topps - Batman (Riddler Back) #15 raw",
+   "was": 16.16,
+   "change_pct": 426.0,
+   "thumb": "img/a9e9d5f56853e932.jpg"
+  },
+  {
+   "set": "Fleer - The Three Stooges",
+   "median": 45.0,
+   "listings": 2,
+   "title": "1959 Fleer #90 Three Stooges Card 3 Stooges No Creases # 90",
+   "image": "https://i.ebayimg.com/images/g/UTsAAeSwq7RpqwTg/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/257819223169?hash=item3c07392481:g:UTsAAeSwq7RpqwTg",
+   "card": "Fleer - The Three Stooges #90 raw",
+   "was": 9.0,
+   "change_pct": 400.0,
+   "thumb": "img/532a198aaa536f14.jpg"
+  },
+  {
+   "set": "Topps - Batman (Black Bat)",
+   "median": 37.49,
+   "listings": 2,
+   "title": "1966 Topps Batman Black Bat Set Card #6 Chloroform Victim",
+   "image": "https://i.ebayimg.com/images/g/zpcAAeSwW5Nq520d/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/168830857789?hash=item274f1a723d:g:zpcAAeSwW5Nq520d",
+   "card": "Topps - Batman (Black Bat) #6 raw",
+   "was": 8.25,
+   "change_pct": 354.4,
+   "thumb": "img/e82022e096c7aa72.jpg"
+  },
+  {
+   "set": "Star Trek (Topps)",
+   "median": 85.27,
+   "listings": 4,
+   "title": "Vtg 1976 Topps #1 Star Trek The U.S.S. Enterprise Trading Card 4.5 VG-EX+",
+   "image": "https://i.ebayimg.com/images/g/M8gAAOSwFVNm4Lxg/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/286054705010?hash=item429a306772:g:M8gAAOSwFVNm4Lxg&amdata=enc%3AAQALAAAA4Of5zIIojhOf%2BkQK%2Bxzjn7mdUJbXYipi%2Bvs5GZh0CS0hKFgYd3rryP9bNr%2Brf37LrdAgyrmNFhMDSVZfIbt4KT%2Fh0vN7E9bgg%2BjPyyLeTdbDYn5JakKYzGkmmAf%2FtX2B3kkWJ4GkuO8t9Yh43dKIGCHz3ZHAllxd2QCD6pjL2Ymq4bCOqHmq2t--78hx1z%2FLjcIHuoneMK52zWGL7695i8zzAcmD5wVVJQJGNjIBjhqFqArrjcKA9T6hvS3Eur9gSX0GJ7G4gxHZ3Ew4V6p0k6LqnKozBvjqJDh80ytwniz5",
+   "card": "Star Trek (Topps) #1 raw",
+   "was": 20.09,
+   "change_pct": 324.4,
+   "thumb": "img/5243ef9b9124b6e3.jpg"
+  },
+  {
+   "set": "O-Pee-Chee - Star Wars",
+   "median": 460.61,
+   "listings": 4,
+   "title": "1977 Topps/O-Pee-Chee Star Wars Stickers C-3PO See-Threepio #5 1e8j",
+   "image": "https://i.ebayimg.com/images/g/fv4AAeSw8M1q323-/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/257818771903?_skw=O-Pee-Chee&hash=item3c073241bf:g:fv4AAeSw8M1q323-",
+   "card": "O-Pee-Chee - Star Wars #5 raw",
+   "was": 115.24,
+   "change_pct": 299.7,
+   "thumb": "img/987690aa77506f74.jpg"
+  },
+  {
+   "set": "Topps - Batman (Black Bat)",
+   "median": 16.5,
+   "listings": 6,
+   "title": "1966 Topps Batman (Black Bat Logo) Monstrous Illusion Card #48",
+   "image": "https://i.ebayimg.com/images/g/llQAAeSwQspq1DSr/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/840032489201?hash=itemc395d68ef1:g:llQAAeSwQspq1DSr",
+   "card": "Topps - Batman (Black Bat) #48 raw",
+   "was": 4.5,
+   "change_pct": 266.7,
+   "thumb": "img/dc6d645322b81a05.jpg"
+  },
+  {
+   "set": "Topps - Civil War News",
+   "median": 21.5,
+   "listings": 2,
+   "title": "1962 Topps Civil War News Card #18 - Death To The Enemy",
+   "image": "https://i.ebayimg.com/images/g/prMAAeSwuVdq3hyw/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/287678543514?hash=item42fafa369a:g:prMAAeSwuVdq3hyw",
+   "card": "Topps - Civil War News #18 raw",
+   "was": 6.0,
+   "change_pct": 258.3,
+   "thumb": "img/b8e828d947e1e07c.jpg"
+  },
+  {
+   "set": "Topps - Civil War News",
+   "median": 18.84,
+   "listings": 2,
+   "title": "1962 Topps Civil War News Card #33 - Fight For Survival",
+   "image": "https://i.ebayimg.com/images/g/gYYAAeSw4bRq3hu7/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/287678512360?hash=item42faf9bce8:g:gYYAAeSw4bRq3hu7",
+   "card": "Topps - Civil War News #33 raw",
+   "was": 5.37,
+   "change_pct": 250.8,
+   "thumb": "img/448893425c9974a1.jpg"
+  },
+  {
+   "set": "Topps - Civil War News",
+   "median": 32.65,
+   "listings": 2,
+   "title": "1962 Topps Civil War News Card #48 - Smashing The Enemy - Excellent Condition",
+   "image": "https://i.ebayimg.com/images/g/ATYAAeSwuxVqnaPX/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/287569512568?hash=item42f47a8878:g:ATYAAeSwuxVqnaPX",
+   "card": "Topps - Civil War News #48 raw",
+   "was": 9.99,
+   "change_pct": 226.8,
+   "thumb": "img/e1d000e09a6acb48.jpg"
+  },
+  {
+   "set": "Topps - Star Wars 4 (Green)",
+   "median": 12.99,
+   "listings": 5,
+   "title": "1977 Topps Star Wars Card #247 Series 4 Green Border Stormtrooper",
+   "image": "https://i.ebayimg.com/images/g/vRgAAOSw2AZm9IWO/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/166990863642?hash=item26e16e5d1a:g:vRgAAOSw2AZm9IWO",
+   "card": "Topps - Star Wars 4 (Green) #247 raw",
+   "was": 4.0,
+   "change_pct": 224.8,
+   "thumb": "img/82cdd18b2131c023.jpg"
+  },
+  {
+   "set": "Bowman - Jets, Rockets and Spacemen",
+   "median": 39.99,
+   "listings": 5,
+   "title": "1951 Bowman Jets Rockets Spacemen #20 Crash Landing in Mercurian Bog VG",
+   "image": "https://i.ebayimg.com/images/g/dVgAAeSwpBJogGHY/s-l500.jpg",
+   "url": "https://www.ebay.com/itm/157202181382?hash=item2499faed06:g:dVgAAeSwpBJogGHY&amdata=enc%3AAQALAAAA4Of5zIIojhOf%2BkQK%2Bxzjn7k%2FaproW64CL6LFrwPw8MrPwvDGYSm8a4OcKPqngKKKE3CUMoA7jjNjwY1locD0txrwT%2F1PITV%2BxqQs2J95j6TLsV%2Fb5VchXK5277uoYxtpOADJEqluWdW87UlnoI8F4uXNqUvR%2Fxrsx%2BRu8Eh8IWpIfguxh59FK7lYCgGIoxqfH53Q%2FDezPnKJcNXn%2FdYwsxVv9ZSF95ozBO27jPtfklHCni9jElxc7wmEnTKXCF3qJhR2i9oTr0aSh4hcCbkjMgBE4CRwqUNJw9GJZpB2tudu",
+   "card": "Bowman - Jets, Rockets and Spacemen #20 raw",
+   "was": 12.5,
+   "change_pct": 219.9,
+   "thumb": "img/27378d0a71a9fa04.jpg"
+  }
+ ],
+ "top_set_climbers_4wk": [
+  {
+   "set": "Topps - James Bond - Moonraker",
+   "median": 34.95,
+   "was": 22.0,
+   "change_pct": 58.9,
+   "listings": 51,
+   "was_listings": 63
+  }
+ ],
+ "top3_per_set": {
+  "Topps - Civil War News": [
+   {
+    "set": "Topps - Civil War News",
+    "median": 21.0,
+    "listings": 4,
+    "title": "Topps 1962 Civil War News Non-Sport Trading Card #76 Blazing Cannon",
+    "image": "https://i.ebayimg.com/images/g/nQwAAeSwNkpquBZC/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/880053888318?hash=itemcce74ca53e:g:nQwAAeSwNkpquBZC",
+    "card": "Topps - Civil War News #76 raw",
+    "was": 6.99,
+    "change_pct": 200.4,
+    "thumb": "img/f0aaedab2248cd97.jpg"
+   },
+   {
+    "set": "Topps - Civil War News",
+    "median": 10.18,
+    "listings": 4,
+    "title": "Topps Civil War News Non-Sport Trading Card Shot To Death #44 Base Set English",
+    "image": "https://i.ebayimg.com/images/g/E1MAAeSwmIRquCN2/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/880053997719?hash=itemcce74e5097:g:E1MAAeSwmIRquCN2",
+    "card": "Topps - Civil War News #44 raw",
+    "was": 4.37,
+    "change_pct": 133.0,
+    "thumb": "img/aea9427cbace66fd.jpg"
+   },
+   {
+    "set": "Topps - Civil War News",
+    "median": 8.59,
+    "listings": 3,
+    "title": "1962 Topps Civil War News #8 Destructive Blow",
+    "image": "https://i.ebayimg.com/images/g/bu8AAeSwaqVqz-0T/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/237124245570?hash=item3735b4d842:g:bu8AAeSwaqVqz-0T",
+    "card": "Topps - Civil War News #8 raw",
+    "was": 6.58,
+    "change_pct": 30.5,
+    "thumb": "img/95f7aea37795ac67.jpg"
+   }
+  ],
+  "Fleer - The Three Stooges": [
+   {
+    "set": "Fleer - The Three Stooges",
+    "median": 3049.68,
+    "listings": 2,
+    "title": "1966 \ud83d\udd35 PSA 7 The Three Stooges How's this for a natural pose? #1",
+    "image": "https://i.ebayimg.com/images/g/qU0AAOSwFRtnM3-M/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/327306129454?hash=item4c34f7302e:g:qU0AAOSwFRtnM3-M",
+    "card": "Fleer - The Three Stooges #1 PSA 7",
+    "change_pct": null,
+    "thumb": "img/e954ccde1b006409.jpg"
+   },
+   {
+    "set": "Fleer - The Three Stooges",
+    "median": 524.99,
+    "listings": 2,
+    "title": "1959 Fleer The Three Stooges Larry #3 SGC 7 Near Mint",
+    "image": "https://i.ebayimg.com/images/g/qWkAAOSwiI9oOHan/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/127460881783?hash=item1dad42b577:g:qWkAAOSwiI9oOHan",
+    "card": "Fleer - The Three Stooges #3 SGC 7",
+    "change_pct": null,
+    "thumb": "img/98085c9bae59548c.jpg"
+   },
+   {
+    "set": "Fleer - The Three Stooges",
+    "median": 245.49,
+    "listings": 2,
+    "title": "1959 Fleer The 3 Three Stooges If You Don't Stop My Name Will Be PSA 9 MINT #39",
+    "image": "https://i.ebayimg.com/images/g/oioAAeSw~hNqvv6n/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/307209556138?hash=item47871dd0aa:g:oioAAeSw~hNqvv6n",
+    "card": "Fleer - The Three Stooges #39 PSA 9",
+    "change_pct": null,
+    "thumb": "img/f58bfce698cfb1cf.jpg"
+   }
+  ],
+  "Topps - Star Wars Stickers": [
+   {
+    "set": "Topps - Star Wars Stickers",
+    "median": 42.74,
+    "listings": 2,
+    "title": "1977 Topps Star Wars Sticker #15 C-3PO See-Threepio Anthony Daniels EX",
+    "image": "https://i.ebayimg.com/images/g/3LEAAeSwFBtq5opU/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/128167045151?hash=item1dd759e81f:g:3LEAAeSwFBtq5opU",
+    "card": "Topps - Star Wars Stickers #15 raw",
+    "was": 7.21,
+    "change_pct": 492.8,
+    "thumb": "img/16fd41c666e784fd.jpg"
+   },
+   {
+    "set": "Topps - Star Wars Stickers",
+    "median": 22.49,
+    "listings": 6,
+    "title": "Topps Star Wars Sticker #35 - 1977 Vintage Sticker Trading Card",
+    "image": "https://i.ebayimg.com/images/g/y-MAAeSwof1qx8Dq/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/860023618316?hash=itemc83d66fb0c:g:y-MAAeSwof1qx8Dq",
+    "card": "Topps - Star Wars Stickers #35 raw",
+    "was": 11.99,
+    "change_pct": 87.6,
+    "thumb": "img/70f45d1423877c46.jpg"
+   },
+   {
+    "set": "Topps - Star Wars Stickers",
+    "median": 9.99,
+    "listings": 7,
+    "title": "1977 Topps/O-Pee-Chee Star Wars Stickers Tusken Raider #10 1c0s",
+    "image": "https://i.ebayimg.com/images/g/9FUAAeSwXg1q7lKS/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257839333250?hash=item3c086bff82:g:9FUAAeSwXg1q7lKS",
+    "card": "Topps - Star Wars Stickers #10 raw",
+    "was": 6.47,
+    "change_pct": 54.4,
+    "thumb": "img/2f9662b8183b0d8b.jpg"
+   }
+  ],
+  "Topps - Batman (Black Bat)": [
+   {
+    "set": "Topps - Batman (Black Bat)",
+    "median": 37.49,
+    "listings": 2,
+    "title": "1966 Topps Batman Black Bat Set Card #6 Chloroform Victim",
+    "image": "https://i.ebayimg.com/images/g/zpcAAeSwW5Nq520d/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/168830857789?hash=item274f1a723d:g:zpcAAeSwW5Nq520d",
+    "card": "Topps - Batman (Black Bat) #6 raw",
+    "was": 3.99,
+    "change_pct": 839.6,
+    "thumb": "img/e82022e096c7aa72.jpg"
+   },
+   {
+    "set": "Topps - Batman (Black Bat)",
+    "median": 75.22,
+    "listings": 2,
+    "title": "1966 A&BC Batman Black Bat Batman Robin Nightly Patrol #14 1s67",
+    "image": "https://i.ebayimg.com/images/g/xhkAAeSwA49q8Dxa/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257841738176?hash=item3c0890b1c0:g:xhkAAeSwA49q8Dxa",
+    "card": "Topps - Batman (Black Bat) #14 raw",
+    "was": 8.88,
+    "change_pct": 747.1,
+    "thumb": "img/aaaca21a8870a5c0.jpg"
+   },
+   {
+    "set": "Topps - Batman (Black Bat)",
+    "median": 17.24,
+    "listings": 2,
+    "title": "1966 Topps BATMAN Black Bat  #16 The Penguin\u2019s Trap EX-NM",
+    "image": "https://i.ebayimg.com/images/g/mBAAAeSwQAJq7JPl/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/128177030440?hash=item1dd7f24528:g:mBAAAeSwQAJq7JPl",
+    "card": "Topps - Batman (Black Bat) #16 raw",
+    "was": 4.55,
+    "change_pct": 278.9,
+    "thumb": "img/d543c6c4f9281cd8.jpg"
+   }
+  ],
+  "Topps - Batman B Series (Blue Bat)": [
+   {
+    "set": "Topps - Batman B Series (Blue Bat)",
+    "median": 155.0,
+    "listings": 2,
+    "title": "1966 O-Pee-Chee Batman ( Blue ) - Riddler Robs a Rainbow #44B",
+    "image": "https://i.ebayimg.com/images/g/xxwAAeSwbVRq5ida/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/327432383864?hash=item4c3c7dad78:g:xxwAAeSwbVRq5ida",
+    "card": "Topps - Batman B Series (Blue Bat) #44b raw",
+    "change_pct": null,
+    "thumb": "img/350cdce37ce248f5.jpg"
+   },
+   {
+    "set": "Topps - Batman B Series (Blue Bat)",
+    "median": 145.0,
+    "listings": 2,
+    "title": "1966 TOPPS USA BATMAN B Series BLUE BAT Back #21 Toll of Torture PSA 5 EX Card",
+    "image": "https://i.ebayimg.com/images/g/LCIAAeSw1nVq4Ck8/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/327425600673?hash=item4c3c162ca1:g:LCIAAeSw1nVq4Ck8",
+    "card": "Topps - Batman B Series (Blue Bat) #21 PSA 5",
+    "change_pct": null,
+    "thumb": "img/91c9f6382456944e.jpg"
+   },
+   {
+    "set": "Topps - Batman B Series (Blue Bat)",
+    "median": 125.0,
+    "listings": 2,
+    "title": "1966 TOPPS USA BATMAN B Series BLUE BAT Back #13 Batman\u2019s Coffin PSA 5 EX Card",
+    "image": "https://i.ebayimg.com/images/g/swoAAeSw0Plp8zHu/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/287302910012?hash=item42e496803c:g:swoAAeSw0Plp8zHu&amdata=enc%3AAQALAAAA4Of5zIIojhOf%2BkQK%2Bxzjn7msCACzgI1RP0mm20%2BmbuDPTHgobNx7LR1heALb9cEzu058ucxBzuiZS5IyT5cfzJ3jpMqyusNzAaJixhdauY3KuH4ii5%2BwpdKbdNN59W%2FgSgDLPGKoCCr6vGlvcB366b0xauIEIMn6GnNJ%2BEHVhKPaXK9XQENMssxZfoNGgzC11cPJVmlYesGX8xuL3NR86juQuzG4IHqxzqFdNJfvJn2KgMpmLXjZ9FKUsmk%2Fr4TVewl99bwc8rQBfwBZtQJNCgS44nSj7CuLYOXXdakD01o1",
+    "card": "Topps - Batman B Series (Blue Bat) #13 PSA 5",
+    "change_pct": null,
+    "thumb": "img/c00d1abfef864d91.jpg"
+   }
+  ],
+  "Topps - Bat Laffs": [
+   {
+    "set": "Topps - Bat Laffs",
+    "median": 6.0,
+    "listings": 2,
+    "title": "1966 A&BC Batman Bat Laffs #34 The Penguin, the Riddler, Catwoman and the Joker",
+    "image": "https://i.ebayimg.com/images/g/TCcAAeSw~VhqTpyZ/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/188617812255?hash=item2bea7f691f:g:TCcAAeSw~VhqTpyZ",
+    "card": "Topps - Bat Laffs #34 raw",
+    "was": 4.0,
+    "change_pct": 50.0,
+    "thumb": "img/5cdb3db00d476655.jpg"
+   },
+   {
+    "set": "Topps - Bat Laffs",
+    "median": 9.74,
+    "listings": 5,
+    "title": "1966 Topps Batman Bat Laffs #14 Batcave",
+    "image": "https://i.ebayimg.com/images/g/nXMAAeSw18BqTp0Q/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/188617812288?hash=item2bea7f6940:g:nXMAAeSw18BqTp0Q",
+    "card": "Topps - Bat Laffs #14 raw",
+    "was": 7.25,
+    "change_pct": 34.3,
+    "thumb": "img/5857d78051db9b35.jpg"
+   },
+   {
+    "set": "Topps - Bat Laffs",
+    "median": 9.91,
+    "listings": 5,
+    "title": "Batman 1966 Bat Laffs A&BC: Card #22 Batman & Robin v2 British Version",
+    "image": "https://i.ebayimg.com/images/g/fTAAAeSwb5Fo3DGW/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/157358462466?hash=item24a34b9602:g:fTAAAeSwb5Fo3DGW",
+    "card": "Topps - Bat Laffs #22 raw",
+    "was": 7.43,
+    "change_pct": 33.4,
+    "thumb": "img/d675c5b66415e372.jpg"
+   }
+  ],
+  "Topps - Star Wars Series 2": [
+   {
+    "set": "Topps - Star Wars Series 2",
+    "median": 5.44,
+    "listings": 6,
+    "title": "1977 Topps Star Wars Series 2 red border #107 the tusken raider",
+    "image": "https://i.ebayimg.com/images/g/OpQAAOSw9lRnH5ed/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/405313091719?hash=item5e5e8af887:g:OpQAAOSw9lRnH5ed",
+    "card": "Topps - Star Wars Series 2 #107 raw",
+    "was": 4.0,
+    "change_pct": 36.0,
+    "thumb": "img/4f761df28ae6db65.jpg"
+   },
+   {
+    "set": "Topps - Star Wars Series 2",
+    "median": 220.0,
+    "listings": 2,
+    "title": "1977 Topps Star Wars #99 Ben With The Light Sabre PSA 8 NM/MT",
+    "image": "https://i.ebayimg.com/images/g/zJ0AAeSwy6Fq7Snc/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/800882743189?hash=itemba7854d795:g:zJ0AAeSwy6Fq7Snc",
+    "card": "Topps - Star Wars Series 2 #99 PSA 8",
+    "change_pct": null,
+    "thumb": "img/1b7db1b9526937f5.jpg"
+   },
+   {
+    "set": "Topps - Star Wars Series 2",
+    "median": 148.72,
+    "listings": 2,
+    "title": "Topps Star Wars - Galactic Files Series 2 Complete Base Set #351-699",
+    "image": "https://i.ebayimg.com/images/g/uZAAAeSwaw5qrWyi/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/307186001746?hash=item4785b66752:g:uZAAAeSwaw5qrWyi",
+    "card": "Topps - Star Wars Series 2 #351 raw",
+    "change_pct": null,
+    "thumb": "img/884ee76595400b43.jpg"
+   }
+  ],
+  "Topps - Star Wars Series 1": [
+   {
+    "set": "Topps - Star Wars Series 1",
+    "median": 107.44,
+    "listings": 2,
+    "title": "1977 Topps Star Wars Series 1 Peter Cushing As Grand Moff Tarkin #60 Blue \u2b50\ud83c\udf11",
+    "image": "https://i.ebayimg.com/images/g/xbsAAeSw5xJq5RWL/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/860104783285?hash=itemc8423d75b5:g:xbsAAeSw5xJq5RWL",
+    "card": "Topps - Star Wars Series 1 #60 raw",
+    "was": 7.99,
+    "change_pct": 1244.7,
+    "thumb": "img/da5e8bd683d1d426.jpg"
+   },
+   {
+    "set": "Topps - Star Wars Series 1",
+    "median": 95.0,
+    "listings": 3,
+    "title": "1977 Topps Star Wars Series 1 Blue #4 Space pirate Han Solo [C]",
+    "image": "https://i.ebayimg.com/images/g/gaAAAeSwNm9q7hYi/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/960162970949?hash=itemdf8e2c3d45:g:gaAAAeSwNm9q7hYi",
+    "card": "Topps - Star Wars Series 1 #4 raw",
+    "was": 28.99,
+    "change_pct": 227.7,
+    "thumb": "img/b2af4da91d8cee5a.jpg"
+   },
+   {
+    "set": "Topps - Star Wars Series 1",
+    "median": 7.5,
+    "listings": 2,
+    "title": "Star Wars Series 1 1977 HAN, CHEWIE AND LUKE #55 Blue",
+    "image": "https://i.ebayimg.com/images/g/wzoAAeSw-w1q5G5a/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/198756920713?hash=item2e46d5ed89:g:wzoAAeSw-w1q5G5a",
+    "card": "Topps - Star Wars Series 1 #55 raw",
+    "was": 3.38,
+    "change_pct": 121.9,
+    "thumb": "img/46425a297d30d4fd.jpg"
+   }
+  ],
+  "Topps - Batman A Series (Red Bat)": [
+   {
+    "set": "Topps - Batman A Series (Red Bat)",
+    "median": 10.0,
+    "listings": 8,
+    "title": "Batman Red Card #2a - Grappling A Gator - 1966 Topps",
+    "image": "https://i.ebayimg.com/images/g/akMAAeSwVO9og5nl/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/297495310424?hash=item45441a3058:g:akMAAeSwVO9og5nl",
+    "card": "Topps - Batman A Series (Red Bat) #2a raw",
+    "was": 3.99,
+    "change_pct": 150.6,
+    "thumb": "img/c67abaf3951e045d.jpg"
+   },
+   {
+    "set": "Topps - Batman A Series (Red Bat)",
+    "median": 7.12,
+    "listings": 4,
+    "title": "1966 Topps Batman A Series Red Bat - #8A - Tentacled Terror  Poor",
+    "image": "https://i.ebayimg.com/images/g/z4sAAeSwan9qVZoY/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/318800394047?hash=item4a39fbf73f:g:z4sAAeSwan9qVZoY",
+    "card": "Topps - Batman A Series (Red Bat) #8a raw",
+    "was": 4.25,
+    "change_pct": 67.5,
+    "thumb": "img/56bb6131ab54dca5.jpg"
+   },
+   {
+    "set": "Topps - Batman A Series (Red Bat)",
+    "median": 8.0,
+    "listings": 4,
+    "title": "1966 Topps Batman Series A (Red Bat Logo) #44A Batman on Broadway",
+    "image": "https://i.ebayimg.com/images/g/FmgAAeSw54pq6Rmx/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/198766628226?hash=item2e476a0d82:g:FmgAAeSw54pq6Rmx",
+    "card": "Topps - Batman A Series (Red Bat) #44a raw",
+    "was": 4.99,
+    "change_pct": 60.3,
+    "thumb": "img/3a92a047a942740c.jpg"
+   }
+  ],
+  "Philadelphia Gum - James Bond - Thunderball": [
+   {
+    "set": "Philadelphia Gum - James Bond - Thunderball",
+    "median": 107.72,
+    "listings": 2,
+    "title": "1966 SOMPORTEX THUNDERBALL 007 FAST AGENT #1 WOMEN OF JAMES BOND RARE L@@K",
+    "image": "https://i.ebayimg.com/images/g/z~QAAeSwevBpiLbb/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/306758236153?hash=item476c3737f9:g:z~QAAeSwevBpiLbb",
+    "card": "Philadelphia Gum - James Bond - Thunderball #1 raw",
+    "change_pct": null,
+    "thumb": "img/60aa06eb373999f1.jpg"
+   },
+   {
+    "set": "Philadelphia Gum - James Bond - Thunderball",
+    "median": 31.88,
+    "listings": 2,
+    "title": "1966 Philadelphia James Bond: Thunderball Flying Fists and Figures #5 1m8",
+    "image": "https://i.ebayimg.com/images/g/qskAAeSwjclq3xY1/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257818303359?hash=item3c072b1b7f:g:qskAAeSwjclq3xY1",
+    "card": "Philadelphia Gum - James Bond - Thunderball #5 raw",
+    "change_pct": null,
+    "thumb": "img/6fd3ca694d9495ae.jpg"
+   },
+   {
+    "set": "Philadelphia Gum - James Bond - Thunderball",
+    "median": 19.14,
+    "listings": 2,
+    "title": "1966 Philadelphia James Bond: Thunderball Hardly a Proper Pet! #24 6qd",
+    "image": "https://i.ebayimg.com/images/g/yJYAAeSwsjVq3qGz/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/237144217353?hash=item3736e59709:g:yJYAAeSwsjVq3qGz",
+    "card": "Philadelphia Gum - James Bond - Thunderball #24 raw",
+    "change_pct": null,
+    "thumb": "img/fde7bd94454fd02d.jpg"
+   }
+  ],
+  "Topps - Batman (Riddler Back)": [
+   {
+    "set": "Topps - Batman (Riddler Back)",
+    "median": 1947.5,
+    "listings": 2,
+    "title": "1966 Topps Batman Riddler Back #1 Batman's Butler PSA 8 NM-MT 3303",
+    "image": "https://i.ebayimg.com/images/g/mH4AAOSwW8lmxja9/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/840096800095?hash=itemc399abdd5f:g:mH4AAOSwW8lmxja9",
+    "card": "Topps - Batman (Riddler Back) #1 PSA 8",
+    "change_pct": null,
+    "thumb": "img/a7d91136213452e6.jpg"
+   },
+   {
+    "set": "Topps - Batman (Riddler Back)",
+    "median": 1022.5,
+    "listings": 2,
+    "title": "1966 TOPPS BATMAN Riddler Back #36 A Catly Caper Cat; PSA 8 ,only 7 higher! ",
+    "image": "https://i.ebayimg.com/images/g/YN8AAeSwjhxquVaa/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/307202165268?hash=item4786ad0a14:g:YN8AAeSwjhxquVaa",
+    "card": "Topps - Batman (Riddler Back) #36 PSA 8",
+    "change_pct": null,
+    "thumb": "img/5d6c2a2445fd1568.jpg"
+   },
+   {
+    "set": "Topps - Batman (Riddler Back)",
+    "median": 549.28,
+    "listings": 2,
+    "title": "1966 A&BC Batman Riddler Back Batman Adam West The Caped Crusader #8 11bd",
+    "image": "https://i.ebayimg.com/images/g/FCwAAeSwHTBq54PF/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/237156145526?hash=item37379b9976:g:FCwAAeSwHTBq54PF",
+    "card": "Topps - Batman (Riddler Back) #8 raw",
+    "change_pct": null,
+    "thumb": "img/041f580680ee5720.jpg"
+   }
+  ],
+  "Star Trek (Topps)": [
+   {
+    "set": "Star Trek (Topps)",
+    "median": 19.5,
+    "listings": 2,
+    "title": "1979 Topps Star Trek On Spock's Native World #72 VG",
+    "image": "https://i.ebayimg.com/images/g/9p0AAeSw2bRqPgzW/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/198456377221?hash=item2e34ebff85:g:9p0AAeSw2bRqPgzW",
+    "card": "Star Trek (Topps) #72 raw",
+    "was": 3.7,
+    "change_pct": 427.0,
+    "thumb": "img/da012417d766d192.jpg"
+   },
+   {
+    "set": "Star Trek (Topps)",
+    "median": 227.5,
+    "listings": 2,
+    "title": "1976 Topps Star Trek Duel at Gothos #38 NM-MT or Better",
+    "image": "https://i.ebayimg.com/images/g/DV4AAeSw~opq4gnU/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/147655480449?hash=item2260f3d481:g:DV4AAeSw~opq4gnU",
+    "card": "Star Trek (Topps) #38 raw",
+    "was": 99.99,
+    "change_pct": 127.5,
+    "thumb": "img/77ef5f7baa719193.jpg"
+   },
+   {
+    "set": "Star Trek (Topps)",
+    "median": 85.27,
+    "listings": 4,
+    "title": "Vtg 1976 Topps #1 Star Trek The U.S.S. Enterprise Trading Card 4.5 VG-EX+",
+    "image": "https://i.ebayimg.com/images/g/M8gAAOSwFVNm4Lxg/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/286054705010?hash=item429a306772:g:M8gAAOSwFVNm4Lxg&amdata=enc%3AAQALAAAA4Of5zIIojhOf%2BkQK%2Bxzjn7mdUJbXYipi%2Bvs5GZh0CS0hKFgYd3rryP9bNr%2Brf37LrdAgyrmNFhMDSVZfIbt4KT%2Fh0vN7E9bgg%2BjPyyLeTdbDYn5JakKYzGkmmAf%2FtX2B3kkWJ4GkuO8t9Yh43dKIGCHz3ZHAllxd2QCD6pjL2Ymq4bCOqHmq2t--78hx1z%2FLjcIHuoneMK52zWGL7695i8zzAcmD5wVVJQJGNjIBjhqFqArrjcKA9T6hvS3Eur9gSX0GJ7G4gxHZ3Ew4V6p0k6LqnKozBvjqJDh80ytwniz5",
+    "card": "Star Trek (Topps) #1 raw",
+    "was": 57.65,
+    "change_pct": 47.9,
+    "thumb": "img/5243ef9b9124b6e3.jpg"
+   }
+  ],
+  "Topps - Wacky Packages - 3rd Series": [
+   {
+    "set": "Topps - Wacky Packages - 3rd Series",
+    "median": 49.99,
+    "listings": 3,
+    "title": "2021 \"WHAT IF\" Wacky Packages FULL SET 3rd Series PACK 9+9 Rare Tan Backs #4/10",
+    "image": "https://i.ebayimg.com/images/g/TNIAAeSwHH9qGgzg/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/168413694383?hash=item27363d09af:g:TNIAAeSwHH9qGgzg",
+    "card": "Topps - Wacky Packages - 3rd Series #4 raw",
+    "change_pct": null,
+    "thumb": "img/8fc66a4156655b63.jpg"
+   },
+   {
+    "set": "Topps - Wacky Packages - 3rd Series",
+    "median": 15.76,
+    "listings": 2,
+    "title": "1980 Topps Wacky Packs No. 155 of 198 Buz Bee Detergent",
+    "image": "https://i.ebayimg.com/images/g/u~wAAeSwvPRp54SZ/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/188797263969?hash=item2bf531a061:g:u~wAAeSwvPRp54SZ",
+    "card": "Topps - Wacky Packages - 3rd Series #155 raw",
+    "change_pct": null,
+    "thumb": "img/70a58fd6fae0c754.jpg"
+   },
+   {
+    "set": "Topps - Wacky Packages - 3rd Series",
+    "median": 12.75,
+    "listings": 3,
+    "title": "1980 WACKY PACKAGES 3RD SERIES RERUN PLAYBUG TOPPS #167 CHECKLIST",
+    "image": "https://i.ebayimg.com/images/g/noUAAOSwVDZm4xBB/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/298727087346?hash=item458d859cf2:g:noUAAOSwVDZm4xBB",
+    "card": "Topps - Wacky Packages - 3rd Series #167 raw",
+    "change_pct": null,
+    "thumb": "img/2a67cbc756d42cfd.jpg"
+   }
+  ],
+  "Topps - Wacky Packages - 9th Series": [
+   {
+    "set": "Topps - Wacky Packages - 9th Series",
+    "median": 49.99,
+    "listings": 4,
+    "title": "1974 Topps Wacky Packages 9th Series 9 Sticker Heartburn Cereal Listing #4",
+    "image": "https://i.ebayimg.com/images/g/B7EAAOSweVBlLGEZ/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/155831231680?hash=item244843e4c0:g:B7EAAOSweVBlLGEZ",
+    "card": "Topps - Wacky Packages - 9th Series #4 raw",
+    "change_pct": null,
+    "thumb": "img/4fe0c07e6848ae80.jpg"
+   }
+  ],
+  "Bowman - Jets, Rockets and Spacemen": [
+   {
+    "set": "Bowman - Jets, Rockets and Spacemen",
+    "median": 39.99,
+    "listings": 5,
+    "title": "1951 Bowman Jets Rockets Spacemen #20 Crash Landing in Mercurian Bog VG",
+    "image": "https://i.ebayimg.com/images/g/dVgAAeSwpBJogGHY/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/157202181382?hash=item2499faed06:g:dVgAAeSwpBJogGHY&amdata=enc%3AAQALAAAA4Of5zIIojhOf%2BkQK%2Bxzjn7k%2FaproW64CL6LFrwPw8MrPwvDGYSm8a4OcKPqngKKKE3CUMoA7jjNjwY1locD0txrwT%2F1PITV%2BxqQs2J95j6TLsV%2Fb5VchXK5277uoYxtpOADJEqluWdW87UlnoI8F4uXNqUvR%2Fxrsx%2BRu8Eh8IWpIfguxh59FK7lYCgGIoxqfH53Q%2FDezPnKJcNXn%2FdYwsxVv9ZSF95ozBO27jPtfklHCni9jElxc7wmEnTKXCF3qJhR2i9oTr0aSh4hcCbkjMgBE4CRwqUNJw9GJZpB2tudu",
+    "card": "Bowman - Jets, Rockets and Spacemen #20 raw",
+    "was": 27.5,
+    "change_pct": 45.4,
+    "thumb": "img/27378d0a71a9fa04.jpg"
+   },
+   {
+    "set": "Bowman - Jets, Rockets and Spacemen",
+    "median": 74.97,
+    "listings": 2,
+    "title": "1951 Bowman Jets, Rockets, Spacemen #19 Bound For Mercury Ex-Nm",
+    "image": "https://i.ebayimg.com/images/g/lbEAAOSw-B1lh6G~/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/166517320515?hash=item26c534ab43:g:lbEAAOSw-B1lh6G~",
+    "card": "Bowman - Jets, Rockets and Spacemen #19 raw",
+    "change_pct": null,
+    "thumb": "img/1d7ee96056162da3.jpg"
+   },
+   {
+    "set": "Bowman - Jets, Rockets and Spacemen",
+    "median": 62.47,
+    "listings": 2,
+    "title": "1951 Jets, Rockets & Spacemen #18 Mantis Men NM *PEL57*",
+    "image": "https://i.ebayimg.com/images/g/xjYAAeSwilNo16ts/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/406245380982?hash=item5e961c9376:g:xjYAAeSwilNo16ts",
+    "card": "Bowman - Jets, Rockets and Spacemen #18 raw",
+    "change_pct": null,
+    "thumb": "img/6b6767be64650744.jpg"
+   }
+  ],
+  "Topps - Star Wars - Series 1 (Blue)": [
+   {
+    "set": "Topps - Star Wars - Series 1 (Blue)",
+    "median": 180.0,
+    "listings": 2,
+    "title": "1977 Topps Star Wars Card #51 Series 1 Blue Border",
+    "image": "https://i.ebayimg.com/images/g/RJwAAOSwnAtm9AQF/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/407257761304?hash=item5ed2744618:g:RJwAAOSwnAtm9AQF",
+    "card": "Topps - Star Wars - Series 1 (Blue) #51 raw",
+    "was": 9.99,
+    "change_pct": 1701.8,
+    "thumb": "img/43bb0be93987ab67.jpg"
+   },
+   {
+    "set": "Topps - Star Wars - Series 1 (Blue)",
+    "median": 77.47,
+    "listings": 2,
+    "title": "1977 TOPPS STAR WARS TUSKEN RAIDER STICKER CARD #39  ",
+    "image": "https://i.ebayimg.com/images/g/biAAAeSwG3dqzZwL/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/860038779633?hash=itemc83e4e52f1:g:biAAAeSwG3dqzZwL",
+    "card": "Topps - Star Wars - Series 1 (Blue) #39 raw",
+    "was": 4.99,
+    "change_pct": 1452.5,
+    "thumb": "img/e071a546ccb167af.jpg"
+   },
+   {
+    "set": "Topps - Star Wars - Series 1 (Blue)",
+    "median": 95.0,
+    "listings": 3,
+    "title": "1977 LUKE SKYWALKER TOPPS STAR WARS SERIES 1 BLUE TRADING CARD #63 RC",
+    "image": "https://i.ebayimg.com/images/g/YjoAAeSwpG5qxZPL/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257786668985?hash=item3c054867b9:g:YjoAAeSwpG5qxZPL",
+    "card": "Topps - Star Wars - Series 1 (Blue) #63 raw",
+    "was": 19.99,
+    "change_pct": 375.2,
+    "thumb": "img/4832876cac1c2928.jpg"
+   }
+  ],
+  "Topps - Star Wars 3 (Yellow)": [
+   {
+    "set": "Topps - Star Wars 3 (Yellow)",
+    "median": 222.5,
+    "listings": 2,
+    "title": "1977 Topps Star Wars S3 #134 Luke Dreams of Being a Star Pilot PSA 9 Low Pop 69",
+    "image": "https://i.ebayimg.com/images/g/4qgAAeSwGNBq75M~/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/327445036185?hash=item4c3d3ebc99:g:4qgAAeSwGNBq75M~",
+    "card": "Topps - Star Wars 3 (Yellow) #134 PSA 9",
+    "change_pct": null,
+    "thumb": "img/5c20d3fb3e6812c9.jpg"
+   },
+   {
+    "set": "Topps - Star Wars 3 (Yellow)",
+    "median": 177.5,
+    "listings": 2,
+    "title": "1977 Topps Star Wars Card #144 Harrison Ford As Han Solo NM -PSA 7 Star Wars",
+    "image": "https://i.ebayimg.com/images/g/2pEAAeSwY41qoIIl/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/227550972225?hash=item34fb184941:g:2pEAAeSwY41qoIIl",
+    "card": "Topps - Star Wars 3 (Yellow) #144 PSA 7",
+    "change_pct": null,
+    "thumb": "img/4fb7f8cbba7f0fb4.jpg"
+   },
+   {
+    "set": "Topps - Star Wars 3 (Yellow)",
+    "median": 159.97,
+    "listings": 2,
+    "title": "1977 Topps Star Wars Card #188 Starship Under Fire C-3PO PSA 9 MINT",
+    "image": "https://i.ebayimg.com/images/g/PLcAAeSwo8Jqjtz8/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/267767893182?hash=item3e5835ccbe:g:PLcAAeSwo8Jqjtz8",
+    "card": "Topps - Star Wars 3 (Yellow) #188 PSA 9",
+    "change_pct": null,
+    "thumb": "img/edb972c8454871b9.jpg"
+   }
+  ],
+  "Topps - Wacky Packages - 2nd Series": [
+   {
+    "set": "Topps - Wacky Packages - 2nd Series",
+    "median": 4.0,
+    "listings": 2,
+    "title": "1966 Topps Dragsters #40 LI'L DEUCE",
+    "image": "https://i.ebayimg.com/images/g/MYcAAeSw-H1p2v0t/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/277885232165?hash=item40b3402425:g:MYcAAeSw-H1p2v0t",
+    "card": "Topps - Wacky Packages - 2nd Series #40 raw",
+    "change_pct": null,
+    "thumb": "img/3726028ad69a70ce.jpg"
+   },
+   {
+    "set": "Topps - Wacky Packages - 2nd Series",
+    "median": 3.85,
+    "listings": 2,
+    "title": "1979 Topps Wacky Packages 2nd Series Rerun #130 Oh Hairy NM Near Mint ID:67891",
+    "image": "https://i.ebayimg.com/images/g/B-EAAeSwNBxosgru/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/317222993768?hash=item49dbf6bf68:g:B-EAAeSwNBxosgru",
+    "card": "Topps - Wacky Packages - 2nd Series #130 raw",
+    "change_pct": null,
+    "thumb": "img/ca356beace9f5494.jpg"
+   }
+  ],
+  "Topps - Wacky Packages - 1st Series": [
+   {
+    "set": "Topps - Wacky Packages - 1st Series",
+    "median": 4.0,
+    "listings": 2,
+    "title": "1979 Topps Wacky Packages (1st Series Rerun) #18 Vile Soap",
+    "image": "https://i.ebayimg.com/images/g/oewAAeSwWihqiMix/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/377439592276?hash=item57e1271f54:g:oewAAeSwWihqiMix",
+    "card": "Topps - Wacky Packages - 1st Series #18 raw",
+    "was": 3.0,
+    "change_pct": 33.3,
+    "thumb": "img/35e5b9f3dc8329a4.jpg"
+   },
+   {
+    "set": "Topps - Wacky Packages - 1st Series",
+    "median": 19.0,
+    "listings": 2,
+    "title": "1979 Topps Wacky Packages (1st Series Rerun) #35 Dampers",
+    "image": "https://i.ebayimg.com/images/g/0McAAeSwXlVpckLN/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/177798660592?hash=item2965a041f0:g:0McAAeSwXlVpckLN",
+    "card": "Topps - Wacky Packages - 1st Series #35 raw",
+    "change_pct": null,
+    "thumb": "img/b9f5f743956e41a8.jpg"
+   },
+   {
+    "set": "Topps - Wacky Packages - 1st Series",
+    "median": 12.28,
+    "listings": 2,
+    "title": "1979 Topps Wacky Packages (1st Series Rerun) #66 Loggs Panty Hose",
+    "image": "https://i.ebayimg.com/images/g/PCsAAeSwzMRqiMgJ/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/377439592315?hash=item57e1271f7b:g:PCsAAeSwzMRqiMgJ",
+    "card": "Topps - Wacky Packages - 1st Series #66 raw",
+    "change_pct": null,
+    "thumb": "img/864daae225c3d450.jpg"
+   }
+  ],
+  "Topps - James Bond - Moonraker": [
+   {
+    "set": "Topps - James Bond - Moonraker",
+    "median": 58.33,
+    "listings": 2,
+    "title": "1979 Topps MOONRAKER Set JAMES BOND STICKER Insert #5 ROGER MOORE \ud83c\udf0e0118",
+    "image": "https://i.ebayimg.com/images/g/QcUAAeSweblpbX1G/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/366134291495?hash=item553f4dec27:g:QcUAAeSweblpbX1G&amdata=enc%3AAQALAAAA4Of5zIIojhOf%2BkQK%2Bxzjn7lxk5PdW%2BwT0hj%2BxJVnxedotXeE1dYCawObeofstY1QjShdXgY8IajFV0P5aM0kEfFyAq1XD%2FCLA28e%2B9t0y3sJL1PxPkXDQuAvu5cnOq1OcsrNgNrnzIURo%2BK8qnAMSSOpNun1opMO7yUcgKPr%2BRPCE18OVy7OkI2hObxC5AoX2eOATNwerC5InQ4e8JMP2hiswSzOhS444OFw%2FzkUg89SBHrZgwW7UG%2BKITo36rzZQn2aqQ0xUSTjLsrDSlyUJ%2B%2B6id%2Fib%2FmDo%2FcKJPkJSMCC",
+    "card": "Topps - James Bond - Moonraker #5 raw",
+    "change_pct": null,
+    "thumb": "img/192fbd9a136fb460.jpg"
+   },
+   {
+    "set": "Topps - James Bond - Moonraker",
+    "median": 38.02,
+    "listings": 2,
+    "title": "James Bond Limited Edition Artist Signed \"MoonRaker\" Trading Card 4/10",
+    "image": "https://i.ebayimg.com/images/g/yecAAOSwBP5nqSMA/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/127535605509?hash=item1db1b6e705:g:yecAAOSwBP5nqSMA&amdata=enc%3AAQALAAAA4Of5zIIojhOf%2BkQK%2Bxzjn7mHaTqxRdAzUX3Q9oRqBVQT38Cd8WKA1pnIAiIm8%2BE4wSFbEatu2%2BgneU152LqP3M7HCF0d1%2BHFHhI4ch%2B%2Ft%2F%2BYw%2Bv5e0tWnjMzYGer9H1M0r1P2nQOZlyhB%2BldrtCV7neOXxDKgjuk0uxIKYTR8Zdor9qhW6Sp2%2BWvzm99DIHLTuE2PFV9Hx4kHzxVFxwvisap2W%2BpyYMJrHqNlZyeppPuQRVS8%2FWStxk94GXz3ZG2k0sVfye%2BuDwgCkVSYjLI9gKptxPYAi8ZW2TCg1EMCuVp",
+    "card": "Topps - James Bond - Moonraker #4 raw",
+    "change_pct": null,
+    "thumb": "img/415a303de7ca4048.jpg"
+   },
+   {
+    "set": "Topps - James Bond - Moonraker",
+    "median": 9.99,
+    "listings": 3,
+    "title": "1979 Topps Moonraker #1 James Bond Agent 007 Rookie Roger Moore Non-Sport Card",
+    "image": "https://i.ebayimg.com/images/g/oyEAAeSw0O9q30j5/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/147652583788?hash=item2260c7a16c:g:oyEAAeSw0O9q30j5",
+    "card": "Topps - James Bond - Moonraker #1 raw",
+    "change_pct": null,
+    "thumb": "img/8232e7adaee882b9.jpg"
+   }
+  ],
+  "Topps - Batman B Series (Blue Bat - Puzzle Back)": [
+   {
+    "set": "Topps - Batman B Series (Blue Bat - Puzzle Back)",
+    "median": 84.0,
+    "listings": 2,
+    "title": "1966 Topps Batman Series B Blue Bat Puzzle Back #11B To Robin's Rescue EX-MINT",
+    "image": "https://i.ebayimg.com/images/g/d-4AAOSwwutnMCKV/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/235824324922?hash=item36e839a13a:g:d-4AAOSwwutnMCKV",
+    "card": "Topps - Batman B Series (Blue Bat - Puzzle Back) #11b raw",
+    "change_pct": null,
+    "thumb": "img/92f12b34b077ebe8.jpg"
+   },
+   {
+    "set": "Topps - Batman B Series (Blue Bat - Puzzle Back)",
+    "median": 34.46,
+    "listings": 2,
+    "title": "1966 Topps Batman B Series (Blue Bat Logo) Puzzle Back Catwoman Robin #5B 0in6",
+    "image": "https://i.ebayimg.com/images/g/eAMAAeSwr4Rq1ZBZ/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257805721580?hash=item3c066b1fec:g:eAMAAeSwr4Rq1ZBZ",
+    "card": "Topps - Batman B Series (Blue Bat - Puzzle Back) #5b raw",
+    "change_pct": null,
+    "thumb": "img/d76712ffc4039dde.jpg"
+   },
+   {
+    "set": "Topps - Batman B Series (Blue Bat - Puzzle Back)",
+    "median": 34.18,
+    "listings": 5,
+    "title": "1966 Topps Batman B Series (Blue Bat Logo) Puzzle Back Bucks Badman #31B 05cx",
+    "image": "https://i.ebayimg.com/images/g/ozcAAeSwiQ1q1Azs/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257803724713?hash=item3c064ca7a9:g:ozcAAeSwiQ1q1Azs",
+    "card": "Topps - Batman B Series (Blue Bat - Puzzle Back) #31b raw",
+    "change_pct": null,
+    "thumb": "img/2a55be2e35018c0e.jpg"
+   }
+  ],
+  "Star Trek (Leaf)": [
+   {
+    "set": "Star Trek (Leaf)",
+    "median": 875.0,
+    "listings": 2,
+    "title": "1967 Leaf Star Trek #33 William Shatner RC signed auto autograph PSA/DNA 10",
+    "image": "https://i.ebayimg.com/images/g/QGMAAOSwS71oG2aQ/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/277093223651?hash=item40840b0ce3:g:QGMAAOSwS71oG2aQ",
+    "card": "Star Trek (Leaf) #33 raw",
+    "change_pct": null,
+    "thumb": "img/7accf52c30c93d9d.jpg"
+   },
+   {
+    "set": "Star Trek (Leaf)",
+    "median": 725.0,
+    "listings": 2,
+    "title": "WILLIAM SHATNER 1967 Leaf Star Trek #26 Signed PSA DNA 10 Auto",
+    "image": "https://i.ebayimg.com/images/g/TfcAAOSwRt9mXzQ7/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/395448483205?hash=item5c1290fd85:g:TfcAAOSwRt9mXzQ7",
+    "card": "Star Trek (Leaf) #26 raw",
+    "change_pct": null,
+    "thumb": "img/3d1990b46f1ffbf5.jpg"
+   },
+   {
+    "set": "Star Trek (Leaf)",
+    "median": 517.5,
+    "listings": 2,
+    "title": "1967 Leaf Star Trek #25 You'Re Kidding EX",
+    "image": "https://i.ebayimg.com/images/g/EaAAAOSwQxRk8hVZ/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/134711925692?hash=item1f5d74dbbc:g:EaAAAOSwQxRk8hVZ",
+    "card": "Star Trek (Leaf) #25 raw",
+    "change_pct": null,
+    "thumb": "img/fc98e75383017f46.jpg"
+   }
+  ],
+  "Topps - Star Wars 2 (Red)": [
+   {
+    "set": "Topps - Star Wars 2 (Red)",
+    "median": 325.0,
+    "listings": 2,
+    "title": "1977 Star Wars Luke Skywalker PSA 7 Luke in Disguise #125 Stormtrooper Outfit",
+    "image": "https://i.ebayimg.com/images/g/kOkAAeSwuGBqyECy/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/327395399697?hash=item4c3a495811:g:kOkAAeSwuGBqyECy",
+    "card": "Topps - Star Wars 2 (Red) #125 PSA 7",
+    "change_pct": null,
+    "thumb": "img/e8cee3e7f8695f1a.jpg"
+   },
+   {
+    "set": "Topps - Star Wars 2 (Red)",
+    "median": 312.5,
+    "listings": 2,
+    "title": "Vintage 1977 Topps Star Wars PSA 8 Chewbacca Poses as Prisoner #117 Hot Card!",
+    "image": "https://i.ebayimg.com/images/g/zJkAAeSwP3hqIY8v/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/327195896171?hash=item4c2e65296b:g:zJkAAeSwP3hqIY8v",
+    "card": "Topps - Star Wars 2 (Red) #117 PSA 8",
+    "change_pct": null,
+    "thumb": "img/a667311c551f64bf.jpg"
+   },
+   {
+    "set": "Topps - Star Wars 2 (Red)",
+    "median": 14.0,
+    "listings": 4,
+    "title": "1977 Topps Star Wars #89 The imprisoned Princess Leia Red Series 2",
+    "image": "https://i.ebayimg.com/images/g/RokAAeSwCjxq2-78/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/198740404336?hash=item2e45d9e870:g:RokAAeSwCjxq2-78",
+    "card": "Topps - Star Wars 2 (Red) #89 raw",
+    "change_pct": null,
+    "thumb": "img/92895801a68d0189.jpg"
+   }
+  ],
+  "Topps - Star Wars 4 (Green)": [
+   {
+    "set": "Topps - Star Wars 4 (Green)",
+    "median": 8.0,
+    "listings": 3,
+    "title": "1977 Topps Star Wars Series 4 GREEN Card #199 NM/MT",
+    "image": "https://i.ebayimg.com/images/g/1CsAAeSwtkVq4mWr/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/940048437397?hash=itemdadf40d095:g:1CsAAeSwtkVq4mWr",
+    "card": "Topps - Star Wars 4 (Green) #199 raw",
+    "was": 4.0,
+    "change_pct": 100.0,
+    "thumb": "img/3e92b249929ebca0.jpg"
+   },
+   {
+    "set": "Topps - Star Wars 4 (Green)",
+    "median": 6.0,
+    "listings": 2,
+    "title": "1977 Topps Star Wars Series 4 GREEN Card #211 NM/MT",
+    "image": "https://i.ebayimg.com/images/g/4qMAAeSwyhVq4md9/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/940048442214?hash=itemdadf40e366:g:4qMAAeSwyhVq4md9",
+    "card": "Topps - Star Wars 4 (Green) #211 raw",
+    "was": 3.87,
+    "change_pct": 55.0,
+    "thumb": "img/e822dfca6ce4127b.jpg"
+   },
+   {
+    "set": "Topps - Star Wars 4 (Green)",
+    "median": 7.87,
+    "listings": 3,
+    "title": "1977 Topps Star Wars Series 4 GREEN Card #215 NM/MT",
+    "image": "https://i.ebayimg.com/images/g/ERUAAeSw-X1q4me8/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/940048442784?hash=itemdadf40e5a0:g:ERUAAeSw-X1q4me8",
+    "card": "Topps - Star Wars 4 (Green) #215 raw",
+    "was": 5.99,
+    "change_pct": 31.4,
+    "thumb": "img/a8025026dbe339fb.jpg"
+   }
+  ],
+  "Topps - Wacky Packages - 11th Series": [
+   {
+    "set": "Topps - Wacky Packages - 11th Series",
+    "median": 49.99,
+    "listings": 4,
+    "title": "2023 Topps Wacky Packages Old School Series 11 Wacky Backs #4 Illogg's Corn Pox",
+    "image": "https://i.ebayimg.com/images/g/sEYAAOSwZL1ltZxX/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/386733748365?hash=item5a0b20b08d:g:sEYAAOSwZL1ltZxX",
+    "card": "Topps - Wacky Packages - 11th Series #4 raw",
+    "change_pct": null,
+    "thumb": "img/00af9ef922aa1a01.jpg"
+   }
+  ],
+  "Topps - Wacky Packages Die-Cuts": [
+   {
+    "set": "Topps - Wacky Packages Die-Cuts",
+    "median": 27.49,
+    "listings": 4,
+    "title": "Wacky Packages 1967 Die-Cut card #26 TIED Detergent ORIGINAL VINTAGE",
+    "image": "https://i.ebayimg.com/images/g/s9UAAOSwe69lIaKl/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/336688811674?hash=item4e64378e9a:g:s9UAAOSwe69lIaKl",
+    "card": "Topps - Wacky Packages Die-Cuts #26 raw",
+    "was": 19.99,
+    "change_pct": 37.5,
+    "thumb": "img/5900a02ac5ad7d01.jpg"
+   },
+   {
+    "set": "Topps - Wacky Packages Die-Cuts",
+    "median": 1037.49,
+    "listings": 2,
+    "title": "1969 Topps Wacky Ads #5 Vile Soap PSA 8oc",
+    "image": "https://i.ebayimg.com/images/g/OK8AAeSwPPJo8sWY/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/277462312229?hash=item409a0ae525:g:OK8AAeSwPPJo8sWY",
+    "card": "Topps - Wacky Packages Die-Cuts #5 PSA 8",
+    "change_pct": null,
+    "thumb": "img/734d85c2ef90564a.jpg"
+   },
+   {
+    "set": "Topps - Wacky Packages Die-Cuts",
+    "median": 589.99,
+    "listings": 3,
+    "title": "Topps 1969 Vintage Wacky Packages Ads Paul Maul Mutts Lavirus Spray Nit #21",
+    "image": "https://i.ebayimg.com/images/g/yY4AAOSwRUNnFwDO/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/205056348827?hash=item2fbe4f929b:g:yY4AAOSwRUNnFwDO",
+    "card": "Topps - Wacky Packages Die-Cuts #21 raw",
+    "change_pct": null,
+    "thumb": "img/681518e0d83d7d96.jpg"
+   }
+  ],
+  "National Chicle - Sky Birds": [
+   {
+    "set": "National Chicle - Sky Birds",
+    "median": 12.5,
+    "listings": 5,
+    "title": "1934 R136 National Chicle SKY BIRDS -#56 D. H. 10 BOMBER *Skinned Back*",
+    "image": "https://i.ebayimg.com/images/g/WXsAAeSwJRlpX--t/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/136931615820?_skw=National+Chicle&hash=item1fe1c2a44c:g:WXsAAeSwJRlpX--t",
+    "card": "National Chicle - Sky Birds #56 raw",
+    "was": 7.5,
+    "change_pct": 66.7,
+    "thumb": "img/723e1378425550e9.jpg"
+   },
+   {
+    "set": "National Chicle - Sky Birds",
+    "median": 28.99,
+    "listings": 2,
+    "title": "1934 R136 National Chicle SKY BIRDS (Series of 144) -#62 WILEY POST",
+    "image": "https://i.ebayimg.com/images/g/W48AAOSwl2NoOnYB/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/135896833270?_skw=National+Chicle&hash=item1fa4151cf6:g:W48AAOSwl2NoOnYB",
+    "card": "National Chicle - Sky Birds #62 raw",
+    "was": 17.99,
+    "change_pct": 61.1,
+    "thumb": "img/13370a47a3fc0af9.jpg"
+   },
+   {
+    "set": "National Chicle - Sky Birds",
+    "median": 19.5,
+    "listings": 5,
+    "title": "1933-34 National Chicle Sky Birds R136 Series of 48 Lieut Thieffry #3 0v9",
+    "image": "https://i.ebayimg.com/images/g/AxcAAeSwoP9q3T4L/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257816026733?_skw=National+Chicle&hash=item3c07085e6d:g:AxcAAeSwoP9q3T4L",
+    "card": "National Chicle - Sky Birds #3 raw",
+    "was": 12.33,
+    "change_pct": 58.2,
+    "thumb": "img/6ea5045858152547.jpg"
+   }
+  ],
+  "Massary Zigarettenfabrik - Cigaretten Bilderdienst": [
+   {
+    "set": "Massary Zigarettenfabrik - Cigaretten Bilderdienst",
+    "median": 9.6,
+    "listings": 3,
+    "title": "1937 Cigaretten Bilderdienst Bunte Filmbilder Series 2 Marlene Dietrich #283 0f3",
+    "image": "https://i.ebayimg.com/images/g/PH0AAeSwafRq2UPj/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/336856282731?_skw=Massary+Zigarettenfabrik&hash=item4e6e32f66b:g:PH0AAeSwafRq2UPj",
+    "card": "Massary Zigarettenfabrik - Cigaretten Bilderdienst #283 raw",
+    "change_pct": null,
+    "thumb": "img/ccdf9a7c83b06bc8.jpg"
+   },
+   {
+    "set": "Massary Zigarettenfabrik - Cigaretten Bilderdienst",
+    "median": 9.45,
+    "listings": 2,
+    "title": "1936 Cigaretten Bilderdienst Bilder Deutscher Geschichte Tobacco #94 1d0j",
+    "image": "https://i.ebayimg.com/images/g/9e0AAeSwusxqyHFa/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257789894603?_skw=Massary+Zigarettenfabrik&hash=item3c05799fcb:g:9e0AAeSwusxqyHFa",
+    "card": "Massary Zigarettenfabrik - Cigaretten Bilderdienst #94 raw",
+    "change_pct": null,
+    "thumb": "img/769224ab9c6a69e5.jpg"
+   },
+   {
+    "set": "Massary Zigarettenfabrik - Cigaretten Bilderdienst",
+    "median": 5.99,
+    "listings": 3,
+    "title": "1936 Cigaretten Bilderdienst Bilder Deutscher Geschichte Tobacco #12 0ad",
+    "image": "https://i.ebayimg.com/images/g/w1EAAeSwF3dqyU1u/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/237116571414?_skw=Massary+Zigarettenfabrik&hash=item37353fbf16:g:w1EAAeSwF3dqyU1u",
+    "card": "Massary Zigarettenfabrik - Cigaretten Bilderdienst #12 raw",
+    "change_pct": null,
+    "thumb": "img/4faa7a863a23e821.jpg"
+   }
+  ],
+  "Nu-Cards - Horror Monster": [
+   {
+    "set": "Nu-Cards - Horror Monster",
+    "median": 427.5,
+    "listings": 4,
+    "title": "Vintage Horror Monster Card 1961 Nu-Cards Nu PSA 7 On Campus #98 Coelacanth Cave",
+    "image": "https://i.ebayimg.com/images/g/lmQAAeSwGf9pkyXm/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/317887465503?_skw=Nu-Cards&hash=item4a0391c81f:g:lmQAAeSwGf9pkyXm&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7mbpEGkabwNP7rqPf2%2FhNRHFK9%2Fy6%2F0G8P9c9MnQ4f1FpZPajskkNvZraHttFzDzcB2HfCtSipuixsnAjL1wDpFl91Uwf%2FPOloMsugg%2BUorL5wwiAV1%2BNz6EDeG6k%2B%2F9wjQSjW7sg00U0lmU%2B8zxQntB8Adp%2BC0dkAeEH%2FT0uemuoKmJZmhDEWYrpsYVB5WImHGkoLOXx7AfgZ6kA3MUOtWoeNZR%2BzZd%2BdADPATKKNJ7KAtpcEsRQdANFsHBTint4UfovlhM3xq0pizfoysvFIrcRxP9nzFQ0VKRfA9yR9xEg%3D%3D",
+    "card": "Nu-Cards - Horror Monster #1961 PSA 7",
+    "change_pct": null,
+    "thumb": "img/3b08c30b19455f79.jpg"
+   },
+   {
+    "set": "Nu-Cards - Horror Monster",
+    "median": 362.5,
+    "listings": 2,
+    "title": "1961 Nu Cards #55 Horror Monster Monster From World Without End Ultra Rare!!",
+    "image": "https://i.ebayimg.com/images/g/np8AAeSwqQFq3TkA/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/287688125861?_skw=Nu-Cards&hash=item42fb8c6da5:g:np8AAeSwqQFq3TkA",
+    "card": "Nu-Cards - Horror Monster #55 raw",
+    "change_pct": null,
+    "thumb": "img/fadd77b4df9af8bf.jpg"
+   },
+   {
+    "set": "Nu-Cards - Horror Monster",
+    "median": 332.5,
+    "listings": 3,
+    "title": "Vintage Horror Monster Card 1961 Nu-Cards Nu PSA 6 The Golem #138 Giant RARE sp",
+    "image": "https://i.ebayimg.com/images/g/HIwAAeSwFQxpkyoo/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/389631018011?_skw=Nu-Cards&hash=item5ab7d1841b:g:HIwAAeSwFQxpkyoo&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7ldDc72n9iaVkdvM1r%2B4hraOsgcPxzaTGKriAX3JABZKbkuz0okNM0Ogt%2FTWBzhq1xmU2inySaCya6gR61ngGAZrwcrVL57GGFQe9ppt8Jn129O%2FUD7QsjDRIXszBrtjfwmoWDwlfzn45iqaLtyLODkIW40mpaWztx5eSG3BkQz%2BreQ6YVFq7f%2Bsfr0KVavNK1Coj7s%2FNwkB50gGwmeREP8VNLd%2FtyChUYYWASlOtdWLUp5pfqRZRn9SlRwYRF1Vm1oLdaHqq1SmIhQo7sVKcS%2BJ9h%2FqFDLZdBhA9Rl%2FsF3Yg%3D%3D",
+    "card": "Nu-Cards - Horror Monster #1961 PSA 6",
+    "change_pct": null,
+    "thumb": "img/a87e4b7c5a6527ef.jpg"
+   }
+  ],
+  "Eckstein-Halpaus - Greats World History": [
+   {
+    "set": "Eckstein-Halpaus - Greats World History",
+    "median": 10.45,
+    "listings": 2,
+    "title": "1934 Eckstein-Halpaus James Cook #93 - Greats of World History",
+    "image": "https://i.ebayimg.com/images/g/GOsAAOSw1-Fns8Zc/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/306941841608?_skw=Eckstein-Halpaus&hash=item477728d0c8:g:GOsAAOSw1-Fns8Zc",
+    "card": "Eckstein-Halpaus - Greats World History #93 raw",
+    "change_pct": null,
+    "thumb": "img/ec9780d3f94cdcbc.jpg"
+   },
+   {
+    "set": "Eckstein-Halpaus - Greats World History",
+    "median": 7.47,
+    "listings": 2,
+    "title": "1934 Eckstein-Halpaus -#97 MARIE ANTOINETTE - Greats of World History -  NM",
+    "image": "https://i.ebayimg.com/images/g/2DgAAOSwKfFoHlY1/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/116596105275?_skw=Eckstein-Halpaus&hash=item1b25ab603b:g:2DgAAOSwKfFoHlY1",
+    "card": "Eckstein-Halpaus - Greats World History #97 raw",
+    "change_pct": null,
+    "thumb": "img/46894ef7ab083ea8.jpg"
+   },
+   {
+    "set": "Eckstein-Halpaus - Greats World History",
+    "median": 5.88,
+    "listings": 2,
+    "title": "1934 Eckstein-Halpaus Oliver Cromwell #53 - Greats of World History - VG",
+    "image": "https://i.ebayimg.com/images/g/sJAAAOSwHUpoCpMe/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/127073770016?_skw=Eckstein-Halpaus&hash=item1d962fda20:g:sJAAAOSwHUpoCpMe",
+    "card": "Eckstein-Halpaus - Greats World History #53 raw",
+    "change_pct": null,
+    "thumb": "img/d402ef11fe24e8cd.jpg"
+   }
+  ],
+  "Cigarettenfabrik Dresden - Bunten Filmbilder": [
+   {
+    "set": "Cigarettenfabrik Dresden - Bunten Filmbilder",
+    "median": 9.46,
+    "listings": 2,
+    "title": "1935 Bunten Filmbilder Tobacco Salem Back Joan Crawford #188 HOF 0f3",
+    "image": "https://i.ebayimg.com/images/g/DF4AAeSwsWpq4uG9/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257822971178?_skw=Cigarettenfabrik+Dresden&hash=item3c0772552a:g:DF4AAeSwsWpq4uG9",
+    "card": "Cigarettenfabrik Dresden - Bunten Filmbilder #188 raw",
+    "change_pct": null,
+    "thumb": "img/cff0a1d9cfb5df90.jpg"
+   },
+   {
+    "set": "Cigarettenfabrik Dresden - Bunten Filmbilder",
+    "median": 5.14,
+    "listings": 2,
+    "title": "1935 Bunten Filmbilder Tobacco Bulgaria Back Kathe Von Nagy Kathe V Nagy #43 0w6",
+    "image": "https://i.ebayimg.com/images/g/mpMAAeSwnZFq3QF7/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/237142296178?_skw=Cigarettenfabrik+Dresden&hash=item3736c84672:g:mpMAAeSwnZFq3QF7",
+    "card": "Cigarettenfabrik Dresden - Bunten Filmbilder #43 raw",
+    "change_pct": null,
+    "thumb": "img/9ef39c90f617652b.jpg"
+   },
+   {
+    "set": "Cigarettenfabrik Dresden - Bunten Filmbilder",
+    "median": 4.71,
+    "listings": 2,
+    "title": "1935 Bunten Filmbilder Tobacco Salem Back Gustl Stark-Gstettenbauer #217 0w6",
+    "image": "https://i.ebayimg.com/images/g/e~gAAeSwMONq347c/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257818974113?_skw=Cigarettenfabrik+Dresden&hash=item3c073557a1:g:e~gAAeSwMONq347c",
+    "card": "Cigarettenfabrik Dresden - Bunten Filmbilder #217 raw",
+    "change_pct": null,
+    "thumb": "img/1fa25662cc9a9ac7.jpg"
+   }
+  ],
+  "Carreras - Film Stars": [
+   {
+    "set": "Carreras - Film Stars",
+    "median": 11.79,
+    "listings": 2,
+    "title": "Charles Laughton 1949 Carreras Turf Famous Film Stars Tobacco Card #1",
+    "image": "https://i.ebayimg.com/images/g/ZS4AAeSwjFhooMLq/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/197622470376?_skw=Carreras+Tobacco&hash=item2e033796e8:g:ZS4AAeSwjFhooMLq",
+    "card": "Carreras - Film Stars #1 raw",
+    "was": 3.69,
+    "change_pct": 219.5,
+    "thumb": "img/22c426f2ef907847.jpg"
+   },
+   {
+    "set": "Carreras - Film Stars",
+    "median": 15.72,
+    "listings": 4,
+    "title": "1936 Carreras Film Stars Tobacco Card #24 Jean Parker",
+    "image": "https://i.ebayimg.com/images/g/GhsAAeSwvEpolV~w/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/127295331747?_skw=Carreras+Tobacco&hash=item1da3649da3:g:GhsAAeSwvEpolV~w",
+    "card": "Carreras - Film Stars #24 raw",
+    "was": 5.24,
+    "change_pct": 200.0,
+    "thumb": "img/f8686f6c715e79c6.jpg"
+   },
+   {
+    "set": "Carreras - Film Stars",
+    "median": 7.37,
+    "listings": 3,
+    "title": "1938 Carreras Film Stars Series 2 Tobacco Carole Lombard #36 0n8e",
+    "image": "https://i.ebayimg.com/images/g/ZxQAAeSwh9lq4e5s/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257821849683?_skw=Carreras+Tobacco&hash=item3c07613853:g:ZxQAAeSwh9lq4e5s",
+    "card": "Carreras - Film Stars #36 raw",
+    "was": 3.89,
+    "change_pct": 89.5,
+    "thumb": "img/bbcb49f3bd9e677e.jpg"
+   }
+  ],
+  "O-Pee-Chee - Star Wars": [
+   {
+    "set": "O-Pee-Chee - Star Wars",
+    "median": 134.45,
+    "listings": 3,
+    "title": "1977 Topps/O-Pee-Chee Star Wars Stickers Han Solo #3 gi0",
+    "image": "https://i.ebayimg.com/images/g/aBYAAeSwlrBq1zMq/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257807924699?_skw=O-Pee-Chee&hash=item3c068cbddb:g:aBYAAeSwlrBq1zMq",
+    "card": "O-Pee-Chee - Star Wars #3 raw",
+    "was": 35.33,
+    "change_pct": 280.6,
+    "thumb": "img/1c49238656a04006.jpg"
+   },
+   {
+    "set": "O-Pee-Chee - Star Wars",
+    "median": 1050.0,
+    "listings": 4,
+    "title": "1977 Star Wars OPC #141 C-3PO KSA 2.5 GD+ (Creases)",
+    "image": "https://i.ebayimg.com/images/g/8q8AAeSw65tq2~pP/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/198740471287?_skw=O-Pee-Chee&hash=item2e45daedf7:g:8q8AAeSw65tq2~pP",
+    "card": "O-Pee-Chee - Star Wars #141 raw",
+    "was": 600.0,
+    "change_pct": 75.0,
+    "thumb": "img/1ceca1581f88224c.jpg"
+   },
+   {
+    "set": "O-Pee-Chee - Star Wars",
+    "median": 1200.0,
+    "listings": 5,
+    "title": "1977 O-Pee-Chee Star Wars #1 Luke Skywalker Stickers",
+    "image": "https://i.ebayimg.com/images/g/AmQAAeSwvkJqMb~Z/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/178228567189?_skw=O-Pee-Chee&hash=item297f401c95:g:AmQAAeSwvkJqMb~Z",
+    "card": "O-Pee-Chee - Star Wars #1 raw",
+    "change_pct": null,
+    "thumb": "img/c2e105178623289c.jpg"
+   }
+  ],
+  "Philadelphia Gum - War Bulletin": [
+   {
+    "set": "Philadelphia Gum - War Bulletin",
+    "median": 30.18,
+    "listings": 2,
+    "title": "1965 Philadelphia Gum War Bulletin #17 Flying Tigers",
+    "image": "https://i.ebayimg.com/images/g/BroAAeSwnYVocnmE/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/167645281913?_skw=Philadelphia+Gum&hash=item27086ffe79:g:BroAAeSwnYVocnmE",
+    "card": "Philadelphia Gum - War Bulletin #17 raw",
+    "change_pct": null,
+    "thumb": "img/c22f190041b2b01e.jpg"
+   },
+   {
+    "set": "Philadelphia Gum - War Bulletin",
+    "median": 23.35,
+    "listings": 2,
+    "title": "1965 Philadelphia Gum War Bulletin #25 Death in the Ruins",
+    "image": "https://i.ebayimg.com/images/g/rv4AAeSwLHhoe7Di/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/127249100561?_skw=Philadelphia+Gum&hash=item1da0a32f11:g:rv4AAeSwLHhoe7Di",
+    "card": "Philadelphia Gum - War Bulletin #25 raw",
+    "change_pct": null,
+    "thumb": "img/60654e357f9388df.jpg"
+   },
+   {
+    "set": "Philadelphia Gum - War Bulletin",
+    "median": 14.99,
+    "listings": 3,
+    "title": "1965 Philadelphia Gum War Bulletin #24 IL DUCE",
+    "image": "https://i.ebayimg.com/images/g/d-UAAeSwQ~Noe68Q/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/127249100563?_skw=Philadelphia+Gum&hash=item1da0a32f13:g:d-UAAeSwQ~Noe68Q",
+    "card": "Philadelphia Gum - War Bulletin #24 raw",
+    "change_pct": null,
+    "thumb": "img/4f2333f72d53de1c.jpg"
+   }
+  ],
+  "Eckstein-Halpaus - Die Tanzbuhnen Der Welt": [
+   {
+    "set": "Eckstein-Halpaus - Die Tanzbuhnen Der Welt",
+    "median": 3.7,
+    "listings": 3,
+    "title": "1934 Eckstein-Halpaus Die Tanzbuhnen der Welt Tobacco Lisa Diederich #36 10ou",
+    "image": "https://i.ebayimg.com/images/g/1VYAAeSwjclq4gLU/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/336867367675?_skw=Eckstein-Halpaus&hash=item4e6edc1afb:g:1VYAAeSwjclq4gLU",
+    "card": "Eckstein-Halpaus - Die Tanzbuhnen Der Welt #36 raw",
+    "change_pct": null,
+    "thumb": "img/e3f3ac784a1ad2a5.jpg"
+   },
+   {
+    "set": "Eckstein-Halpaus - Die Tanzbuhnen Der Welt",
+    "median": 3.7,
+    "listings": 4,
+    "title": "1934 Eckstein-Halpaus Die Tanzbuhnen der Welt Tobacco Psyche #69 10ou",
+    "image": "https://i.ebayimg.com/images/g/kgkAAeSwGV1q4i2n/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/336867519984?_skw=Eckstein-Halpaus&hash=item4e6ede6df0:g:kgkAAeSwGV1q4i2n",
+    "card": "Eckstein-Halpaus - Die Tanzbuhnen Der Welt #69 raw",
+    "change_pct": null,
+    "thumb": "img/ad0167ff70c0ec7f.jpg"
+   },
+   {
+    "set": "Eckstein-Halpaus - Die Tanzbuhnen Der Welt",
+    "median": 3.7,
+    "listings": 2,
+    "title": "1934 Eckstein-Halpaus Die Tanzbuhnen der Welt Tobacco Ilse Meudtner #7 0w6",
+    "image": "https://i.ebayimg.com/images/g/WwcAAeSwmaNq8Hao/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/237171243536?_skw=Eckstein-Halpaus&hash=item373881fa10:g:WwcAAeSwmaNq8Hao",
+    "card": "Eckstein-Halpaus - Die Tanzbuhnen Der Welt #7 raw",
+    "change_pct": null,
+    "thumb": "img/0d9906c52464c1ef.jpg"
+   }
+  ],
+  "Cigarettenfabrik Dresden - Goldfilm Constantin": [
+   {
+    "set": "Cigarettenfabrik Dresden - Goldfilm Constantin",
+    "median": 7.27,
+    "listings": 2,
+    "title": "1934 Goldfilm Series 1 Tobacco Constantin Back Douglas Fairbanks Sr #138 0f3",
+    "image": "https://i.ebayimg.com/images/g/SAIAAeSw1LJq07Nw/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/237129271720?_skw=Cigarettenfabrik+Dresden&hash=item37360189a8:g:SAIAAeSw1LJq07Nw",
+    "card": "Cigarettenfabrik Dresden - Goldfilm Constantin #138 raw",
+    "change_pct": null,
+    "thumb": "img/4e794912d72d9a20.jpg"
+   },
+   {
+    "set": "Cigarettenfabrik Dresden - Goldfilm Constantin",
+    "median": 6.85,
+    "listings": 2,
+    "title": "1934 Goldfilm Series 1 Tobacco Constantin Back Hans Stuwe #23 0f3",
+    "image": "https://i.ebayimg.com/images/g/PW4AAeSwyhVq3TNA/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/237142542716?_skw=Cigarettenfabrik+Dresden&hash=item3736cc097c:g:PW4AAeSwyhVq3TNA",
+    "card": "Cigarettenfabrik Dresden - Goldfilm Constantin #23 raw",
+    "change_pct": null,
+    "thumb": "img/e88bd356a2befd1b.jpg"
+   },
+   {
+    "set": "Cigarettenfabrik Dresden - Goldfilm Constantin",
+    "median": 6.58,
+    "listings": 2,
+    "title": "1934 Goldfilm Series 1 Tobacco Constantin Back Claudette Colbert #143 0f3",
+    "image": "https://i.ebayimg.com/images/g/82oAAeSwy25q7L1L/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257836914131?_skw=Cigarettenfabrik+Dresden&hash=item3c084715d3:g:82oAAeSwy25q7L1L",
+    "card": "Cigarettenfabrik Dresden - Goldfilm Constantin #143 raw",
+    "change_pct": null,
+    "thumb": "img/685892cf881a04aa.jpg"
+   }
+  ],
+  "Nu-Cards - Rock Roll": [
+   {
+    "set": "Nu-Cards - Rock Roll",
+    "median": 109.5,
+    "listings": 2,
+    "title": "Ray Charles Rookie Card 1959 Nu Cards Rock & Roll Music #62 HOF Near Mint",
+    "image": "https://i.ebayimg.com/images/g/XvAAAeSwXiNqX9xv/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/800384999860?_skw=Nu-Cards&hash=itemba5aa9e1b4:g:XvAAAeSwXiNqX9xv",
+    "card": "Nu-Cards - Rock Roll #1959 raw",
+    "change_pct": null,
+    "thumb": "img/2071996254383019.jpg"
+   },
+   {
+    "set": "Nu-Cards - Rock Roll",
+    "median": 103.28,
+    "listings": 2,
+    "title": "Vintage 1959 Ray Charles Card - #62 - Rare Nu-Cards Rock & Roll - Singer Pianist",
+    "image": "https://i.ebayimg.com/images/g/MTYAAeSwj5dq4k5N/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/960128720157?_skw=Nu-Cards&hash=itemdf8c219d1d:g:MTYAAeSwj5dq4k5N",
+    "card": "Nu-Cards - Rock Roll #62 raw",
+    "change_pct": null,
+    "thumb": "img/b026c4dd5f777091.jpg"
+   },
+   {
+    "set": "Nu-Cards - Rock Roll",
+    "median": 94.55,
+    "listings": 5,
+    "title": "1959 Nu-Cards Rock & Roll Frank Sinatra #42 0jk3",
+    "image": "https://i.ebayimg.com/images/g/4MsAAeSwymdq6X9K/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/237159774761?_skw=Nu-Cards&hash=item3737d2fa29:g:4MsAAeSwymdq6X9K",
+    "card": "Nu-Cards - Rock Roll #42 raw",
+    "change_pct": null,
+    "thumb": "img/b1904dffed3d7747.jpg"
+   }
+  ],
+  "Ed-U-Cards - Green Hornet Playing": [
+   {
+    "set": "Ed-U-Cards - Green Hornet Playing",
+    "median": 8.3,
+    "listings": 3,
+    "title": "1966 Ed-U-Cards Green Hornet Playing Cards Green Hornet Kato #4C 0a6",
+    "image": "https://i.ebayimg.com/images/g/-sUAAeSw-Khq3Xok/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/336861827612?_skw=Ed-U-Cards&hash=item4e6e87921c:g:-sUAAeSw-Khq3Xok",
+    "card": "Ed-U-Cards - Green Hornet Playing #4c raw",
+    "change_pct": null,
+    "thumb": "img/7bebe9514fc1a8df.jpg"
+   },
+   {
+    "set": "Ed-U-Cards - Green Hornet Playing",
+    "median": 8.29,
+    "listings": 2,
+    "title": "1966 Ed-U-Cards Green Hornet Playing Cards Green Hornet #7C 0f4i",
+    "image": "https://i.ebayimg.com/images/g/G1wAAeSwcOFq3Uut/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257816109327?_skw=Ed-U-Cards&hash=item3c0709a10f:g:G1wAAeSwcOFq3Uut",
+    "card": "Ed-U-Cards - Green Hornet Playing #7c raw",
+    "change_pct": null,
+    "thumb": "img/873c6e497a8f4524.jpg"
+   },
+   {
+    "set": "Ed-U-Cards - Green Hornet Playing",
+    "median": 6.87,
+    "listings": 4,
+    "title": "1966 Ed-U-Cards Green Hornet Playing Cards Kato #6D 0a6",
+    "image": "https://i.ebayimg.com/images/g/XbIAAeSw6dVq36oJ/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257819111380?_skw=Ed-U-Cards&hash=item3c07376fd4:g:XbIAAeSw6dVq36oJ",
+    "card": "Ed-U-Cards - Green Hornet Playing #6d raw",
+    "change_pct": null,
+    "thumb": "img/f548841de69ee07e.jpg"
+   }
+  ],
+  "Exhibit Supply Co. - Exhibit Arcade": [
+   {
+    "set": "Exhibit Supply Co. - Exhibit Arcade",
+    "median": 7.04,
+    "listings": 2,
+    "title": "EXHIBIT ARCADE COWBOY CARD 1920's JACK LUDEN!! GREAT CARD!",
+    "image": "https://i.ebayimg.com/images/g/CgQAAeSw3i9q3qGW/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/860083873317?_skw=Exhibits&hash=itemc840fe6625:g:CgQAAeSw3i9q3qGW",
+    "card": "Exhibit Supply Co. - Exhibit Arcade #1920 raw",
+    "change_pct": null,
+    "thumb": "img/c23e4a1aa4d3c81c.jpg"
+   },
+   {
+    "set": "Exhibit Supply Co. - Exhibit Arcade",
+    "median": 6.0,
+    "listings": 4,
+    "title": "EXHIBIT CO. ARCADE ACTOR CARD 1910's EARLE WILLIAMS!! RARE CARD!!",
+    "image": "https://i.ebayimg.com/images/g/fGIAAeSwRQFqtyKr/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/860083897744?_skw=Exhibits&hash=itemc840fec590:g:fGIAAeSwRQFqtyKr",
+    "card": "Exhibit Supply Co. - Exhibit Arcade #1910 raw",
+    "change_pct": null,
+    "thumb": "img/4ce8d39c400e390e.jpg"
+   },
+   {
+    "set": "Exhibit Supply Co. - Exhibit Arcade",
+    "median": 4.0,
+    "listings": 31,
+    "title": "EXHIBIT CO. ARCADE VOCALISTS CARD 1950'S CONNIE HAINES!! RARE, POPULAR CARD!!",
+    "image": "https://i.ebayimg.com/images/g/fVkAAeSwruJqtyLJ/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/860083929711?_skw=Exhibits&hash=itemc840ff426f:g:fVkAAeSwruJqtyLJ",
+    "card": "Exhibit Supply Co. - Exhibit Arcade #1950 raw",
+    "change_pct": null,
+    "thumb": "img/4c876d77af0850ec.jpg"
+   }
+  ],
+  "Scanlens - Star Wars": [
+   {
+    "set": "Scanlens - Star Wars",
+    "median": 6374.49,
+    "listings": 2,
+    "title": "1977 STAR WARS SCANLENS #1 LUKE SKYWALKER RC rare ",
+    "image": "https://i.ebayimg.com/images/g/OEAAAeSwIYVq18Ok/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/227575967481?_skw=Scanlens&hash=item34fc95aef9:g:OEAAAeSwIYVq18Ok",
+    "card": "Scanlens - Star Wars #1 raw",
+    "was": 2749.0,
+    "change_pct": 131.9,
+    "thumb": "img/f025e81f9b402294.jpg"
+   },
+   {
+    "set": "Scanlens - Star Wars",
+    "median": 425.0,
+    "listings": 3,
+    "title": "RARE 1977 Star Wars Scanlens #3 R2D2 Excellent",
+    "image": "https://i.ebayimg.com/images/g/ICAAAeSwmwpqvEg-/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/168742620293?_skw=Scanlens&hash=item2749d80c85:g:ICAAAeSwmwpqvEg-",
+    "card": "Scanlens - Star Wars #3 raw",
+    "change_pct": null,
+    "thumb": "img/ea9b4e430bf4d986.jpg"
+   },
+   {
+    "set": "Scanlens - Star Wars",
+    "median": 305.0,
+    "listings": 2,
+    "title": "ULTRA RARE 1977 Star Wars Allens & Regina NZ Darth Vader #7 rarer ++ Scanlens",
+    "image": "https://i.ebayimg.com/images/g/uE8AAeSw2l9q31T6/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/168817833936?_skw=Scanlens&hash=item274e53b7d0:g:uE8AAeSw2l9q31T6",
+    "card": "Scanlens - Star Wars #7 raw",
+    "change_pct": null,
+    "thumb": "img/3d65c91353453a53.jpg"
+   }
+  ],
+  "Massary Zigarettenfabrik - Caid Beruhmter Filmkunstler": [
+   {
+    "set": "Massary Zigarettenfabrik - Caid Beruhmter Filmkunstler",
+    "median": 3.13,
+    "listings": 2,
+    "title": "1934 Caid Beruhmter Filmkunstler Tobacco Hubert von Meyerinck #242 1s8",
+    "image": "https://i.ebayimg.com/images/g/67oAAeSwVbBq3wEU/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/237144723862?_skw=Massary+Zigarettenfabrik&hash=item3736ed5196:g:67oAAeSwVbBq3wEU",
+    "card": "Massary Zigarettenfabrik - Caid Beruhmter Filmkunstler #242 raw",
+    "change_pct": null,
+    "thumb": "img/56066da74ec954ab.jpg"
+   },
+   {
+    "set": "Massary Zigarettenfabrik - Caid Beruhmter Filmkunstler",
+    "median": 3.13,
+    "listings": 2,
+    "title": "1934 Caid Beruhmter Filmkunstler Tobacco Hans Stuwe #129 1s8",
+    "image": "https://i.ebayimg.com/images/g/2JUAAeSw-X1q3rJ2/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/237144301961?_skw=Massary+Zigarettenfabrik&hash=item3736e6e189:g:2JUAAeSw-X1q3rJ2",
+    "card": "Massary Zigarettenfabrik - Caid Beruhmter Filmkunstler #129 raw",
+    "change_pct": null,
+    "thumb": "img/c4caff6fbb3f6347.jpg"
+   }
+  ],
+  "Eckstein-Halpaus - Grossen Der Weltgeschichte": [
+   {
+    "set": "Eckstein-Halpaus - Grossen Der Weltgeschichte",
+    "median": 131.24,
+    "listings": 2,
+    "title": "Leonardo Da Vinci - 1934 Eckstein-Halpaus Grossen Der Weltgeschichte #15  PSA 5",
+    "image": "https://i.ebayimg.com/images/g/wx0AAOSwZVxoVF1c/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/177209035337?_skw=Eckstein-Halpaus&hash=item29427b4a49:g:wx0AAOSwZVxoVF1c",
+    "card": "Eckstein-Halpaus - Grossen Der Weltgeschichte #15 PSA 5",
+    "change_pct": null,
+    "thumb": "img/b8bce11add09ce17.jpg"
+   },
+   {
+    "set": "Eckstein-Halpaus - Grossen Der Weltgeschichte",
+    "median": 111.8,
+    "listings": 5,
+    "title": "1934 Eckstein-Halpaus Die Grossen der Weltgeschichte George Washington #91 1u9k",
+    "image": "https://i.ebayimg.com/images/g/WJsAAeSwra9q1hDH/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257806433723?_skw=Eckstein-Halpaus&hash=item3c0675fdbb:g:WJsAAeSwra9q1hDH",
+    "card": "Eckstein-Halpaus - Grossen Der Weltgeschichte #91 raw",
+    "change_pct": null,
+    "thumb": "img/0b9c2893ac44a3a6.jpg"
+   }
+  ],
+  "Red Man - Indian Chiefs": [
+   {
+    "set": "Red Man - Indian Chiefs",
+    "median": 19.95,
+    "listings": 3,
+    "title": "AMERICAN INDIAN CHIEFS No. 19 BIG RAZOR - RED MAN 1954 T129",
+    "image": "https://i.ebayimg.com/images/g/qe4AAeSw3Bxqe67b/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/800547507666?_skw=Red+Man&hash=itemba64598dd2:g:qe4AAeSw3Bxqe67b",
+    "card": "Red Man - Indian Chiefs #19 raw",
+    "was": 15.0,
+    "change_pct": 33.0,
+    "thumb": "img/2ab0e9aaa71b7090.jpg"
+   },
+   {
+    "set": "Red Man - Indian Chiefs",
+    "median": 97.97,
+    "listings": 2,
+    "title": "1954 T219 Red Man Indian Chiefs    Big Razor #19 PSA 8 Set Break",
+    "image": "https://i.ebayimg.com/images/g/7ZUAAeSwoZtqtI~K/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/920099283271?_skw=Red+Man&hash=itemd63a30e147:g:7ZUAAeSwoZtqtI~K",
+    "card": "Red Man - Indian Chiefs #19 PSA 8",
+    "change_pct": null,
+    "thumb": "img/37f8672bd77f6ae4.jpg"
+   },
+   {
+    "set": "Red Man - Indian Chiefs",
+    "median": 70.5,
+    "listings": 2,
+    "title": "T129 1954 American Indian Chiefs #24 IRON BULL Red Man tobacco card",
+    "image": "https://i.ebayimg.com/images/g/kiEAAeSwXftoy1A-/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/116784891816?_skw=Red+Man&hash=item1b30ec07a8:g:kiEAAeSwXftoy1A-",
+    "card": "Red Man - Indian Chiefs #24 raw",
+    "change_pct": null,
+    "thumb": "img/f15f6a4b52fcb8a5.jpg"
+   }
+  ],
+  "Imperial Tobacco - Motor Cars": [
+   {
+    "set": "Imperial Tobacco - Motor Cars",
+    "median": 9.64,
+    "listings": 2,
+    "title": "1924 Imperial Tobacco Canada Motor Cars Tobacco E50 Nash #3 z6d",
+    "image": "https://i.ebayimg.com/images/g/uTcAAeSw4r5q02Mi/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257802860184?_skw=Imperial+Tobacco+Canada&hash=item3c063f7698:g:uTcAAeSw4r5q02Mi",
+    "card": "Imperial Tobacco - Motor Cars #3 raw",
+    "change_pct": null,
+    "thumb": "img/a8537c2b0985cff3.jpg"
+   },
+   {
+    "set": "Imperial Tobacco - Motor Cars",
+    "median": 8.87,
+    "listings": 2,
+    "title": "1924 Imperial Tobacco Canada Motor Cars Tobacco E50 Studebaker #4 z6d",
+    "image": "https://i.ebayimg.com/images/g/osEAAeSwkYpq3sdg/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/336863269636?_skw=Imperial+Tobacco+Canada&hash=item4e6e9d9304:g:osEAAeSwkYpq3sdg",
+    "card": "Imperial Tobacco - Motor Cars #4 raw",
+    "change_pct": null,
+    "thumb": "img/d6d5f93d0f597168.jpg"
+   },
+   {
+    "set": "Imperial Tobacco - Motor Cars",
+    "median": 8.02,
+    "listings": 2,
+    "title": "1924 Imperial Tobacco Canada Motor Cars Tobacco E50 Pierce-rrow #46 z6d",
+    "image": "https://i.ebayimg.com/images/g/3EEAAeSwxvlq02cM/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/237128815647?_skw=Imperial+Tobacco+Canada&hash=item3735fa941f:g:3EEAAeSwxvlq02cM",
+    "card": "Imperial Tobacco - Motor Cars #46 raw",
+    "change_pct": null,
+    "thumb": "img/6b97289d5f83ecec.jpg"
+   }
+  ],
+  "American Tobacco - Indian Chiefs": [
+   {
+    "set": "American Tobacco - Indian Chiefs",
+    "median": 16.0,
+    "listings": 2,
+    "title": "T129 Red Man Tobacco, American Indian Chiefs, 1952, #8 Red Bird, Chippewa (A26)",
+    "image": "https://i.ebayimg.com/images/g/VaIAAOSwEEdnTzUo/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/316023671737?_skw=American+Tobacco&hash=item49947a8bb9:g:VaIAAOSwEEdnTzUo",
+    "card": "American Tobacco - Indian Chiefs #8 raw",
+    "was": 10.74,
+    "change_pct": 49.0,
+    "thumb": "img/f3d16f6e922c8a48.jpg"
+   },
+   {
+    "set": "American Tobacco - Indian Chiefs",
+    "median": 99.99,
+    "listings": 3,
+    "title": "1888 ALLEN & GINTER N2 AMERICAN  INDIAN CHIEFS Tobacco Card #11 BLACK HAWK",
+    "image": "https://i.ebayimg.com/images/g/6U0AAeSwJFBpvu6A/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/267747552554?_skw=American+Tobacco&hash=item3e56ff6d2a:g:6U0AAeSwJFBpvu6A",
+    "card": "American Tobacco - Indian Chiefs #11 raw",
+    "change_pct": null,
+    "thumb": "img/d5f6872860d2abeb.jpg"
+   },
+   {
+    "set": "American Tobacco - Indian Chiefs",
+    "median": 25.0,
+    "listings": 3,
+    "title": "1930 British American Tobacco Indian Chiefs #3 Clam Fish HIGH GRADE!",
+    "image": "https://i.ebayimg.com/images/g/bZwAAeSweJZp6Oje/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/188305085219?_skw=American+Tobacco&hash=item2bd7db9323:g:bZwAAeSweJZp6Oje",
+    "card": "American Tobacco - Indian Chiefs #3 raw",
+    "change_pct": null,
+    "thumb": "img/8e1b6bb613b91f8d.jpg"
+   }
+  ],
+  "Garb\u00e1ty - Kurmark Moderne Schonheitsgalerie": [
+   {
+    "set": "Garb\u00e1ty - Kurmark Moderne Schonheitsgalerie",
+    "median": 23.77,
+    "listings": 2,
+    "title": "1936 Kurmark Moderne Schonheitsgalerie 2 Folge Tobacco Sybille Schmitz #266 8a7",
+    "image": "https://i.ebayimg.com/images/g/hhcAAeSwYV1q7uLm/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257840076499?_skw=Garb%C3%A1ty&hash=item3c087756d3:g:hhcAAeSwYV1q7uLm",
+    "card": "Garb\u00e1ty - Kurmark Moderne Schonheitsgalerie #266 raw",
+    "change_pct": null,
+    "thumb": "img/42e0ec1dd5b85df8.jpg"
+   },
+   {
+    "set": "Garb\u00e1ty - Kurmark Moderne Schonheitsgalerie",
+    "median": 20.93,
+    "listings": 2,
+    "title": "1934 Garbaty Kurmark Moderne Schonheitsgalerie Tobacco Patricia Farley #132 0f8",
+    "image": "https://i.ebayimg.com/images/g/~pcAAeSw2rlqyfhn/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/336837934117?_skw=Garb%C3%A1ty&hash=item4e6d1afc25:g:~pcAAeSw2rlqyfhn",
+    "card": "Garb\u00e1ty - Kurmark Moderne Schonheitsgalerie #132 raw",
+    "change_pct": null,
+    "thumb": "img/b075d6fcc8d33eab.jpg"
+   },
+   {
+    "set": "Garb\u00e1ty - Kurmark Moderne Schonheitsgalerie",
+    "median": 20.34,
+    "listings": 2,
+    "title": "1934 Garbaty Kurmark Moderne Schonheitsgalerie Tobacco Maria Pagarina #142 4r3",
+    "image": "https://i.ebayimg.com/images/g/cagAAeSwbt9qygG5/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/336837978887?_skw=Garb%C3%A1ty&hash=item4e6d1bab07:g:cagAAeSwbt9qygG5",
+    "card": "Garb\u00e1ty - Kurmark Moderne Schonheitsgalerie #142 raw",
+    "change_pct": null,
+    "thumb": "img/8c76f40a01b01564.jpg"
+   }
+  ],
+  "Garb\u00e1ty - Garbaty Film": [
+   {
+    "set": "Garb\u00e1ty - Garbaty Film",
+    "median": 254.0,
+    "listings": 2,
+    "title": "1934 GARBATY FILM STARS  #70  GRETL THEIMER  NM+  SERIES 1  TOBACCO CARD",
+    "image": "https://i.ebayimg.com/images/g/tHkAAOSwrHNmongQ/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/236794721592?_skw=Garb%C3%A1ty&hash=item372210b538:g:tHkAAOSwrHNmongQ",
+    "card": "Garb\u00e1ty - Garbaty Film #70 raw",
+    "change_pct": null,
+    "thumb": "img/e07a27a769f71b23.jpg"
+   },
+   {
+    "set": "Garb\u00e1ty - Garbaty Film",
+    "median": 126.0,
+    "listings": 2,
+    "title": "MAE WEST #70 1934 Garbaty Film Star  Cigarette Card ~ SGC 8 ~ Population 1 ",
+    "image": "https://i.ebayimg.com/images/g/twIAAeSw-5RpcWeI/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/168801021012?_skw=Garb%C3%A1ty&hash=item274d532c54:g:twIAAeSw-5RpcWeI",
+    "card": "Garb\u00e1ty - Garbaty Film #70 SGC 8",
+    "change_pct": null,
+    "thumb": "img/7977a5b431e27327.jpg"
+   },
+   {
+    "set": "Garb\u00e1ty - Garbaty Film",
+    "median": 40.0,
+    "listings": 2,
+    "title": "Ida Lupino -1937 Garbaty Film Lieblinge Card #119; Passion Cig; SGC 7 (NM - 84)",
+    "image": "https://i.ebayimg.com/images/g/-~8AAOSwWnFV~tFH/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/252098619647?_skw=Garb%C3%A1ty&hash=item3ab23fa8ff:g:-~8AAOSwWnFV~tFH",
+    "card": "Garb\u00e1ty - Garbaty Film #119 SGC 7",
+    "change_pct": null,
+    "thumb": "img/8a722fb769e0cad3.jpg"
+   }
+  ],
+  "Cavanders Ltd. - Camera Studies": [
+   {
+    "set": "Cavanders Ltd. - Camera Studies",
+    "median": 13.73,
+    "listings": 2,
+    "title": "1926 Cavanders Camera Studies Tobacco Small Springtime #41 0w6",
+    "image": "https://i.ebayimg.com/images/g/vPwAAeSwgfhq3EJu/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/336860361306?_skw=Cavanders&hash=item4e6e71325a:g:vPwAAeSwgfhq3EJu",
+    "card": "Cavanders Ltd. - Camera Studies #41 raw",
+    "change_pct": null,
+    "thumb": "img/5c0ff179609f9193.jpg"
+   },
+   {
+    "set": "Cavanders Ltd. - Camera Studies",
+    "median": 9.44,
+    "listings": 3,
+    "title": "1926 Cavanders Camera Studies Tobacco Small Cockington Village #14 0w6",
+    "image": "https://i.ebayimg.com/images/g/77sAAeSw9SBq2UPo/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257810544401?_skw=Cavanders&hash=item3c06b4b711:g:77sAAeSw9SBq2UPo",
+    "card": "Cavanders Ltd. - Camera Studies #14 raw",
+    "change_pct": null,
+    "thumb": "img/74a6e8c5b3e0a3e6.jpg"
+   },
+   {
+    "set": "Cavanders Ltd. - Camera Studies",
+    "median": 7.48,
+    "listings": 2,
+    "title": "1926 Cavanders Ltd. Camera Studies #20 Casual Water - Hand Colored Real Photos",
+    "image": "https://i.ebayimg.com/images/g/C2EAAeSws4BqzCo-/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/227563078016?_skw=Cavanders&hash=item34fbd10180:g:C2EAAeSws4BqzCo-",
+    "card": "Cavanders Ltd. - Camera Studies #20 raw",
+    "change_pct": null,
+    "thumb": "img/0b685d89478a7d33.jpg"
+   }
+  ],
+  "Topps - Topps World": [
+   {
+    "set": "Topps - Topps World",
+    "median": 906.5,
+    "listings": 2,
+    "title": "1954 Topps World on Wheels PSA 9 #103 Ford School Bus 15389",
+    "image": "https://i.ebayimg.com/images/g/Iw8AAOSwnmRn9DpO/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/278188652013?_skw=Wheels&hash=item40c555f5ed:g:Iw8AAOSwnmRn9DpO",
+    "card": "Topps - Topps World #103 PSA 9",
+    "change_pct": null,
+    "thumb": "img/c15cc4a3ae87be60.jpg"
+   },
+   {
+    "set": "Topps - Topps World",
+    "median": 832.0,
+    "listings": 2,
+    "title": "1954 Topps World on Wheels PSA 9 #131 MG Mighty Midget",
+    "image": "https://i.ebayimg.com/images/g/pLUAAOSw9Ehn6vNJ/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/307067779802?_skw=Wheels&hash=item477eaa7ada:g:pLUAAOSw9Ehn6vNJ",
+    "card": "Topps - Topps World #131 PSA 9",
+    "change_pct": null,
+    "thumb": "img/850fbf1b25198ba9.jpg"
+   },
+   {
+    "set": "Topps - Topps World",
+    "median": 485.0,
+    "listings": 2,
+    "title": "1955 Topps World on Wheels #177 1955 Cadillac Eldorade PSA 7 Red Back  (6091)",
+    "image": "https://i.ebayimg.com/images/g/wR4AAOSwiaxkuBZf/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/134660322736?_skw=Wheels&hash=item1f5a6175b0:g:wR4AAOSwiaxkuBZf",
+    "card": "Topps - Topps World #177 PSA 7",
+    "change_pct": null,
+    "thumb": "img/7a9bdc334171267d.jpg"
+   }
+  ],
+  "Kinney Bros. - Sweet Caporal": [
+   {
+    "set": "Kinney Bros. - Sweet Caporal",
+    "median": 32.0,
+    "listings": 2,
+    "title": "1890 KINNEY, SWEET CAPORAL, N210 ACTRESSES (SET 1): #24 \"QUENNIE VASSAR\" (RARE)",
+    "image": "https://i.ebayimg.com/images/g/C~gAAeSweWlo-1~n/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/236411220949?_skw=Kinney+Brothers+Tobacco&hash=item370b34f3d5:g:C~gAAeSweWlo-1~n&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7lPw6oN1Ymh3f6XHEyvJGywijsBycPipZ7y%2BvyUTX69TPCzzVLhEzGTWAdMvYmb3OQeWQfE4e7%2Fzb%2F%2BEt5WLzW7AK%2BrGNbnSHYkVgZ18NphjWL9uSen0VaBgOs55Zcs98IJ4aKQAtbc%2Bu5VQp8Hocr14Ee4loWbmXkYRjY69WwqPy2lzNya5ONtaJg76e6K9KsGNoe1VRam1r7ijq0UJd2OxecgWoBFXvh0PlHPWR1jiTD80HiSYcd6%2BGCRtu2zsCSMYhlI2EnNu3cnMRzW%2BIxiKcTXg4IROD%2BAZH2htq0P%2Fq2ZQ3OyiXowItwpk%2Bp9bO0%3D",
+    "card": "Kinney Bros. - Sweet Caporal #24 raw",
+    "change_pct": null,
+    "thumb": "img/bdc92b10bea5e396.jpg"
+   },
+   {
+    "set": "Kinney Bros. - Sweet Caporal",
+    "median": 28.48,
+    "listings": 2,
+    "title": "1901 Kinney Brothers \u2013 Sweet Caporal Actresses (T176) Unnamed Actress Image #1",
+    "image": "https://i.ebayimg.com/images/g/A0MAAeSwlklpUqb4/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/297888249256?_skw=Kinney+Brothers+Tobacco&hash=item455b85f5a8:g:A0MAAeSwlklpUqb4",
+    "card": "Kinney Bros. - Sweet Caporal #1 raw",
+    "change_pct": null,
+    "thumb": "img/4a0d6ef0172df222.jpg"
+   },
+   {
+    "set": "Kinney Bros. - Sweet Caporal",
+    "median": 10.88,
+    "listings": 2,
+    "title": "1901 Kinney Brothers \u2013 Sweet Caporal Actresses (T176) Unnamed Actress Image #4",
+    "image": "https://i.ebayimg.com/images/g/Kp0AAeSw3QdpUqb7/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/306683024405?_skw=Kinney+Brothers+Tobacco&hash=item4767bb9415:g:Kp0AAeSw3QdpUqb7",
+    "card": "Kinney Bros. - Sweet Caporal #4 raw",
+    "change_pct": null,
+    "thumb": "img/2a1f182bf2725a10.jpg"
+   }
+  ],
+  "Parkhurst - Frontier Days": [
+   {
+    "set": "Parkhurst - Frontier Days",
+    "median": 78.48,
+    "listings": 2,
+    "title": "1956 Parkhurst Frontier Days SAM HOUSTON #68 PSA 6 EX-MT",
+    "image": "https://i.ebayimg.com/images/g/pkcAAOSwDKdlsrfj/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/196210068493?_skw=Parkhurst&hash=item2daf080c0d:g:pkcAAOSwDKdlsrfj",
+    "card": "Parkhurst - Frontier Days #68 PSA 6",
+    "change_pct": null,
+    "thumb": "img/e16e9b981a53f1e5.jpg"
+   },
+   {
+    "set": "Parkhurst - Frontier Days",
+    "median": 15.75,
+    "listings": 2,
+    "title": "1956 Parkhurst Frontier Days #21 Death by Moonlight",
+    "image": "https://i.ebayimg.com/images/g/yRsAAeSwySxpX7Ac/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/168083308983?_skw=Parkhurst&hash=item27228bc1b7:g:yRsAAeSwySxpX7Ac",
+    "card": "Parkhurst - Frontier Days #21 raw",
+    "change_pct": null,
+    "thumb": "img/acb1c90d0ffcd4c3.jpg"
+   },
+   {
+    "set": "Parkhurst - Frontier Days",
+    "median": 6.97,
+    "listings": 2,
+    "title": "V339-5 Parkhurst, Frontier Days, 1956, #84  Annie Oakley",
+    "image": "https://i.ebayimg.com/images/g/kwAAAOSwRQ5lFcdg/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/314856792748?_skw=Parkhurst&hash=item494eed62ac:g:kwAAAOSwRQ5lFcdg",
+    "card": "Parkhurst - Frontier Days #84 raw",
+    "change_pct": null,
+    "thumb": "img/1653330bca50d9ea.jpg"
+   }
+  ],
+  "Cavanders Ltd. - Army Club Peeps Into": [
+   {
+    "set": "Cavanders Ltd. - Army Club Peeps Into",
+    "median": 8.3,
+    "listings": 2,
+    "title": "1930 Cavanders Army Club Peeps into Prehistoric Times Tobacco Small Right #3 1i3",
+    "image": "https://i.ebayimg.com/images/g/QX0AAeSwI9Nqx9GT/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257789293156?_skw=Cavanders&hash=item3c05707264:g:QX0AAeSwI9Nqx9GT",
+    "card": "Cavanders Ltd. - Army Club Peeps Into #3 raw",
+    "change_pct": null,
+    "thumb": "img/d1d98847b96900f6.jpg"
+   },
+   {
+    "set": "Cavanders Ltd. - Army Club Peeps Into",
+    "median": 4.28,
+    "listings": 3,
+    "title": "1930 Cavanders Army Club Peeps into Prehistoric Times Tobacco Large Left #6 7eo",
+    "image": "https://i.ebayimg.com/images/g/QaMAAeSw4TFq7fb4/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257838779605?_skw=Cavanders&hash=item3c08638cd5:g:QaMAAeSw4TFq7fb4",
+    "card": "Cavanders Ltd. - Army Club Peeps Into #6 raw",
+    "change_pct": null,
+    "thumb": "img/7c2626194dd7fc88.jpg"
+   },
+   {
+    "set": "Cavanders Ltd. - Army Club Peeps Into",
+    "median": 3.99,
+    "listings": 2,
+    "title": "1930 Cavanders Army Club Peeps into Prehistoric Times Tobacco Large Left #7 0f8",
+    "image": "https://i.ebayimg.com/images/g/~C4AAeSwbo5q29b0/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/237140470208?_skw=Cavanders&hash=item3736ac69c0:g:~C4AAeSwbo5q29b0",
+    "card": "Cavanders Ltd. - Army Club Peeps Into #7 raw",
+    "change_pct": null,
+    "thumb": "img/cc4354ed0ff73304.jpg"
+   }
+  ],
+  "Gallaher - Screen Stage": [
+   {
+    "set": "Gallaher - Screen Stage",
+    "median": 8.99,
+    "listings": 2,
+    "title": "CLARK GABLE 1934 Gallaher Cigarette Champions of Screen & Stage #46 Tobacco Card",
+    "image": "https://i.ebayimg.com/images/g/K80AAeSw7OFqndFq/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/168669171303?_skw=Gallaher&hash=item2745774e67:g:K80AAeSw7OFqndFq",
+    "card": "Gallaher - Screen Stage #46 raw",
+    "was": 5.99,
+    "change_pct": 50.1,
+    "thumb": "img/d799eb217bbc931d.jpg"
+   },
+   {
+    "set": "Gallaher - Screen Stage",
+    "median": 87.39,
+    "listings": 2,
+    "title": "1935 GALLAHER LTD. STARS OF SCREEN & STAGE #9 LAUREL AND HARDY PSA 7",
+    "image": "https://i.ebayimg.com/images/g/37IAAeSwBP1qQSyu/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/307030374011?_skw=Gallaher&hash=item477c6fb67b:g:37IAAeSwBP1qQSyu",
+    "card": "Gallaher - Screen Stage #9 PSA 7",
+    "change_pct": null,
+    "thumb": "img/7036c6401ecaf713.jpg"
+   },
+   {
+    "set": "Gallaher - Screen Stage",
+    "median": 6.21,
+    "listings": 2,
+    "title": "1935 Gallaher Stars of Screen & Stage Green Back Ginger Rogers #14 4s4",
+    "image": "https://i.ebayimg.com/images/g/N7EAAeSwzAFq7gGi/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/237167730724?_skw=Gallaher&hash=item37384c6024:g:N7EAAeSwzAFq7gGi",
+    "card": "Gallaher - Screen Stage #14 raw",
+    "change_pct": null,
+    "thumb": "img/5b97f91ef37b3c8f.jpg"
+   }
+  ],
+  "Ed-U-Cards - Cowboys Indians": [
+   {
+    "set": "Ed-U-Cards - Cowboys Indians",
+    "median": 9.17,
+    "listings": 2,
+    "title": "1967 Ed-U-Cards Cowboys and Indians Mini Smoke Signal #4 0w6",
+    "image": "https://i.ebayimg.com/images/g/fOQAAeSwqTlq4vPt/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257823064504?_skw=Ed-U-Cards&hash=item3c0773c1b8:g:fOQAAeSwqTlq4vPt",
+    "card": "Ed-U-Cards - Cowboys Indians #4 raw",
+    "was": 3.7,
+    "change_pct": 147.8,
+    "thumb": "img/a4d85b2a2c85dee5.jpg"
+   },
+   {
+    "set": "Ed-U-Cards - Cowboys Indians",
+    "median": 9.17,
+    "listings": 2,
+    "title": "1967 Ed-U-Cards Cowboys and Indians Mini Six-Shooter #7 0w6",
+    "image": "https://i.ebayimg.com/images/g/3lMAAeSwGV1q3IvU/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/336860701190?_skw=Ed-U-Cards&hash=item4e6e766206:g:3lMAAeSwGV1q3IvU",
+    "card": "Ed-U-Cards - Cowboys Indians #7 raw",
+    "was": 3.7,
+    "change_pct": 147.8,
+    "thumb": "img/c7f498127b6e469a.jpg"
+   },
+   {
+    "set": "Ed-U-Cards - Cowboys Indians",
+    "median": 10.89,
+    "listings": 2,
+    "title": "1967 Ed-U-Cards Cowboys and Indians Mini Old-Timer #11 0kb5",
+    "image": "https://i.ebayimg.com/images/g/7cAAAeSwUo1q0xDA/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/237128367299?_skw=Ed-U-Cards&hash=item3735f3bcc3:g:7cAAAeSwUo1q0xDA",
+    "card": "Ed-U-Cards - Cowboys Indians #11 raw",
+    "change_pct": null,
+    "thumb": "img/04620687f6ccf442.jpg"
+   }
+  ],
+  "Kellogg's - All Wheat": [
+   {
+    "set": "Kellogg's - All Wheat",
+    "median": 9.56,
+    "listings": 2,
+    "title": "1946 Kellogg's All-Wheat Series 2 Uniforms Napoleonic Soldier #4 9at",
+    "image": "https://i.ebayimg.com/images/g/vc0AAeSwPtFq5CsI/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257824850548?_skw=Kellogg%27s&hash=item3c078f0274:g:vc0AAeSwPtFq5CsI",
+    "card": "Kellogg's - All Wheat #4 raw",
+    "change_pct": null,
+    "thumb": "img/bd0d5c6f868d9dc9.jpg"
+   },
+   {
+    "set": "Kellogg's - All Wheat",
+    "median": 7.09,
+    "listings": 5,
+    "title": "1946 Kellogg's All-Wheat Series 2 Things to Make Tom Tom #9 9at",
+    "image": "https://i.ebayimg.com/images/g/n9wAAeSwxPZq565F/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257828996597?_skw=Kellogg%27s&hash=item3c07ce45f5:g:n9wAAeSwxPZq565F",
+    "card": "Kellogg's - All Wheat #9 raw",
+    "change_pct": null,
+    "thumb": "img/476178b0bfdbd7d3.jpg"
+   },
+   {
+    "set": "Kellogg's - All Wheat",
+    "median": 6.56,
+    "listings": 2,
+    "title": "1946 Kellogg's All-Wheat Series 2 Aeroplanes Bellanca Skyrocket #10 9at",
+    "image": "https://i.ebayimg.com/images/g/GScAAeSw2l9q3Hxz/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/237141516888?_skw=Kellogg%27s&hash=item3736bc6258:g:GScAAeSw2l9q3Hxz",
+    "card": "Kellogg's - All Wheat #10 raw",
+    "change_pct": null,
+    "thumb": "img/f4adb411afb67a11.jpg"
+   }
+  ],
+  "Carreras - Film Favourites": [
+   {
+    "set": "Carreras - Film Favourites",
+    "median": 8.92,
+    "listings": 2,
+    "title": "1938 Carreras Film Favourites Tobacco Bing Crosby #29 0d6c",
+    "image": "https://i.ebayimg.com/images/g/LwQAAeSw1f5q6Pfb/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/237158575089?_skw=Carreras+Tobacco&hash=item3737c0abf1:g:LwQAAeSw1f5q6Pfb",
+    "card": "Carreras - Film Favourites #29 raw",
+    "change_pct": null,
+    "thumb": "img/4052c7081cd2a095.jpg"
+   },
+   {
+    "set": "Carreras - Film Favourites",
+    "median": 8.62,
+    "listings": 2,
+    "title": "1938 Carreras Film Favourites Tobacco Trading Card #46 Anna Lee EX",
+    "image": "https://i.ebayimg.com/images/g/sBkAAOSwFd5mdOWJ/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/147661111166?_skw=Carreras+Tobacco&hash=item226149bf7e:g:sBkAAOSwFd5mdOWJ",
+    "card": "Carreras - Film Favourites #46 raw",
+    "change_pct": null,
+    "thumb": "img/01c5cfeb8c54e37b.jpg"
+   },
+   {
+    "set": "Carreras - Film Favourites",
+    "median": 6.27,
+    "listings": 2,
+    "title": "1938 Carreras Film Favourites Tobacco Trading Card #20 Robert Donat EX",
+    "image": "https://i.ebayimg.com/images/g/~-UAAOSw6k9mU4Mb/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/147661111158?_skw=Carreras+Tobacco&hash=item226149bf76:g:~-UAAOSw6k9mU4Mb",
+    "card": "Carreras - Film Favourites #20 raw",
+    "change_pct": null,
+    "thumb": "img/21154b36942b0544.jpg"
+   }
+  ],
+  "Nu-Cards - Horror Monsters": [
+   {
+    "set": "Nu-Cards - Horror Monsters",
+    "median": 17.52,
+    "listings": 2,
+    "title": "1961 Nu-Cards Horror Monsters Series 2 This is No Place for Second Best #116 4g8",
+    "image": "https://i.ebayimg.com/images/g/FwYAAeSwwnNq3unJ/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/336863416735?_skw=Nu-Cards&hash=item4e6e9fd19f:g:FwYAAeSwwnNq3unJ",
+    "card": "Nu-Cards - Horror Monsters #116 raw",
+    "change_pct": null,
+    "thumb": "img/4f5e6bd224014cbf.jpg"
+   },
+   {
+    "set": "Nu-Cards - Horror Monsters",
+    "median": 14.14,
+    "listings": 2,
+    "title": "1961 Nu-Cards Horror Monsters Series 2 La Casa Del Terror #122 0mx5",
+    "image": "https://i.ebayimg.com/images/g/PCYAAeSwudhq73Hf/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/237170051601?_skw=Nu-Cards&hash=item37386fca11:g:PCYAAeSwudhq73Hf",
+    "card": "Nu-Cards - Horror Monsters #122 raw",
+    "change_pct": null,
+    "thumb": "img/d7ea64b6c9454af6.jpg"
+   },
+   {
+    "set": "Nu-Cards - Horror Monsters",
+    "median": 12.96,
+    "listings": 2,
+    "title": "1961 Nu-Cards Horror Monsters Series 2 The Alligator People #83 a8x",
+    "image": "https://i.ebayimg.com/images/g/kYAAAeSw88tq0n2x/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257801683117?_skw=Nu-Cards&hash=item3c062d80ad:g:kYAAAeSw88tq0n2x",
+    "card": "Nu-Cards - Horror Monsters #83 raw",
+    "change_pct": null,
+    "thumb": "img/9db01c59dfb77d31.jpg"
+   }
+  ],
+  "Parkhurst - Time Cars": [
+   {
+    "set": "Parkhurst - Time Cars",
+    "median": 3.84,
+    "listings": 2,
+    "title": "1959 Parkhurst Old Time Cars 1922 Dagmar #51 0q3",
+    "image": "https://i.ebayimg.com/images/g/Dw0AAeSwwnNq3f~q/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/237143505639?_skw=Parkhurst&hash=item3736dabae7:g:Dw0AAeSwwnNq3f~q",
+    "card": "Parkhurst - Time Cars #51 raw",
+    "change_pct": null,
+    "thumb": "img/aa45d2e09762f667.jpg"
+   },
+   {
+    "set": "Parkhurst - Time Cars",
+    "median": 3.84,
+    "listings": 2,
+    "title": "1959 Parkhurst Old Time Cars 1931 Auburn #63 0q3",
+    "image": "https://i.ebayimg.com/images/g/vSwAAeSwwnNq3g31/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/257817007504?_skw=Parkhurst&hash=item3c07175590:g:vSwAAeSwwnNq3g31",
+    "card": "Parkhurst - Time Cars #63 raw",
+    "change_pct": null,
+    "thumb": "img/ae0dd9036aaad324.jpg"
+   }
+  ],
+  "Imperial Tobacco - Itc Canadian History": [
+   {
+    "set": "Imperial Tobacco - Itc Canadian History",
+    "median": 9.46,
+    "listings": 2,
+    "title": "1926 ITC of Canada Canadian History Series Tobacco #1 sy3",
+    "image": "https://i.ebayimg.com/images/g/750AAeSwHWZq1Wng/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/336851387086?_skw=Imperial+Tobacco+Canada&hash=item4e6de842ce:g:750AAeSwHWZq1Wng",
+    "card": "Imperial Tobacco - Itc Canadian History #1 raw",
+    "was": 6.58,
+    "change_pct": 43.8,
+    "thumb": "img/2cdb6662d0cd0618.jpg"
+   },
+   {
+    "set": "Imperial Tobacco - Itc Canadian History",
+    "median": 9.46,
+    "listings": 2,
+    "title": "1926 ITC of Canada Canadian History Series Tobacco #8 sy3",
+    "image": "https://i.ebayimg.com/images/g/uv8AAeSwtKBq1Wnh/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/336851387085?_skw=Imperial+Tobacco+Canada&hash=item4e6de842cd:g:uv8AAeSwtKBq1Wnh",
+    "card": "Imperial Tobacco - Itc Canadian History #8 raw",
+    "change_pct": null,
+    "thumb": "img/900044a0a3787507.jpg"
+   },
+   {
+    "set": "Imperial Tobacco - Itc Canadian History",
+    "median": 9.46,
+    "listings": 2,
+    "title": "1926 - 1930 ITC of Canada Canadian History Series C5 Tobacco #27 sy3",
+    "image": "https://i.ebayimg.com/images/g/4NUAAeSwCGZq11vM/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/336853956171?_skw=Imperial+Tobacco+Canada&hash=item4e6e0f764b:g:4NUAAeSwCGZq11vM",
+    "card": "Imperial Tobacco - Itc Canadian History #27 raw",
+    "change_pct": null,
+    "thumb": "img/abac4645c89ecedf.jpg"
+   }
+  ],
+  "Ed-U-Cards - Book Knowledge Flash": [
+   {
+    "set": "Ed-U-Cards - Book Knowledge Flash",
+    "median": 22.24,
+    "listings": 2,
+    "title": "Vtg 1960 ED-U Cards Marie Curie #14 - The Book Of Knowledge Flash Cards",
+    "image": "https://i.ebayimg.com/images/g/N9kAAOSwdVFmaeHU/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/335437637369?_skw=Ed-U-Cards&hash=item4e19a426f9:g:N9kAAOSwdVFmaeHU",
+    "card": "Ed-U-Cards - Book Knowledge Flash #14 raw",
+    "change_pct": null,
+    "thumb": "img/32b03cb42a9318fd.jpg"
+   },
+   {
+    "set": "Ed-U-Cards - Book Knowledge Flash",
+    "median": 12.74,
+    "listings": 2,
+    "title": "Rembrandt Van Ryn #42 1960 Ed-U-Cards Book Of Knowledge Flash Card ",
+    "image": "https://i.ebayimg.com/images/g/5NgAAOSwu2hhyiPg/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/203767359757?_skw=Ed-U-Cards&hash=item2f717b290d:g:5NgAAOSwu2hhyiPg&amdata=enc%3AAQALAAAA4Of5zIIojhOf%2BkQK%2Bxzjn7kJBy8pBi%2FM0Jzo7zC65HWAGBra0Q7oQJai9Sc9lTQaHxDYPNcygLBrEYsMdtcBxwFuTLRFgngETXOBjvSAJN%2FCzq%2B2aIZhkutkro5BQZfdXaZM%2FVo714fDx60SLagEmX4fYzCHilWouzuLuFaLJp3uJpiD5Hy%2F6jcpdqrfBmanHT1O5COxsSo9MglgZMk0GN0NAFHLJ%2B85ArnK2ys32FC8huUtFupppVh%2BieGanq%2B7UvNreKv8WAX26gSQzhZ9L2XikZ4fN6Sj2hUTRhuOzqTt",
+    "card": "Ed-U-Cards - Book Knowledge Flash #42 raw",
+    "change_pct": null,
+    "thumb": "img/e4e0d82c9f1a2d86.jpg"
+   },
+   {
+    "set": "Ed-U-Cards - Book Knowledge Flash",
+    "median": 12.74,
+    "listings": 2,
+    "title": "Geoffrey Chaucer #12 1960 Ed-U-Cards Book Of Knowledge Flash Card ",
+    "image": "https://i.ebayimg.com/images/g/eOQAAOSw60thyhxb/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/203767337614?_skw=Ed-U-Cards&hash=item2f717ad28e:g:eOQAAOSw60thyhxb&amdata=enc%3AAQALAAAA4Of5zIIojhOf%2BkQK%2Bxzjn7mHIwBSgV0TM5OFV445v1Cd01U%2F%2BOfTodQs4OH4j9Gd5tPHI3Uv61oc9KBGUyhQsBNZaTRfBq6SkQ92GWKneH21NwmgTr0NSEicsn7Q22GCJNbUbCwiwb7nQmvMn4DYhVEd823Z%2BsKz28olnmvG0qsn3SKCcjZLO1fA2eYrqi49sQZUyca%2BzxMQoXn1xKAmS92AhCHB9f6dXSNCR99dVamTRrbXyGWyMtiWh35LWHd5mr6AS%2FBrnSY7LMbo3DVrIsF9Cyd%2B95Wa4TNgKFoCLjUj",
+    "card": "Ed-U-Cards - Book Knowledge Flash #12 raw",
+    "change_pct": null,
+    "thumb": "img/fc912ea051419339.jpg"
+   }
+  ],
+  "Gallaher - Shots Famous Films": [
+   {
+    "set": "Gallaher - Shots Famous Films",
+    "median": 19.02,
+    "listings": 2,
+    "title": "1935 MYRNA LOY & CLARK GABLE Shots from Famous Films #29 Gallaher tobacco card",
+    "image": "https://i.ebayimg.com/images/g/l~cAAeSwf3xqGKGl/s-l500.jpg",
+    "url": "https://www.ebay.com/itm/117220074658?_skw=Gallaher&hash=item1b4adc64a2:g:l~cAAeSwf3xqGKGl",
+    "card": "Gallaher - Shots Famous Films #29 raw",
+    "change_pct": null,
+    "thumb": "img/96226ba0640ae2c4.jpg"
+   }
+  ]
+ },
+ "my_price_check": []
+}

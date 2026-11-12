@@ -610,3 +610,6 @@ date,old_item_id,new_item_id,status,new_title,new_price,ad_rate,fees,message,sou
 2026-11-12 20:42,226630355971,227611650156,relisted,Hot Toys Harley Quinn Prey Robbie Batman MMS 1/6 Suit Clothes ONLY 4 Toy Figure,,4.2,0.00,,auto
 2026-11-12 20:43,226409847122,227611650260,relisted,Batman comic Lot Beyond #1 Issue Knightfall Batwoman Cat Knight most High Grade,,4.2,0.00,,auto
 2026-11-12 20:43,226827678641,227611650364,relisted,Hot Toys Spider-Man Integrated Suit MMS 1/6 Head Sculpt Holland Only for Figure,,4.2,0.00,,auto
+2026-11-12 23:17,226827678790,,skipped,,,,,listing is not active (Completed),auto
+2026-11-12 23:17,224275261263,,skipped,President Toy Figure Lot. Silver Plastic Color Historical USA America Roosevelt,,,,"eBay rejected the new listing, nothing was changed: VerifyAddFixedPriceItem failed: Error: Please add at least one valid shipping service option to your listing.",auto
+2026-11-12 23:17,226431048779,227611781502,relisted,Vtg Model Cast Iron Train Figure Railroad W&A General JW Figurine ? Antique Toy,,,0.00,relisted WITHOUT changes: AddFixedPriceItem failed: Error: It looks like this listing is for an item you already have on eBay: Vtg Model Cast Iron Train Figure Railroad W&A General JW Figurine ? Antique Toy (226431048779). We don't allow listings for identical items from the same seller to appear on,auto

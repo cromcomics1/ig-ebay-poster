@@ -379,10 +379,7 @@ def shipping_xml(service, cost):
          f"<ShippingService>{escape(service)}</ShippingService>"
          f'<ShippingServiceCost currencyID="USD">{cost:.2f}</ShippingServiceCost>'
          "</ShippingServiceOptions></ShippingDetails>")
-    if service == "US_eBayStandardEnvelope":  # envelope needs a letter under 3 oz
-        x += ('<ShippingPackageDetails><ShippingPackage>Letter</ShippingPackage>'
-              '<WeightMajor unit="lbs">0</WeightMajor><WeightMinor unit="oz">1</WeightMinor></ShippingPackageDetails>')
-    return x
+    return x  # package weight/dimensions are left blank (Yan's rule)
 
 
 def build_item(row, pics, category_id, tmpl, uid):
@@ -431,7 +428,7 @@ def build_item(row, pics, category_id, tmpl, uid):
             x.append(relist.ser(ship, drop=relist.SHIPPING_DROP))
         if ret is not None:
             x.append(relist.ser(ret, keep=relist.RETURN_KEEP))
-        pkg = None if own_ship else find("e:ShippingPackageDetails")
+        pkg = None  # package weight/dimensions are always left blank (Yan's rule)
         if pkg is not None:
             x.append(relist.ser(pkg))
     if row.get("best_offer", True):

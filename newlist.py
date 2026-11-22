@@ -321,6 +321,38 @@ def template_item(batch):
     return item["xml"]
 
 
+# Per-item shipping. "shipping": "patch" applies Yan's patch rule (price <= $20: eBay Standard
+# Envelope, buyer pays $3.25; over $20: USPS Ground Advantage, buyer pays $6). "envelope"/"ground" force one,
+# or give {"service": "<eBay ShippingService code>", "cost": 3.25}. No "shipping" = copy from the template listing.
+SHIP_PRESETS = {"envelope": ("US_eBayStandardEnvelope", 3.25), "ground": ("USPSGroundAdvantage", 6.00)}
+
+
+def shipping_for(row):
+    s = row.get("shipping")
+    if not s:
+        return None
+    if isinstance(s, dict):
+        return s["service"], float(s["cost"])
+    s = str(s).lower()
+    if s == "patch":
+        s = "envelope" if float(row["price"]) <= 20 else "ground"
+    if s not in SHIP_PRESETS:
+        raise RuntimeError(f"unknown shipping '{s}' (use patch, envelope, ground or {{service, cost}})")
+    return SHIP_PRESETS[s]
+
+
+def shipping_xml(service, cost):
+    x = ("<ShippingDetails><ShippingType>Flat</ShippingType><ShippingServiceOptions>"
+         "<ShippingServicePriority>1</ShippingServicePriority>"
+         f"<ShippingService>{escape(service)}</ShippingService>"
+         f'<ShippingServiceCost currencyID="USD">{cost:.2f}</ShippingServiceCost>'
+         "</ShippingServiceOptions></ShippingDetails>")
+    if service == "US_eBayStandardEnvelope":  # envelope needs a letter under 3 oz
+        x += ('<ShippingPackageDetails><ShippingPackage>Letter</ShippingPackage>'
+              '<WeightMajor unit="lbs">0</WeightMajor><WeightMinor unit="oz">1</WeightMinor></ShippingPackageDetails>')
+    return x
+
+
 def build_item(row, pics, category_id, tmpl, uid):
     find = lambda p: tmpl.find(p, NS)
     x = [f"<UUID>{uid}</UUID>", f"<Title>{escape(row['title'][:80])}</Title>",
@@ -331,6 +363,8 @@ def build_item(row, pics, category_id, tmpl, uid):
          f'<StartPrice currencyID="USD">{float(row["price"]):.2f}</StartPrice>',
          f"<Quantity>{int(row.get('quantity') or 1)}</Quantity>", "<Currency>USD</Currency>", "<Site>US</Site>",
          f"<ConditionID>{int(row.get('condition_id') or 3000)}</ConditionID>"]
+    if row.get("sku"):  # inventory number, e.g. "s SP1" (eBay "Custom label")
+        x.append(f"<SKU>{escape(str(row['sku'])[:50])}</SKU>")
     if row.get("condition_note"):
         x.append(f"<ConditionDescription>{escape(row['condition_note'][:1000])}</ConditionDescription>")
     for tag in ("Country", "Location", "PostalCode", "DispatchTimeMax"):
@@ -343,22 +377,29 @@ def build_item(row, pics, category_id, tmpl, uid):
         x.append("<ItemSpecifics>" + "".join(
             f"<NameValueList><Name>{escape(n)}</Name>" + "".join(f"<Value>{escape(str(v))}</Value>" for v in (vals if isinstance(vals, list) else [vals])) + "</NameValueList>"
             for n, vals in specs.items()) + "</ItemSpecifics>")
+    own_ship = shipping_for(row)
     profiles = find("e:SellerProfiles")
     if profiles is not None and profiles.find("e:SellerShippingProfile/e:ShippingProfileID", NS) is not None:
         p = "<SellerProfiles>"
-        for kind, idtag in (("SellerShippingProfile", "ShippingProfileID"), ("SellerReturnProfile", "ReturnProfileID"),
-                            ("SellerPaymentProfile", "PaymentProfileID")):
+        kinds = (("SellerShippingProfile", "ShippingProfileID"), ("SellerReturnProfile", "ReturnProfileID"),
+                 ("SellerPaymentProfile", "PaymentProfileID"))
+        for kind, idtag in kinds[1:] if own_ship else kinds:
             pid = profiles.findtext(f"e:{kind}/e:{idtag}", "", NS)
             if pid:
                 p += f"<{kind}><{idtag}>{pid}</{idtag}></{kind}>"
         x.append(p + "</SellerProfiles>")
+        if own_ship:
+            x.append(shipping_xml(*own_ship))
     else:
         ship, ret = find("e:ShippingDetails"), find("e:ReturnPolicy")
+        if own_ship:
+            x.append(shipping_xml(*own_ship))
+            ship = None
         if ship is not None:
             x.append(relist.ser(ship, drop=relist.SHIPPING_DROP))
         if ret is not None:
             x.append(relist.ser(ret, keep=relist.RETURN_KEEP))
-        pkg = find("e:ShippingPackageDetails")
+        pkg = None if own_ship else find("e:ShippingPackageDetails")
         if pkg is not None:
             x.append(relist.ser(pkg))
     if row.get("best_offer", True):
@@ -416,6 +457,8 @@ def list_items():
                 cat, cname = suggest_category(row["title"])
                 print(f"   category: {cname} ({cat})")
             uid = hashlib.md5(f"newlist-{row['id']}".encode()).hexdigest().upper()
+            if shipping_for(row):
+                print(f"   shipping: {shipping_for(row)[0]}, buyer pays ${shipping_for(row)[1]:.2f}")
             item = build_item(row, pics, cat, tmpl, uid)
             root, _ = trading("VerifyAddFixedPriceItem", item)
             fee = total_fees(root)

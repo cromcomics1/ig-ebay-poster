@@ -249,6 +249,19 @@ def sheets():
 
 
 # ---------------- MODE=list ----------------
+RAW = "https://raw.githubusercontent.com/cromcomics1/ig-ebay-poster/" + BRANCH
+
+
+def upload_external(url, name):
+    root, _ = trading("UploadSiteHostedPictures",
+                      f"<ExternalPictureURL>{escape(url)}</ExternalPictureURL><PictureName>{escape(name[:50])}</PictureName>"
+                      "<PictureSet>Supersize</PictureSet><ExtensionInDays>30</ExtensionInDays>")
+    full = root.findtext("e:SiteHostedPictureDetails/e:FullURL", "", NS)
+    if not full:
+        raise RuntimeError("no picture URL returned")
+    return full
+
+
 def upload_picture(jpeg, name):
     token = os.environ["EBAY_USER_TOKEN"]
     xml = (f'<?xml version="1.0" encoding="utf-8"?><UploadSiteHostedPicturesRequest xmlns="urn:ebay:apis:eBLBaseComponents">'
@@ -446,7 +459,15 @@ def list_items():
                         raise RuntimeError(f"photo {p['n']} is no longer in the album")
                     g = info["guid"]
                     data, label = fetch(album().urls([g])[album_photos()[g]["big"]]), str(p["n"])
-                im = open_image(data, int(p.get("rotate") or 0))
+                rot = int(p.get("rotate") or 0)
+                if "file" in p and not rot:
+                    try:  # eBay fetches the photo straight from the public repo
+                        pics.append(upload_external(f"{RAW}/photos/{row['id']}/{urllib.parse.quote(p['file'])}",
+                                                    f"{row['id']}-{label}"))
+                        continue
+                    except (RuntimeError, EbayError) as e:
+                        print(f"   link upload failed for {label} ({e}); trying file upload")
+                im = open_image(data, rot)
                 im.thumbnail((2000, 2000))
                 buf = io.BytesIO()
                 im.save(buf, "JPEG", quality=90)

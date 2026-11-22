@@ -1,0 +1,67 @@
+name: New listings
+run-name: "New listings: ${{ inputs.step }}${{ inputs.dry_run == false && ' (LIVE)' || '' }}"
+
+# HOW TO USE
+#   Run 1: STEP = "1 - Make photo sheets". Reads the iCloud album (ALBUM_URL secret)
+#          and saves numbered contact sheets. Nothing on eBay changes.
+#          Then ask Claude to draft the listings; approve them in chat.
+#   Run 2: STEP = "2 - List approved items", PRACTICE ONLY = on.
+#          Uploads the photos and has eBay check each listing. Nothing is listed.
+#   Run 3: same as Run 2 with PRACTICE ONLY = off. This lists for real.
+
+on:
+  workflow_dispatch:
+    inputs:
+      step:
+        description: "STEP"
+        type: choice
+        options:
+          - "1 - Make photo sheets"
+          - "2 - List approved items"
+        default: "1 - Make photo sheets"
+      ad_campaign:
+        description: "Ad campaign name (blank = latest running campaign)"
+        default: "August 2026"
+      max_fee:
+        description: "Max eBay listing fee allowed per item in $ (0 = only free)"
+        default: "0"
+      dry_run:
+        description: "PRACTICE ONLY (ON = nothing is listed)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency: newlist
+
+jobs:
+  newlist:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install pillow
+
+      - name: Git identity
+        run: |
+          git config user.name "ig-poster-bot"
+          git config user.email "ig-poster-bot@users.noreply.github.com"
+
+      - name: New listings
+        run: python newlist.py
+        env:
+          ALBUM_URL: ${{ secrets.ALBUM_URL }}
+          EBAY_USER_TOKEN: ${{ secrets.EBAY_USER_TOKEN }}
+          EBAY_REFRESH_TOKEN: ${{ secrets.EBAY_REFRESH_TOKEN }}
+          EBAY_APP_ID: ${{ secrets.EBAY_APP_ID }}
+          EBAY_CERT_ID: ${{ secrets.EBAY_CERT_ID }}
+          AD_CAMPAIGN: ${{ inputs.ad_campaign || 'latest' }}
+          MODE: ${{ startsWith(inputs.step, '2') && 'list' || 'sheets' }}
+          MAX_FEE: ${{ inputs.max_fee }}
+          DRY_RUN: ${{ inputs.dry_run == true && 'true' || 'false' }}

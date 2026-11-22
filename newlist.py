@@ -252,46 +252,65 @@ def sheets():
 RAW = "https://raw.githubusercontent.com/cromcomics1/ig-ebay-poster/" + BRANCH
 
 
+MEDIA = "https://apim.ebay.com/commerce/media/v1_beta"
+_media_token = None
+
+
+def media_token():
+    """OAuth token for eBay's Media API (photos), from the EBAY_REFRESH_TOKEN secret."""
+    global _media_token
+    if not _media_token:
+        import base64
+        creds = base64.b64encode(f"{os.environ['EBAY_APP_ID']}:{os.environ['EBAY_CERT_ID']}".encode()).decode()
+        last = None
+        for scope in ("https://api.ebay.com/oauth/api_scope/sell.inventory", "https://api.ebay.com/oauth/api_scope"):
+            form = urllib.parse.urlencode({"grant_type": "refresh_token", "refresh_token": os.environ["EBAY_REFRESH_TOKEN"],
+                                           "scope": scope}).encode()
+            req = urllib.request.Request("https://api.ebay.com/identity/v1/oauth2/token", data=form, method="POST",
+                                         headers={"Authorization": f"Basic {creds}",
+                                                  "Content-Type": "application/x-www-form-urlencoded"})
+            try:
+                with urllib.request.urlopen(req, timeout=60) as r:
+                    _media_token = json.loads(r.read().decode())["access_token"]
+                    break
+            except urllib.error.HTTPError as e:
+                last = f"{scope.rsplit('/', 1)[-1]}: HTTP {e.code} {e.read().decode(errors='replace')[:200]}"
+        if not _media_token:
+            raise RuntimeError(f"no photo-upload access ({last}); re-run the eBay sign-in with the sell.inventory scope")
+    return _media_token
+
+
+def _media_result(status, headers, data):
+    url = (data or {}).get("imageUrl")
+    if not url:
+        loc = headers.get("Location") or headers.get("location")
+        if loc:
+            _, _, data = relist.rest("GET", loc, media_token())
+            url = data.get("imageUrl")
+    if not url:
+        raise RuntimeError(f"Media API returned no image URL ({status} {str(data)[:200]})")
+    return url
+
+
 def upload_external(url, name):
-    root, _ = trading("UploadSiteHostedPictures",
-                      f"<ExternalPictureURL>{escape(url)}</ExternalPictureURL><PictureName>{escape(name[:50])}</PictureName>"
-                      "<PictureSet>Supersize</PictureSet><ExtensionInDays>30</ExtensionInDays>")
-    full = root.findtext("e:SiteHostedPictureDetails/e:FullURL", "", NS)
-    if not full:
-        raise RuntimeError("no picture URL returned")
-    return full
+    return _media_result(*relist.rest("POST", f"{MEDIA}/image/create_image_from_url", media_token(), {"imageUrl": url}))
 
 
 def upload_picture(jpeg, name):
-    token = os.environ["EBAY_USER_TOKEN"]
-    xml = (f'<?xml version="1.0" encoding="utf-8"?><UploadSiteHostedPicturesRequest xmlns="urn:ebay:apis:eBLBaseComponents">'
-           f"<RequesterCredentials><eBayAuthToken>{escape(token)}</eBayAuthToken></RequesterCredentials>"
-           f"<PictureName>{escape(name[:50])}</PictureName><PictureSet>Supersize</PictureSet>"
-           f"<ExtensionInDays>30</ExtensionInDays></UploadSiteHostedPicturesRequest>")
     boundary = "----crom" + uuidlib.uuid4().hex
-    body = (f'--{boundary}\r\nContent-Disposition: form-data; name="XML Payload"\r\n'
-            f"Content-Type: text/xml;charset=utf-8\r\n\r\n{xml}\r\n"
-            f'--{boundary}\r\nContent-Disposition: form-data; name="image"; filename="image.jpg"\r\n'
-            f"Content-Type: image/jpeg\r\nContent-Transfer-Encoding: binary\r\n\r\n").encode() + jpeg + f"\r\n--{boundary}--\r\n".encode()
-    headers = {"X-EBAY-API-SITEID": "0", "X-EBAY-API-COMPATIBILITY-LEVEL": "1193",
-               "X-EBAY-API-CALL-NAME": "UploadSiteHostedPictures",
-               "Content-Type": f"multipart/form-data; boundary={boundary}"}
-    import xml.etree.ElementTree as ET
-    for attempt in range(3):
-        try:
-            req = urllib.request.Request(relist.API, data=body, headers=headers, method="POST")
-            with urllib.request.urlopen(req, timeout=180) as r:
-                root = ET.fromstring(r.read())
-            break
-        except OSError as e:
-            if attempt == 2:
-                raise RuntimeError(f"photo upload failed: {e}")
-            time.sleep(5 * (attempt + 1))
-    url = root.findtext("e:SiteHostedPictureDetails/e:FullURL", "", NS)
-    if not url:
-        msgs = [e.findtext("e:LongMessage", "", NS) for e in root.findall("e:Errors", NS)]
-        raise RuntimeError("photo upload failed: " + " | ".join(msgs))
-    return url
+    body = (f'--{boundary}\r\nContent-Disposition: form-data; name="image"; filename="{name[:40]}.jpg"\r\n'
+            "Content-Type: image/jpeg\r\n\r\n").encode() + jpeg + f"\r\n--{boundary}--\r\n".encode()
+    req = urllib.request.Request(f"{MEDIA}/image/create_image_from_file", data=body, method="POST",
+                                 headers={"Authorization": f"Bearer {media_token()}", "Accept": "application/json",
+                                          "Content-Type": f"multipart/form-data; boundary={boundary}"})
+    try:
+        with urllib.request.urlopen(req, timeout=180) as r:
+            raw = r.read().decode()
+            return _media_result(r.status, dict(r.headers), json.loads(raw) if raw.strip() else {})
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"photo upload failed: HTTP {e.code} {e.read().decode(errors='replace')[:300]}")
+    except OSError as e:
+        raise RuntimeError(f"photo upload failed: {e}")
 
 
 _app_token = None

@@ -1,1 +1,52 @@
-{"ad_rate": 5.1, "template_item": "", "items": []}
+{
+ "ad_rate": 5.1,
+ "template_item": "",
+ "items": [
+  {
+   "id": "patch-50sw-master-of-space-test",
+   "approve": true,
+   "title": "Vintage USAF 50th Space Wing Master of Space Pegasus Embroidered Patch Air Force",
+   "price": 12.99,
+   "description": "<p>s SP1</p><p>Old from another time (and maybe dimension).</p><p>Old with possible wear from storage.</p><p>Stands and rulers not included.</p><p>Enjoy!</p>",
+   "category_id": "",
+   "condition_id": 3000,
+   "condition_note": "Light edge wear and a few loose threads; no stains.",
+   "specifics": {
+    "Type": [
+     "Patch"
+    ],
+    "Theme": [
+     "Militaria"
+    ],
+    "Branch": [
+     "Air Force"
+    ],
+    "Original/Reproduction": [
+     "Original"
+    ],
+    "Country/Region of Manufacture": [
+     "United States"
+    ],
+    "Unit": [
+     "50th Space Wing"
+    ],
+    "Material": [
+     "Fabric"
+    ]
+   },
+   "photos": [
+    "IMG_3006.JPEG",
+    "IMG_3007.JPEG",
+    "IMG_3011.JPEG",
+    "IMG_3008.JPEG",
+    "IMG_3010.JPEG",
+    "IMG_3012.JPEG"
+   ],
+   "quantity": 1,
+   "best_offer": true,
+   "ad_rate": 5.1,
+   "shipping": "patch",
+   "sku": "s SP1"
+  }
+ ]
+}

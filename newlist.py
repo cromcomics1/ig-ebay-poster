@@ -21,7 +21,9 @@ batch.json:
      {"id": "patch-01", "approve": true, "title": "...", "price": 24.99,
       "description": "<p>...</p>", "category_id": "",      # blank = eBay suggests one
       "condition_id": 3000, "condition_note": "...",
-      "specifics": {"Brand": ["..."]}, "photos": [12, {"n": 13, "rotate": 90}],
+      "specifics": {"Brand": ["..."]},
+      "photos": ["IMG_0001.JPEG", {"file": "IMG_0002.JPEG", "rotate": 90}],   # files in photos/<id>/
+                 # (or album photo numbers from the contact sheets: [12, {"n": 13, "rotate": 90}])
       "quantity": 1, "best_offer": true, "ad_rate": 5.1}]}
 """
 
@@ -124,7 +126,41 @@ def fetch(url, tries=3):
             time.sleep(3 * (n + 1))
 
 
+_album, _album_photos = None, None
+
+
+def album():
+    global _album
+    if not _album:
+        if not os.environ.get("ALBUM_URL"):
+            raise RuntimeError("this item uses album photo numbers, but there is no ALBUM_URL secret")
+        _album = Album(os.environ["ALBUM_URL"])
+    return _album
+
+
+def album_photos():
+    global _album_photos
+    if _album_photos is None:
+        _album_photos = {p["guid"]: p for p in album().photos()[1]}
+    return _album_photos
+
+
+def branch_bytes(path):
+    r = subprocess.run(["git", "show", f"FETCH_HEAD:{path}"], capture_output=True)
+    if r.returncode:
+        git("fetch", "-q", "origin", BRANCH)
+        r = subprocess.run(["git", "show", f"FETCH_HEAD:{path}"], capture_output=True)
+    if r.returncode:
+        raise RuntimeError(f"photo not found in the repo: {path} (branch {BRANCH})")
+    return r.stdout
+
+
 def open_image(data, rotate=0):
+    try:
+        import pillow_heif
+        pillow_heif.register_heif_opener()  # iPhone .HEIC photos
+    except ImportError:
+        pass
     from PIL import Image, ImageOps
     im = ImageOps.exif_transpose(Image.open(io.BytesIO(data))).convert("RGB")
     if rotate % 360:
@@ -342,9 +378,6 @@ def list_items():
     print(f"{len(rows)} approved item(s) to do{' (PRACTICE ONLY: nothing will be listed)' if DRY_RUN else ''}.")
     if not rows:
         return
-    album = Album(os.environ["ALBUM_URL"])
-    _, photos = album.photos()
-    by_guid = {p["guid"]: p for p in photos}
     tmpl = template_item(batch)
     ads = Marketing.connect()
     if ads:
@@ -361,21 +394,22 @@ def list_items():
                 raise RuntimeError(f"title is {len(row['title'])} characters (max 80)")
             if not 0 <= rate <= relist.MAX_AD_RATE:
                 raise RuntimeError(f"ad rate {rate}% looks wrong")
-            picks = [p if isinstance(p, dict) else {"n": p} for p in row["photos"]]
-            guids = []
-            for p in picks:
-                info = index.get(str(p["n"]))
-                if not info or info["guid"] not in by_guid:
-                    raise RuntimeError(f"photo {p['n']} is no longer in the album")
-                guids.append(info["guid"])
-            urls = album.urls(guids)
             pics = []
-            for p, g in zip(picks, guids):
-                im = open_image(fetch(urls[by_guid[g]["big"]]), int(p.get("rotate") or 0))
+            for p in row["photos"]:
+                p = p if isinstance(p, dict) else ({"n": p} if isinstance(p, int) else {"file": p})
+                if "file" in p:  # photo saved in the repo: photos/<item id>/<file>
+                    data, label = branch_bytes(f"photos/{row['id']}/{p['file']}"), p["file"]
+                else:  # photo number from the iCloud contact sheets
+                    info = index.get(str(p["n"]))
+                    if not info or info["guid"] not in album_photos():
+                        raise RuntimeError(f"photo {p['n']} is no longer in the album")
+                    g = info["guid"]
+                    data, label = fetch(album().urls([g])[album_photos()[g]["big"]]), str(p["n"])
+                im = open_image(data, int(p.get("rotate") or 0))
                 im.thumbnail((2000, 2000))
                 buf = io.BytesIO()
                 im.save(buf, "JPEG", quality=90)
-                pics.append(upload_picture(buf.getvalue(), f"{row['id']}-{p['n']}"))
+                pics.append(upload_picture(buf.getvalue(), f"{row['id']}-{label}"))
             print(f"   {len(pics)} photos uploaded")
             cat = str(row.get("category_id") or "")
             if not cat:
@@ -417,6 +451,6 @@ def list_items():
 
 
 if __name__ == "__main__":
-    if not os.environ.get("ALBUM_URL"):
-        sys.exit("Add the album's Public Website link as the ALBUM_URL secret first.")
+    if MODE == "sheets" and not os.environ.get("ALBUM_URL"):
+        sys.exit("Photo sheets need the album's Public Website link as the ALBUM_URL secret.")
     sheets() if MODE == "sheets" else list_items()

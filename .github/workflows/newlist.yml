@@ -18,7 +18,7 @@ on:
         options:
           - "1 - Make photo sheets"
           - "2 - List approved items"
-        default: "1 - Make photo sheets"
+        default: "2 - List approved items"
       ad_campaign:
         description: "Ad campaign name (blank = latest running campaign)"
         default: "August 2026"
@@ -46,7 +46,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - run: pip install pillow
+      - run: pip install pillow pillow-heif
 
       - name: Git identity
         run: |

@@ -21,7 +21,7 @@ on:
         default: "2 - List approved items"
       ad_campaign:
         description: "Ad campaign name (blank = latest running campaign)"
-        default: "August 2026"
+        default: "Refreshed listings"
       max_fee:
         description: "Max eBay listing fee allowed per item in $ (0 = only free)"
         default: "0"

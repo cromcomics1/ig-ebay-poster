@@ -725,15 +725,29 @@ def apply(auto_rows=None, target=None, source=None):
             ended = True
             trading("EndFixedPriceItem", f"<ItemID>{iid}</ItemID><EndingReason>OtherListingError</EndingReason>")
             print("   old listing ended")
-            try:
-                root, warns = trading("AddFixedPriceItem", new_item)
-            except RuntimeError as e:
+            root = None
+            # eBay often still sees the just-ended listing for a little while and rejects the
+            # new copy as a duplicate of it. Wait and try again before giving up.
+            for wait in (0, 20, 45, 90):
+                if wait:
+                    print(f"   eBay still sees the old listing; waiting {wait}s and trying again")
+                    time.sleep(wait)
+                try:
+                    root, warns = trading("AddFixedPriceItem", new_item)
+                    break
+                except RuntimeError as e:
+                    err = e
+                    if not ("already have on eBay" in str(e) and f"({iid})" in str(e)):
+                        break  # a different problem (or a duplicate of ANOTHER listing): waiting won't help
+            if root is None:
+                e = err
                 # never leave an item ended: put the old listing back up unchanged
                 print(f"   creating the new listing failed ({e}); relisting the old one unchanged")
                 root, warns = trading("RelistFixedPriceItem", f"<Item><ItemID>{iid}</ItemID></Item>")
                 entry["message"] = f"relisted WITHOUT changes: {e}"[:300]
                 entry["new_title"] = item["title"]
-                stop = True
+                if "already have on eBay" not in str(e):
+                    stop = True  # unexpected error: stop. Duplicate errors are safe to move past.
             new_id = root.findtext("e:ItemID", "", NS)
             fees = total_fees(root)
             entry.update(new_item_id=new_id, status="relisted", fees=f"{fees:.2f}")
@@ -751,7 +765,8 @@ def apply(auto_rows=None, target=None, source=None):
                     stop = True
             except RuntimeError as e:
                 print(f"   (could not re-check photos: {e})\n")
-            if rate and marketing and entry["status"] == "relisted" and not entry["message"].startswith("relisted WITHOUT"):
+            # promote every new listing, including a plain relist made after a failed copy
+            if rate and marketing and entry["status"] == "relisted" and new_id:
                 try:
                     marketing.promote(new_id, rate)
                     entry["ad_rate"] = f"{rate:g}"
@@ -905,5 +920,46 @@ def send_digest(log):
         print(f"Email summary could not be sent: {e}")
 
 
+def promote_missing():
+    """One-time catch-up: promote every relisted listing in log.csv that has no ad rate,
+    at AD_RATE (default 4.2), if it is still active. Updates the log's ad_rate column."""
+    rate = float(os.environ.get("AD_RATE") or "4.2")
+    log = read_csv(load_branch_file("log.csv"))
+    todo = [r for r in log if r["status"] == "relisted" and r["new_item_id"] and not (r.get("ad_rate") or "").strip()]
+    print(f"{'PRACTICE ONLY: ' if DRY_RUN else 'LIVE: '}{len(todo)} relisted listing(s) have no ad rate; target {rate:g}%\n")
+    marketing = Marketing.connect()
+    if marketing is None:
+        sys.exit("Advertising access is not set up; nothing done.")
+    print(f"campaign: {marketing.campaign_label()}\n")
+    fixed = 0
+    for r in todo:
+        nid = r["new_item_id"]
+        try:
+            st = get_item(nid)["xml"].findtext("e:SellingStatus/e:ListingStatus", "", NS)
+        except RuntimeError as e:
+            print(f"   {nid}: could not read ({e}); skipped"); continue
+        if st != "Active":
+            print(f"   {nid}: {st or 'not active'}; skipped"); continue
+        if DRY_RUN:
+            print(f"   {nid}: would promote at {rate:g}%"); continue
+        try:
+            marketing.promote(nid, rate)
+            r["ad_rate"] = f"{rate:g}"
+            r["message"] = (r["message"] + f" | promoted later at {rate:g}%")[:300]
+            fixed += 1
+            print(f"   {nid}: promoted at {rate:g}%")
+        except RuntimeError as e:
+            print(f"   {nid}: AD NOT SET: {e}")
+        time.sleep(1)
+    if fixed and not DRY_RUN:
+        current = read_csv(load_branch_file("log.csv"))
+        upd = {r["new_item_id"]: r for r in todo if r.get("ad_rate")}
+        for row in current:
+            if row["new_item_id"] in upd and not (row.get("ad_rate") or "").strip():
+                row["ad_rate"], row["message"] = upd[row["new_item_id"]]["ad_rate"], upd[row["new_item_id"]]["message"]
+        save_branch_files({"log.csv": to_csv(current, LOG_COLS)}, f"Promoted {fixed} missed listing(s) at {rate:g}%")
+    print(f"\nDone. Promoted: {fixed} of {len(todo)}.")
+
+
 if __name__ == "__main__":
-    {"apply": apply, "auto": autopilot, "drip": drip}.get(MODE, propose)()
+    {"apply": apply, "auto": autopilot, "drip": drip, "promote_missing": promote_missing}.get(MODE, propose)()

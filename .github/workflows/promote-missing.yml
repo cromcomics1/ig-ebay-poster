@@ -1,0 +1,42 @@
+name: Promote missed relists
+
+# One-time catch-up: puts every relisted listing that has no Promoted Listings ad rate
+# into the newest running campaign at 4.2%. Run with practice ON first, then OFF.
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Practice only (ON = nothing really changes)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency: relist
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Git identity
+        run: |
+          git config user.name "ig-poster-bot"
+          git config user.email "ig-poster-bot@users.noreply.github.com"
+      - name: Promote missed listings
+        run: python relist.py
+        env:
+          EBAY_USER_TOKEN: ${{ secrets.EBAY_USER_TOKEN }}
+          EBAY_REFRESH_TOKEN: ${{ secrets.EBAY_REFRESH_TOKEN }}
+          EBAY_APP_ID: ${{ secrets.EBAY_APP_ID }}
+          EBAY_CERT_ID: ${{ secrets.EBAY_CERT_ID }}
+          MODE: promote_missing
+          AD_RATE: "4.2"
+          AD_CAMPAIGN: "latest"
+          DRY_RUN: ${{ inputs.dry_run && 'true' || 'false' }}

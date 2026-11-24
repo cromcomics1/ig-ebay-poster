@@ -1,0 +1,24 @@
+name: Scheduled listings report
+
+# Read-only: lists the eBay listings that are scheduled but not live yet. Changes nothing.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scheduled.py
+        env:
+          EBAY_USER_TOKEN: ${{ secrets.EBAY_USER_TOKEN }}
+          EBAY_APP_ID: ${{ secrets.EBAY_APP_ID }}
+          EBAY_CERT_ID: ${{ secrets.EBAY_CERT_ID }}
